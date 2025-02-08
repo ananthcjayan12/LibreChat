@@ -1,6 +1,6 @@
-import { useFormContext } from 'react-hook-form';
-import * as RadioGroup from '@radix-ui/react-radio-group';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
+import * as RadioGroup from '@radix-ui/react-radio-group';
+import { useFormContext } from 'react-hook-form';
 import {
   AuthTypeEnum,
   AuthorizationTypeEnum,

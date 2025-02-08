@@ -1,5 +1,5 @@
-import { SelectDropDown, SelectDropDownPop } from '~/components/ui';
 import type { TModelSelectProps } from '~/common';
+import { SelectDropDown, SelectDropDownPop } from '~/components/ui';
 import { TemporaryChat } from './TemporaryChat';
 import { cn, cardStyle } from '~/utils/';
 

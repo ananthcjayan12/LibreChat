@@ -4,8 +4,8 @@ import {
   BrowserVoiceDropdown,
   ExternalVoiceDropdown,
 } from '~/components/Audio/Voices';
-import store from '~/store';
 import { TTSEndpoints } from '~/common';
+import store from '~/store';
 
 const voiceDropdownComponentsMap = {
   [TTSEndpoints.edge]: EdgeVoiceDropdown,

@@ -1,38 +1,37 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useMemo, useState, useCallback } from 'react';
+import {
+  flexRender,
+  useReactTable,
+  type ColumnDef,
+  getCoreRowModel,
+  getSortedRowModel,
+  type SortingState,
+  getFilteredRowModel,
+  type VisibilityState,
+  getPaginationRowModel,
+  type ColumnFiltersState,
+} from '@tanstack/react-table';
 import { ArrowUpLeft } from 'lucide-react';
 import { useSetRecoilState } from 'recoil';
 import {
-  flexRender,
-  getCoreRowModel,
-  getFilteredRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
-  useReactTable,
-  type ColumnDef,
-  type SortingState,
-  type VisibilityState,
-  type ColumnFiltersState,
-} from '@tanstack/react-table';
-import {
-  fileConfig as defaultFileConfig,
-  checkOpenAIStorage,
-  mergeFileConfig,
   megabyte,
-  isAssistantsEndpoint,
   type TFile,
+  mergeFileConfig,
+  checkOpenAIStorage,
+  isAssistantsEndpoint,
+  fileConfig as defaultFileConfig,
 } from 'librechat-data-provider';
-
 import {
-  Button,
   Input,
   Table,
+  Button,
+  TableRow,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
 } from '~/components/ui';
-import { useFileMapContext, useChatContext, useToastContext } from '~/Providers';
+import { useChatContext, useToastContext, useFileMapContext } from '~/Providers';
 import { useLocalize, useUpdateFiles } from '~/hooks';
 import { useGetFileConfig } from '~/data-provider';
 import store from '~/store';

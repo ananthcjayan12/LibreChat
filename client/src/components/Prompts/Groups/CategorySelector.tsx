@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { useFormContext, Controller } from 'react-hook-form';
+import { Controller, useFormContext } from 'react-hook-form';
 import { LocalStorageKeys } from 'librechat-data-provider';
 import { Dropdown } from '~/components/ui';
 import { useCategories } from '~/hooks';

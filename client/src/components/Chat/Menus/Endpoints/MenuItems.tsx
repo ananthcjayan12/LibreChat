@@ -1,10 +1,10 @@
-import type { FC } from 'react';
 import { Close } from '@radix-ui/react-popover';
+import type { FC } from 'react';
 import {
-  EModelEndpoint,
-  alternateName,
-  PermissionTypes,
   Permissions,
+  alternateName,
+  EModelEndpoint,
+  PermissionTypes,
 } from 'librechat-data-provider';
 import { useGetEndpointsQuery } from '~/data-provider';
 import MenuSeparator from '../UI/MenuSeparator';

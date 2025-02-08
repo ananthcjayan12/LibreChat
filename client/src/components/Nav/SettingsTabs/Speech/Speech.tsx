@@ -1,27 +1,27 @@
-import { useRecoilState } from 'recoil';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
+import { Cog, Lightbulb } from 'lucide-react';
 import * as Tabs from '@radix-ui/react-tabs';
-import { Lightbulb, Cog } from 'lucide-react';
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { useGetCustomConfigSpeechQuery } from 'librechat-data-provider/react-query';
+import { useRecoilState } from 'recoil';
 import {
-  CloudBrowserVoicesSwitch,
-  AutomaticPlaybackSwitch,
-  TextToSpeechSwitch,
-  EngineTTSDropdown,
-  CacheTTSSwitch,
-  VoiceDropdown,
   PlaybackRate,
+  VoiceDropdown,
+  CacheTTSSwitch,
+  EngineTTSDropdown,
+  TextToSpeechSwitch,
+  AutomaticPlaybackSwitch,
+  CloudBrowserVoicesSwitch,
 } from './TTS';
 import {
-  AutoTranscribeAudioSwitch,
-  LanguageSTTDropdown,
-  SpeechToTextSwitch,
-  AutoSendTextSelector,
-  EngineSTTDropdown,
   DecibelSelector,
+  EngineSTTDropdown,
+  SpeechToTextSwitch,
+  LanguageSTTDropdown,
+  AutoSendTextSelector,
+  AutoTranscribeAudioSwitch,
 } from './STT';
+import { useGetCustomConfigSpeechQuery } from 'librechat-data-provider/react-query';
 import ConversationModeSwitch from './ConversationModeSwitch';
-import { useOnClickOutside, useMediaQuery } from '~/hooks';
+import { useMediaQuery, useOnClickOutside } from '~/hooks';
 import { cn, logger } from '~/utils';
 import store from '~/store';
 

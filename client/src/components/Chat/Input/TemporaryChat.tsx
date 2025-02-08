@@ -1,4 +1,4 @@
-import { MessageCircleDashed, X } from 'lucide-react';
+import { X, MessageCircleDashed } from 'lucide-react';
 import { useLocalize } from '~/hooks';
 
 interface TemporaryChatProps {

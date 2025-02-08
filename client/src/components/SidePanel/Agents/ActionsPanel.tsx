@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
+import { ChevronLeft } from 'lucide-react';
+import type { ActionAuthForm, AgentPanelProps } from '~/common';
 import {
   AuthTypeEnum,
   AuthorizationTypeEnum,
   TokenExchangeMethodEnum,
 } from 'librechat-data-provider';
-import { ChevronLeft } from 'lucide-react';
-import type { AgentPanelProps, ActionAuthForm } from '~/common';
-import { Dialog, DialogTrigger, OGDialog, OGDialogTrigger, Label } from '~/components/ui';
+import { Label, Dialog, OGDialog, DialogTrigger, OGDialogTrigger } from '~/components/ui';
 import OGDialogTemplate from '~/components/ui/OGDialogTemplate';
 import { useDeleteAgentAction } from '~/data-provider';
 import useLocalize from '~/hooks/useLocalize';

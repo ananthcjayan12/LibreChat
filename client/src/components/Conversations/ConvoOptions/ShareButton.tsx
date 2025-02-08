@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { QRCodeSVG } from 'qrcode.react';
 import { Copy, CopyCheck } from 'lucide-react';
+import { QRCodeSVG } from 'qrcode.react';
 import { useGetSharedLinkQuery } from 'librechat-data-provider/react-query';
 import OGDialogTemplate from '~/components/ui/OGDialogTemplate';
 import { useLocalize, useCopyToClipboard } from '~/hooks';

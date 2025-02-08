@@ -1,8 +1,8 @@
 import { useRef, useState, useEffect } from 'react';
-import { RefreshCw } from 'lucide-react';
-import { useSetRecoilState } from 'recoil';
 import * as Tabs from '@radix-ui/react-tabs';
-import type { SandpackPreviewRef, CodeEditorRef } from '@codesandbox/sandpack-react';
+import { useSetRecoilState } from 'recoil';
+import { RefreshCw } from 'lucide-react';
+import type { CodeEditorRef, SandpackPreviewRef } from '@codesandbox/sandpack-react';
 import useArtifacts from '~/hooks/Artifacts/useArtifacts';
 import DownloadArtifact from './DownloadArtifact';
 import { useEditorContext } from '~/Providers';

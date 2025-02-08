@@ -1,13 +1,13 @@
 import { memo } from 'react';
-import remarkGfm from 'remark-gfm';
-import remarkMath from 'remark-math';
+import rehypeHighlight from 'rehype-highlight';
+import ReactMarkdown from 'react-markdown';
 import rehypeKatex from 'rehype-katex';
 import supersub from 'remark-supersub';
-import ReactMarkdown from 'react-markdown';
-import rehypeHighlight from 'rehype-highlight';
+import remarkMath from 'remark-math';
+import remarkGfm from 'remark-gfm';
 import type { PluggableList } from 'unified';
-import { code, codeNoExecution, a, p } from './Markdown';
-import { CodeBlockProvider, ArtifactProvider } from '~/Providers';
+import { ArtifactProvider, CodeBlockProvider } from '~/Providers';
+import { a, p, code, codeNoExecution } from './Markdown';
 import { langSubset } from '~/utils';
 
 const MarkdownLite = memo(

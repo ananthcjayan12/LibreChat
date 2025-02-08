@@ -1,7 +1,7 @@
-import { memo, Suspense, useMemo } from 'react';
+import { memo, useMemo, Suspense } from 'react';
 import { useRecoilValue } from 'recoil';
 import type { TMessage } from 'librechat-data-provider';
-import type { TMessageContentProps, TDisplayProps } from '~/common';
+import type { TDisplayProps, TMessageContentProps } from '~/common';
 import Error from '~/components/Messages/Content/Error';
 import Thinking from '~/components/Artifacts/Thinking';
 import { DelayedRender } from '~/components/ui';

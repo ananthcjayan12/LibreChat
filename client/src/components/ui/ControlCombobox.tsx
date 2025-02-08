@@ -1,10 +1,10 @@
-import * as Ariakit from '@ariakit/react';
+import { memo, useRef, useMemo, useState, useEffect, startTransition } from 'react';
+import { List, AutoSizer } from 'react-virtualized';
 import { matchSorter } from 'match-sorter';
-import { AutoSizer, List } from 'react-virtualized';
-import { startTransition, useMemo, useState, useEffect, useRef, memo } from 'react';
-import { cn } from '~/utils';
-import type { OptionWithIcon } from '~/common';
+import * as Ariakit from '@ariakit/react';
 import { Search } from 'lucide-react';
+import type { OptionWithIcon } from '~/common';
+import { cn } from '~/utils';
 
 interface ControlComboboxProps {
   selectedValue: string;

@@ -1,11 +1,4 @@
 const express = require('express');
-const openAI = require('./openAI');
-const custom = require('./custom');
-const google = require('./google');
-const anthropic = require('./anthropic');
-const gptPlugins = require('./gptPlugins');
-const { isEnabled } = require('~/server/utils');
-const { EModelEndpoint } = require('librechat-data-provider');
 const {
   checkBan,
   uaParser,
@@ -15,6 +8,13 @@ const {
   messageUserLimiter,
   validateConvoAccess,
 } = require('~/server/middleware');
+const { EModelEndpoint } = require('librechat-data-provider');
+const { isEnabled } = require('~/server/utils');
+const gptPlugins = require('./gptPlugins');
+const anthropic = require('./anthropic');
+const custom = require('./custom');
+const google = require('./google');
+const openAI = require('./openAI');
 
 const { LIMIT_CONCURRENT_MESSAGES, LIMIT_MESSAGE_IP, LIMIT_MESSAGE_USER } = process.env ?? {};
 

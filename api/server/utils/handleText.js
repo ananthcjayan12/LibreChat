@@ -1,5 +1,7 @@
-const path = require('path');
 const crypto = require('crypto');
+const path = require('path');
+const partialRight = require('lodash/partialRight');
+const { Providers } = require('@librechat/agents');
 const {
   Capabilities,
   EModelEndpoint,
@@ -9,8 +11,6 @@ const {
   defaultRetrievalModels,
   defaultAssistantsVersion,
 } = require('librechat-data-provider');
-const { Providers } = require('@librechat/agents');
-const partialRight = require('lodash/partialRight');
 const { sendMessage } = require('./streamResponse');
 
 /** Helper function to escape special characters in regex

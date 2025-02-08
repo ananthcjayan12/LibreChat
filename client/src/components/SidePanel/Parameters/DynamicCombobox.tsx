@@ -1,9 +1,9 @@
 import { useMemo, useState, useCallback } from 'react';
-import { OptionTypes } from 'librechat-data-provider';
 import type { DynamicSettingProps } from 'librechat-data-provider';
 import { Label, HoverCard, HoverCardTrigger } from '~/components/ui';
 import ControlCombobox from '~/components/ui/ControlCombobox';
 import { useLocalize, useParameterEffects } from '~/hooks';
+import { OptionTypes } from 'librechat-data-provider';
 import { useChatContext } from '~/Providers';
 import OptionHover from './OptionHover';
 import { ESide } from '~/common';

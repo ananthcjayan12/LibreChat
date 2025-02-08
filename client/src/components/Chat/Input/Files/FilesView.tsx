@@ -1,8 +1,8 @@
-import { FileSources, FileContext } from 'librechat-data-provider';
 import type { TFile } from 'librechat-data-provider';
-import { OGDialog, OGDialogContent, OGDialogHeader, OGDialogTitle } from '~/components';
+import { OGDialog, OGDialogTitle, OGDialogHeader, OGDialogContent } from '~/components';
+import { FileContext, FileSources } from 'librechat-data-provider';
 import { useGetFiles } from '~/data-provider';
-import { DataTable, columns } from './Table';
+import { columns,DataTable } from './Table';
 import { useLocalize } from '~/hooks';
 
 export default function Files({ open, onOpenChange }) {

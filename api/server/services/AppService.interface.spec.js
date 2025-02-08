@@ -27,8 +27,8 @@ jest.mock('./start/checks', () => ({
   checkAzureVariables: jest.fn(),
 }));
 
-const AppService = require('./AppService');
 const { loadDefaultInterface } = require('./start/interface');
+const AppService = require('./AppService');
 
 describe('AppService interface configuration', () => {
   let app;

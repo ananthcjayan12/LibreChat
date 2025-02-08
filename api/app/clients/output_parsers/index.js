@@ -1,5 +1,5 @@
-const addImages = require('./addImages');
 const handleOutputs = require('./handleOutputs');
+const addImages = require('./addImages');
 
 module.exports = {
   addImages,

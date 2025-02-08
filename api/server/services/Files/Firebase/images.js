@@ -1,5 +1,5 @@
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs');
 const sharp = require('sharp');
 const { resizeImageBuffer } = require('../images/resize');
 const { updateUser } = require('~/models/userMethods');

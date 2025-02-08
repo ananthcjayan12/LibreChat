@@ -1,12 +1,12 @@
-const appleLogin = require('./appleStrategy');
-const passportLogin = require('./localStrategy');
-const googleLogin = require('./googleStrategy');
-const githubLogin = require('./githubStrategy');
-const discordLogin = require('./discordStrategy');
 const facebookLogin = require('./facebookStrategy');
+const discordLogin = require('./discordStrategy');
+const passportLogin = require('./localStrategy');
+const githubLogin = require('./githubStrategy');
+const googleLogin = require('./googleStrategy');
 const setupOpenId = require('./openidStrategy');
-const jwtLogin = require('./jwtStrategy');
+const appleLogin = require('./appleStrategy');
 const ldapLogin = require('./ldapStrategy');
+const jwtLogin = require('./jwtStrategy');
 
 module.exports = {
   appleLogin,

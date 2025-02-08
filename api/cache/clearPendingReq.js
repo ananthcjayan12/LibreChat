@@ -1,5 +1,5 @@
-const getLogStores = require('./getLogStores');
 const { isEnabled } = require('../server/utils');
+const getLogStores = require('./getLogStores');
 const { USE_REDIS, LIMIT_CONCURRENT_MESSAGES } = process.env ?? {};
 const ttl = 1000 * 60 * 1;
 

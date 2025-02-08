@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react';
-import { v4 } from 'uuid';
-import { SSE } from 'sse.js';
+import { useState, useEffect } from 'react';
 import { useSetRecoilState } from 'recoil';
+import { SSE } from 'sse.js';
+import { v4 } from 'uuid';
+import type { TMessage, TPayload, TSubmission, EventSubmission } from 'librechat-data-provider';
+import type { TResData } from '~/common';
 import {
   request,
   /* @ts-ignore */
@@ -10,10 +12,8 @@ import {
   removeNullishValues,
   isAssistantsEndpoint,
 } from 'librechat-data-provider';
-import type { EventSubmission, TMessage, TPayload, TSubmission } from 'librechat-data-provider';
+import { useGetUserBalance, useGenTitleMutation, useGetStartupConfig } from '~/data-provider';
 import type { EventHandlerParams } from './useEventHandlers';
-import type { TResData } from '~/common';
-import { useGenTitleMutation, useGetStartupConfig, useGetUserBalance } from '~/data-provider';
 import { useAuthContext } from '~/hooks/AuthContext';
 import useEventHandlers from './useEventHandlers';
 import store from '~/store';

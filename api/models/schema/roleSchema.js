@@ -1,5 +1,5 @@
-const { PermissionTypes, Permissions } = require('librechat-data-provider');
 const mongoose = require('mongoose');
+const { PermissionTypes, Permissions } = require('librechat-data-provider');
 
 const roleSchema = new mongoose.Schema({
   name: {

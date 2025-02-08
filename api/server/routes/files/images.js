@@ -1,12 +1,12 @@
 const path = require('path');
 const fs = require('fs').promises;
 const express = require('express');
-const { isAgentsEndpoint } = require('librechat-data-provider');
 const {
   filterFile,
   processImageFile,
   processAgentFileUpload,
 } = require('~/server/services/Files/process');
+const { isAgentsEndpoint } = require('librechat-data-provider');
 const { logger } = require('~/config');
 
 const router = express.Router();

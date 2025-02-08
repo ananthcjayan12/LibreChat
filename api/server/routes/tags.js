@@ -1,5 +1,4 @@
 const express = require('express');
-const { PermissionTypes, Permissions } = require('librechat-data-provider');
 const {
   getConversationTags,
   updateConversationTag,
@@ -8,6 +7,7 @@ const {
   updateTagsForConversation,
 } = require('~/models/ConversationTag');
 const { requireJwtAuth, generateCheckAccess } = require('~/server/middleware');
+const { PermissionTypes, Permissions } = require('librechat-data-provider');
 const { logger } = require('~/config');
 
 const router = express.Router();

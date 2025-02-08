@@ -1,11 +1,6 @@
-import debounce from 'lodash/debounce';
 import { useState, useEffect } from 'react';
 import { useFormContext } from 'react-hook-form';
-import {
-  validateAndParseOpenAPISpec,
-  openapiToFunction,
-  AuthTypeEnum,
-} from 'librechat-data-provider';
+import debounce from 'lodash/debounce';
 import type {
   Action,
   FunctionTool,
@@ -14,12 +9,17 @@ import type {
   AssistantsEndpoint,
 } from 'librechat-data-provider';
 import type { ActionAuthForm, ActionWithNullableMetadata } from '~/common';
-import type { Spec } from './ActionsTable';
-import { useAssistantsMapContext, useToastContext } from '~/Providers';
-import { ActionsTable, columns } from './ActionsTable';
+import {
+  AuthTypeEnum,
+  openapiToFunction,
+  validateAndParseOpenAPISpec,
+} from 'librechat-data-provider';
+import { useToastContext, useAssistantsMapContext } from '~/Providers';
+import { columns, ActionsTable } from './ActionsTable';
 import { useUpdateAction } from '~/data-provider';
 import useLocalize from '~/hooks/useLocalize';
 import { Spinner } from '~/components/svg';
+import type { Spec } from './ActionsTable';
 
 const debouncedValidation = debounce(
   (input: string, callback: (result: ValidationResult) => void) => {

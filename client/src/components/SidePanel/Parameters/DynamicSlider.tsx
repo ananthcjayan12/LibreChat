@@ -1,10 +1,10 @@
 import { useMemo, useCallback } from 'react';
-import { OptionTypes } from 'librechat-data-provider';
 import type { DynamicSettingProps } from 'librechat-data-provider';
-import { Label, Slider, HoverCard, Input, InputNumber, HoverCardTrigger } from '~/components/ui';
+import { Input, Label, Slider, HoverCard, InputNumber, HoverCardTrigger } from '~/components/ui';
 import { useLocalize, useDebouncedInput, useParameterEffects } from '~/hooks';
-import { cn, defaultTextProps, optionText } from '~/utils';
-import { ESide, defaultDebouncedDelay } from '~/common';
+import { cn, optionText, defaultTextProps } from '~/utils';
+import { ESide,defaultDebouncedDelay } from '~/common';
+import { OptionTypes } from 'librechat-data-provider';
 import { useChatContext } from '~/Providers';
 import OptionHover from './OptionHover';
 

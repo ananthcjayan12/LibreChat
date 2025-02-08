@@ -1,9 +1,8 @@
 const express = require('express');
 const { createTTSLimiters, createSTTLimiters } = require('~/server/middleware');
-
+const customConfigSpeech = require('./customConfigSpeech');
 const stt = require('./stt');
 const tts = require('./tts');
-const customConfigSpeech = require('./customConfigSpeech');
 
 const router = express.Router();
 

@@ -1,20 +1,20 @@
+import { useRef, useEffect, useCallback } from 'react';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import debounce from 'lodash/debounce';
-import { useEffect, useRef, useCallback } from 'react';
-import { useRecoilValue, useRecoilState } from 'recoil';
 import type { TEndpointOption } from 'librechat-data-provider';
 import type { KeyboardEvent } from 'react';
 import {
-  forceResize,
-  insertTextAtCursor,
-  getEntityName,
   getEntity,
+  forceResize,
+  getEntityName,
   checkIfScrollable,
+  insertTextAtCursor,
 } from '~/utils';
 import { useAssistantsMapContext } from '~/Providers/AssistantsMapContext';
 import { useAgentsMapContext } from '~/Providers/AgentsMapContext';
 import useGetSender from '~/hooks/Conversations/useGetSender';
-import useFileHandling from '~/hooks/Files/useFileHandling';
 import { useInteractionHealthCheck } from '~/data-provider';
+import useFileHandling from '~/hooks/Files/useFileHandling';
 import { useChatContext } from '~/Providers/ChatContext';
 import useLocalize from '~/hooks/useLocalize';
 import { globalAudioId } from '~/common';

@@ -1,13 +1,13 @@
-import { Capabilities } from 'librechat-data-provider';
-import { useFormContext, Controller } from 'react-hook-form';
+import { Controller, useFormContext } from 'react-hook-form';
 import type { AssistantForm } from '~/common';
 import {
   Checkbox,
   HoverCard,
-  HoverCardContent,
   HoverCardPortal,
+  HoverCardContent,
   HoverCardTrigger,
 } from '~/components/ui';
+import { Capabilities } from 'librechat-data-provider';
 import { CircleHelpIcon } from '~/components/svg';
 import { useLocalize } from '~/hooks';
 import { ESide } from '~/common';

@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-import { useEffect, useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
 import { useRecoilValue } from 'recoil';
 import type { TMessageAudio } from '~/common';
-import { useLocalize, useTTSBrowser, useTTSEdge, useTTSExternal } from '~/hooks';
-import { VolumeIcon, VolumeMuteIcon, Spinner } from '~/components/svg';
+import { useTTSEdge, useLocalize, useTTSBrowser, useTTSExternal } from '~/hooks';
+import { Spinner, VolumeIcon, VolumeMuteIcon } from '~/components/svg';
 import { useToastContext } from '~/Providers/ToastContext';
 import { logger } from '~/utils';
 import store from '~/store';

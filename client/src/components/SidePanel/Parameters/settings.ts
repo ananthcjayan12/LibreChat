@@ -1,13 +1,13 @@
+import type { SettingDefinition, SettingsConfiguration } from 'librechat-data-provider';
 import {
   ImageDetail,
   EModelEndpoint,
-  openAISettings,
   googleSettings,
+  openAISettings,
   ReasoningEffort,
   BedrockProviders,
   anthropicSettings,
 } from 'librechat-data-provider';
-import type { SettingsConfiguration, SettingDefinition } from 'librechat-data-provider';
 
 // Base definitions
 const baseDefinitions: Record<string, SettingDefinition> = {

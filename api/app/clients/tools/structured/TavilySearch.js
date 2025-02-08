@@ -1,5 +1,5 @@
-const { z } = require('zod');
 const { tool } = require('@langchain/core/tools');
+const { z } = require('zod');
 const { getApiKey } = require('./credentials');
 
 function createTavilySearchTool(fields = {}) {

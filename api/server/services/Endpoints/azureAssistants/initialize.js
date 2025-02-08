@@ -1,5 +1,5 @@
-const OpenAI = require('openai');
 const { HttpsProxyAgent } = require('https-proxy-agent');
+const OpenAI = require('openai');
 const {
   ErrorTypes,
   EModelEndpoint,

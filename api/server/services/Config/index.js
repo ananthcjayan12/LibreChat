@@ -1,11 +1,11 @@
-const { config } = require('./EndpointService');
-const getCustomConfig = require('./getCustomConfig');
-const loadCustomConfig = require('./loadCustomConfig');
-const loadConfigModels = require('./loadConfigModels');
-const loadDefaultModels = require('./loadDefaultModels');
 const getEndpointsConfig = require('./getEndpointsConfig');
-const loadOverrideConfig = require('./loadOverrideConfig');
 const loadAsyncEndpoints = require('./loadAsyncEndpoints');
+const loadOverrideConfig = require('./loadOverrideConfig');
+const loadDefaultModels = require('./loadDefaultModels');
+const loadConfigModels = require('./loadConfigModels');
+const loadCustomConfig = require('./loadCustomConfig');
+const getCustomConfig = require('./getCustomConfig');
+const { config } = require('./EndpointService');
 
 module.exports = {
   config,

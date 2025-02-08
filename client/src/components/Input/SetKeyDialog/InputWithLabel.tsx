@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import type { ChangeEvent, FC, Ref } from 'react';
-import { cn, defaultTextPropsLabel, removeFocusOutlines, defaultTextProps } from '~/utils/';
+import type { FC, Ref, ChangeEvent } from 'react';
+import { cn, defaultTextProps, removeFocusOutlines, defaultTextPropsLabel } from '~/utils/';
 import { Input, Label } from '~/components/ui';
 import { useLocalize } from '~/hooks';
 

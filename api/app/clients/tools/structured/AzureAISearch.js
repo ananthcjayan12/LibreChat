@@ -1,6 +1,6 @@
-const { z } = require('zod');
-const { Tool } = require('@langchain/core/tools');
 const { SearchClient, AzureKeyCredential } = require('@azure/search-documents');
+const { Tool } = require('@langchain/core/tools');
+const { z } = require('zod');
 const { logger } = require('~/config');
 
 class AzureAISearch extends Tool {

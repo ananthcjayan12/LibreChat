@@ -1,6 +1,6 @@
 const { addOpenAPISpecs, transformSpec } = require('./addOpenAPISpecs');
-const { loadSpecs } = require('./loadSpecs');
 const { createOpenAPIPlugin } = require('../dynamic/OpenAPIPlugin');
+const { loadSpecs } = require('./loadSpecs');
 
 jest.mock('./loadSpecs');
 jest.mock('../dynamic/OpenAPIPlugin');

@@ -1,7 +1,7 @@
 import { useRecoilState } from 'recoil';
-import { EModelEndpoint, SettingsViews } from 'librechat-data-provider';
 import type { ReactNode } from 'react';
-import { MessagesSquared, GPTIcon, AssistantIcon, DataIcon } from '~/components/svg';
+import { GPTIcon, DataIcon, AssistantIcon, MessagesSquared } from '~/components/svg';
+import { SettingsViews, EModelEndpoint } from 'librechat-data-provider';
 import { useChatContext } from '~/Providers';
 import { Button } from '~/components/ui';
 import { useLocalize } from '~/hooks';
@@ -44,8 +44,8 @@ export default function PopoverButtons({
   const endpoint = overrideEndpoint ?? endpointType ?? _endpoint ?? '';
   const model = overrideModel ?? _model;
 
-  const isGenerativeModel = model?.toLowerCase()?.includes('gemini') ?? false;
-  const isChatModel = (!isGenerativeModel && model?.toLowerCase()?.includes('chat')) ?? false;
+  const isGenerativeModel = model?.toLowerCase().includes('gemini') ?? false;
+  const isChatModel = (!isGenerativeModel && model?.toLowerCase().includes('chat')) ?? false;
   const isTextModel = !isGenerativeModel && !isChatModel && /code|text/.test(model ?? '');
 
   const { showExamples } = optionSettings;

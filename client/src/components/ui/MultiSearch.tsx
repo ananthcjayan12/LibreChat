@@ -1,5 +1,5 @@
-import { Search, X } from 'lucide-react';
-import React, { useState, useMemo, useCallback, useRef } from 'react';
+import React, { useRef, useMemo, useState, useCallback } from 'react';
+import { X, Search } from 'lucide-react';
 import { useLocalize } from '~/hooks';
 import { cn } from '~/utils';
 

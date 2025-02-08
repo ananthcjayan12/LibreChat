@@ -1,9 +1,9 @@
-import { useRecoilState } from 'recoil';
+import { memo, Fragment, useState } from 'react';
 import * as Select from '@ariakit/react/select';
-import { Fragment, useState, memo } from 'react';
-import { FileText, LogOut } from 'lucide-react';
-import { LinkIcon, GearIcon, DropdownMenuSeparator } from '~/components';
-import { useGetStartupConfig, useGetUserBalance } from '~/data-provider';
+import { LogOut, FileText } from 'lucide-react';
+import { useRecoilState } from 'recoil';
+import { GearIcon, LinkIcon, DropdownMenuSeparator } from '~/components';
+import { useGetUserBalance, useGetStartupConfig } from '~/data-provider';
 import FilesView from '~/components/Chat/Input/Files/FilesView';
 import { useAuthContext } from '~/hooks/AuthContext';
 import useAvatar from '~/hooks/Messages/useAvatar';

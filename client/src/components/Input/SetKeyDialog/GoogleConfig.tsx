@@ -1,9 +1,9 @@
 import React from 'react';
 import { object, string } from 'zod';
-import { AuthKeys } from 'librechat-data-provider';
 import type { TConfigProps } from '~/common';
 import FileUpload from '~/components/Chat/Input/Files/FileUpload';
 import { useLocalize, useMultipleKeys } from '~/hooks';
+import { AuthKeys } from 'librechat-data-provider';
 import InputWithLabel from './InputWithLabel';
 import { Label } from '~/components/ui';
 

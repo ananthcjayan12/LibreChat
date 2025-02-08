@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
-import { removeNullishValues } from 'librechat-data-provider';
 import type { Artifact } from '~/common';
 import { getKey, getProps, getTemplate, getArtifactFilename } from '~/utils/artifacts';
+import { removeNullishValues } from 'librechat-data-provider';
 import { getMermaidFiles } from '~/utils/mermaid';
 
 export default function useArtifactProps({ artifact }: { artifact: Artifact }) {

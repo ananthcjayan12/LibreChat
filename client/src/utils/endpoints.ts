@@ -1,13 +1,13 @@
+import type * as t from 'librechat-data-provider';
+import type { IconsRecord, LocalizeFunction } from '~/common';
 import {
   EModelEndpoint,
   defaultEndpoints,
-  modularEndpoints,
-  LocalStorageKeys,
   isAgentsEndpoint,
+  LocalStorageKeys,
+  modularEndpoints,
   isAssistantsEndpoint,
 } from 'librechat-data-provider';
-import type * as t from 'librechat-data-provider';
-import type { LocalizeFunction, IconsRecord } from '~/common';
 
 export const getEntityName = ({
   name = '',

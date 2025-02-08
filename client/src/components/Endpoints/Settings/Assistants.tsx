@@ -1,12 +1,12 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
-import type { Assistant, TPreset } from 'librechat-data-provider';
-import type { TModelSelectProps, Option } from '~/common';
+import type { TPreset, Assistant } from 'librechat-data-provider';
+import type { Option, TModelSelectProps } from '~/common';
 import {
   cn,
+  mapAssistants,
   defaultTextProps,
   removeFocusRings,
-  mapAssistants,
   createDropdownSetter,
 } from '~/utils';
 import { Label, HoverCard, SelectDropDown, HoverCardTrigger } from '~/components/ui';
@@ -27,7 +27,7 @@ export default function Settings({ conversation, setOption, models, readonly }: 
     conversation ?? {};
 
   const currentList = useMemo(
-    () => Object.values(assistantListMap?.[endpoint ?? ''] ?? {}) as Assistant[],
+    () => Object.values(assistantListMap[endpoint ?? ''] ?? {}) as Assistant[],
     [assistantListMap, endpoint],
   );
 

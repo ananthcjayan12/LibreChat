@@ -1,6 +1,6 @@
 import { useRecoilValue, useSetRecoilState } from 'recoil';
-import type { TPreset, TPlugin } from 'librechat-data-provider';
-import type { TSetOptionsPayload, TSetExample, TSetOption, TSetOptions } from '~/common';
+import type { TPlugin, TPreset } from 'librechat-data-provider';
+import type { TSetOption, TSetExample, TSetOptions, TSetOptionsPayload } from '~/common';
 import { useChatContext } from '~/Providers/ChatContext';
 import { cleanupPreset } from '~/utils';
 import store from '~/store';
@@ -144,7 +144,7 @@ const usePresetIndexOptions: TUsePresetOptions = (_preset) => {
           }
           return tool;
         })
-        ?.filter((el) => !!el) || [];
+        .filter((el) => !!el) || [];
     const isSelected = checkPluginSelection(newValue);
     const tool = availableTools[newValue];
     if (isSelected || remove) {

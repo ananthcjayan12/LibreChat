@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo } from 'react';
+import React, { useRef, useMemo, useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import * as Dialog from '@radix-ui/react-dialog';
 import DialogImage from './DialogImage';
@@ -47,8 +47,8 @@ const Image = ({
   const { width: scaledWidth, height: scaledHeight } = useMemo(
     () =>
       scaleImage({
-        originalWidth: Number(placeholderDimensions?.width?.split('px')[0]) ?? width,
-        originalHeight: Number(placeholderDimensions?.height?.split('px')[0]) ?? height,
+        originalWidth: Number(placeholderDimensions?.width.split('px')[0]) ?? width,
+        originalHeight: Number(placeholderDimensions?.height.split('px')[0]) ?? height,
         containerRef,
       }),
     [placeholderDimensions, height, width],

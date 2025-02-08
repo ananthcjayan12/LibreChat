@@ -1,12 +1,12 @@
-import { useState, useRef } from 'react';
+import { useRef, useState } from 'react';
+import { Dialog, Transition, DialogPanel, DialogTitle, TransitionChild } from '@headlessui/react';
+import { Command, MessageSquare } from 'lucide-react';
 import * as Tabs from '@radix-ui/react-tabs';
-import { MessageSquare, Command } from 'lucide-react';
-import { SettingsTabValues } from 'librechat-data-provider';
 import type { TDialogProps } from '~/common';
-import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react';
-import { GearIcon, DataIcon, SpeechIcon, UserIcon, ExperimentIcon } from '~/components/svg';
-import { General, Chat, Speech, Beta, Commands, Data, Account } from './SettingsTabs';
-import { useMediaQuery, useLocalize } from '~/hooks';
+import { DataIcon, GearIcon, UserIcon, SpeechIcon, ExperimentIcon } from '~/components/svg';
+import { Beta, Chat, Data, Speech, Account, General, Commands } from './SettingsTabs';
+import { SettingsTabValues } from 'librechat-data-provider';
+import { useLocalize, useMediaQuery } from '~/hooks';
 import { cn } from '~/utils';
 
 export default function Settings({ open, onOpenChange }: TDialogProps) {

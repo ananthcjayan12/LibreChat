@@ -1,5 +1,4 @@
 const express = require('express');
-const { ContentTypes } = require('librechat-data-provider');
 const {
   saveConvo,
   saveMessage,
@@ -10,6 +9,7 @@ const {
 } = require('~/models');
 const { findAllArtifacts, replaceArtifactContent } = require('~/server/services/Artifacts/update');
 const { requireJwtAuth, validateMessageReq } = require('~/server/middleware');
+const { ContentTypes } = require('librechat-data-provider');
 const { countTokens } = require('~/server/utils');
 const { logger } = require('~/config');
 

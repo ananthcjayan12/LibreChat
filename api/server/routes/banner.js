@@ -1,7 +1,6 @@
 const express = require('express');
-
-const { getBanner } = require('~/models/Banner');
 const optionalJwtAuth = require('~/server/middleware/optionalJwtAuth');
+const { getBanner } = require('~/models/Banner');
 const router = express.Router();
 
 router.get('/', optionalJwtAuth, async (req, res) => {

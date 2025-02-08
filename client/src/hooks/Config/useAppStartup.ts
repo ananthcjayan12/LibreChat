@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
-import TagManager from 'react-gtm-module';
 import { useRecoilState, useSetRecoilState } from 'recoil';
-import { LocalStorageKeys } from 'librechat-data-provider';
+import TagManager from 'react-gtm-module';
+import type { TUser, TPlugin, TStartupConfig } from 'librechat-data-provider';
 import { useAvailablePluginsQuery } from 'librechat-data-provider/react-query';
-import type { TStartupConfig, TPlugin, TUser } from 'librechat-data-provider';
 import { mapPlugins, selectPlugins, processPlugins } from '~/utils';
+import { LocalStorageKeys } from 'librechat-data-provider';
 import store from '~/store';
 
 const pluginStore: TPlugin = {
@@ -76,7 +76,6 @@ export default function useAppStartup({
       return;
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     const userPlugins = user.plugins ?? [];
 
     if (userPlugins.length === 0) {

@@ -1,6 +1,6 @@
-import { useRecoilValue } from 'recoil';
-import { forwardRef, useLayoutEffect, useState } from 'react';
+import { useState, forwardRef, useLayoutEffect } from 'react';
 import ReactTextareaAutosize from 'react-textarea-autosize';
+import { useRecoilValue } from 'recoil';
 import type { TextareaAutosizeProps } from 'react-textarea-autosize';
 import store from '~/store';
 

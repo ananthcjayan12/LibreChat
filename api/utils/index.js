@@ -1,10 +1,10 @@
-const loadYaml = require('./loadYaml');
-const axiosHelpers = require('./axios');
-const tokenHelpers = require('./tokens');
-const azureUtils = require('./azureUtils');
-const deriveBaseURL = require('./deriveBaseURL');
-const extractBaseURL = require('./extractBaseURL');
 const findMessageContent = require('./findMessageContent');
+const extractBaseURL = require('./extractBaseURL');
+const deriveBaseURL = require('./deriveBaseURL');
+const azureUtils = require('./azureUtils');
+const tokenHelpers = require('./tokens');
+const axiosHelpers = require('./axios');
+const loadYaml = require('./loadYaml');
 
 module.exports = {
   loadYaml,

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import { CodeInProgress } from './Parts/CodeProgress';
-import { useProgress, useLocalize } from '~/hooks';
-import ProgressText from './ProgressText';
+import { useLocalize, useProgress } from '~/hooks';
 import FinishedIcon from './FinishedIcon';
 import MarkdownLite from './MarkdownLite';
+import ProgressText from './ProgressText';
 import store from '~/store';
 
 export default function CodeAnalyze({

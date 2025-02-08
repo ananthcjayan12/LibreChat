@@ -1,15 +1,15 @@
 const { parseCompactConvo, EModelEndpoint, isAgentsEndpoint } = require('librechat-data-provider');
-const { getModelsConfig } = require('~/server/controllers/ModelController');
 const azureAssistants = require('~/server/services/Endpoints/azureAssistants');
+const { getModelsConfig } = require('~/server/controllers/ModelController');
 const assistants = require('~/server/services/Endpoints/assistants');
 const gptPlugins = require('~/server/services/Endpoints/gptPlugins');
 const { processFiles } = require('~/server/services/Files/process');
 const anthropic = require('~/server/services/Endpoints/anthropic');
 const bedrock = require('~/server/services/Endpoints/bedrock');
-const openAI = require('~/server/services/Endpoints/openAI');
 const agents = require('~/server/services/Endpoints/agents');
 const custom = require('~/server/services/Endpoints/custom');
 const google = require('~/server/services/Endpoints/google');
+const openAI = require('~/server/services/Endpoints/openAI');
 const { getConvoFiles } = require('~/models/Conversation');
 const { handleError } = require('~/server/utils');
 

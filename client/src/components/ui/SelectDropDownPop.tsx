@@ -1,10 +1,10 @@
 import React from 'react';
-import { Root, Trigger, Content, Portal } from '@radix-ui/react-popover';
-import MenuItem from '~/components/Chat/Menus/UI/MenuItem';
+import { Root, Portal, Content, Trigger } from '@radix-ui/react-popover';
 import type { Option } from '~/common';
+import MenuItem from '~/components/Chat/Menus/UI/MenuItem';
+import { useMultiSearch } from './MultiSearch';
 import { useLocalize } from '~/hooks';
 import { cn } from '~/utils/';
-import { useMultiSearch } from './MultiSearch';
 
 type SelectDropDownProps = {
   id?: string;

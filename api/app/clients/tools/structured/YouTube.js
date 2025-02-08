@@ -1,7 +1,7 @@
-const { z } = require('zod');
-const { tool } = require('@langchain/core/tools');
-const { youtube } = require('@googleapis/youtube');
 const { YoutubeTranscript } = require('youtube-transcript');
+const { youtube } = require('@googleapis/youtube');
+const { tool } = require('@langchain/core/tools');
+const { z } = require('zod');
 const { getApiKey } = require('./credentials');
 const { logger } = require('~/config');
 

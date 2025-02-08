@@ -1,26 +1,26 @@
-import debounce from 'lodash/debounce';
-import { useRecoilValue } from 'recoil';
-import { Menu, Rocket } from 'lucide-react';
-import { useForm, FormProvider } from 'react-hook-form';
+import { useRef, useMemo, useState, useEffect, useCallback } from 'react';
 import { useParams, useOutletContext } from 'react-router-dom';
-import { useEffect, useState, useMemo, useCallback, useRef } from 'react';
+import { useForm, FormProvider } from 'react-hook-form';
+import { Menu, Rocket } from 'lucide-react';
+import { useRecoilValue } from 'recoil';
+import debounce from 'lodash/debounce';
 import type { TCreatePrompt } from 'librechat-data-provider';
-import { SystemRoles, PermissionTypes, Permissions } from 'librechat-data-provider';
 import {
-  useCreatePrompt,
   useGetPrompts,
+  useCreatePrompt,
+  useDeletePrompt,
   useGetPromptGroup,
   useUpdatePromptGroup,
   useMakePromptProduction,
-  useDeletePrompt,
 } from '~/data-provider';
-import { useAuthContext, usePromptGroupsNav, useHasAccess, useLocalize } from '~/hooks';
+import { useLocalize, useHasAccess, useAuthContext, usePromptGroupsNav } from '~/hooks';
+import { Permissions, SystemRoles, PermissionTypes } from 'librechat-data-provider';
 import CategorySelector from './Groups/CategorySelector';
-import NoPromptGroup from './Groups/NoPromptGroup';
 import { Button, Skeleton } from '~/components/ui';
+import NoPromptGroup from './Groups/NoPromptGroup';
 import PromptVariables from './PromptVariables';
-import { cn, findPromptGroup } from '~/utils';
 import { useToastContext } from '~/Providers';
+import { cn, findPromptGroup } from '~/utils';
 import PromptVersions from './PromptVersions';
 import { PromptsEditorMode } from '~/common';
 import DeleteConfirm from './DeleteVersion';
@@ -70,7 +70,7 @@ const PromptForm = () => {
 
   const selectedPrompt = useMemo(
     () => (prompts.length > 0 ? prompts[selectionIndex] : undefined),
-    [prompts, /* eslint-disable-line react-hooks/exhaustive-deps */ selectionIndex],
+    [prompts,   selectionIndex],
   );
 
   const { groupsQuery } = useOutletContext<ReturnType<typeof usePromptGroupsNav>>();

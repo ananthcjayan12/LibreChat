@@ -1,3 +1,4 @@
+const { tool } = require('@langchain/core/tools');
 const {
   CacheKeys,
   Constants,
@@ -6,7 +7,6 @@ const {
   isImageVisionTool,
   actionDomainSeparator,
 } = require('librechat-data-provider');
-const { tool } = require('@langchain/core/tools');
 const { isActionDomainAllowed } = require('~/server/services/domains');
 const { encryptV2, decryptV2 } = require('~/server/utils/crypto');
 const { getActions, deleteActions } = require('~/models/Action');

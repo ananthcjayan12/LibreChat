@@ -1,14 +1,6 @@
-import { v4 } from 'uuid';
+import { useRecoilValue, useSetRecoilState, useResetRecoilState } from 'recoil';
 import { useQueryClient } from '@tanstack/react-query';
-import {
-  Constants,
-  QueryKeys,
-  ContentTypes,
-  EModelEndpoint,
-  parseCompactConvo,
-  isAssistantsEndpoint,
-} from 'librechat-data-provider';
-import { useSetRecoilState, useResetRecoilState, useRecoilValue } from 'recoil';
+import { v4 } from 'uuid';
 import type {
   TMessage,
   TSubmission,
@@ -17,11 +9,19 @@ import type {
   TEndpointsConfig,
 } from 'librechat-data-provider';
 import type { SetterOrUpdater } from 'recoil';
-import type { TAskFunction, ExtendedFile } from '~/common';
+import type { ExtendedFile, TAskFunction } from '~/common';
+import {
+  Constants,
+  QueryKeys,
+  ContentTypes,
+  EModelEndpoint,
+  parseCompactConvo,
+  isAssistantsEndpoint,
+} from 'librechat-data-provider';
 import useSetFilesToDelete from '~/hooks/Files/useSetFilesToDelete';
 import useGetSender from '~/hooks/Conversations/useGetSender';
 import { getArtifactsMode } from '~/utils/artifacts';
-import { getEndpointField, logger } from '~/utils';
+import { logger, getEndpointField } from '~/utils';
 import useUserKey from '~/hooks/Input/useUserKey';
 import store from '~/store';
 

@@ -1,14 +1,14 @@
-// hooks/Plugins/usePluginInstall.ts
 import { useCallback } from 'react';
-import { useUpdateUserPluginsMutation } from 'librechat-data-provider/react-query';
+import { useSetRecoilState } from 'recoil';
 import type {
-  TError,
   TUser,
-  TUpdateUserPlugins,
+  TError,
   TPlugin,
   TPluginAction,
+  TUpdateUserPlugins,
 } from 'librechat-data-provider';
-import { useSetRecoilState } from 'recoil';
+import { useUpdateUserPluginsMutation } from 'librechat-data-provider/react-query';
+// hooks/Plugins/usePluginInstall.ts
 import store from '~/store';
 
 interface PluginStoreHandlers {

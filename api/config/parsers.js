@@ -1,6 +1,6 @@
+const traverse = require('traverse');
 const { klona } = require('klona');
 const winston = require('winston');
-const traverse = require('traverse');
 
 const SPLAT_SYMBOL = Symbol.for('splat');
 const MESSAGE_SYMBOL = Symbol.for('message');

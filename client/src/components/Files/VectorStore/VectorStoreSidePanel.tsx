@@ -1,12 +1,12 @@
 import React from 'react';
-import VectorStoreList from './VectorStoreList';
-import { TVectorStore } from '~/common';
-import VectorStoreButton from './VectorStoreButton';
-import { Button, Input } from '~/components/ui';
-import FilesSectionSelector from '../FilesSectionSelector';
-import ActionButton from '../ActionButton';
-import DeleteIconButton from '../DeleteIconButton';
 import { ListFilter } from 'lucide-react';
+import FilesSectionSelector from '../FilesSectionSelector';
+import VectorStoreButton from './VectorStoreButton';
+import DeleteIconButton from '../DeleteIconButton';
+import { Input, Button } from '~/components/ui';
+import VectorStoreList from './VectorStoreList';
+import ActionButton from '../ActionButton';
+import { TVectorStore } from '~/common';
 import { useLocalize } from '~/hooks';
 
 const fakeVectorStores: TVectorStore[] = [

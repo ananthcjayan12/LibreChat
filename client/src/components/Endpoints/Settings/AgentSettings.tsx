@@ -1,8 +1,8 @@
 import type { TModelSelectProps } from '~/common';
 import {
-  Switch,
   Label,
   Slider,
+  Switch,
   HoverCard,
   InputNumber,
   SelectDropDown,

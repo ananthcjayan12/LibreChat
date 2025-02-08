@@ -1,12 +1,12 @@
+import { ArrowUpIcon, ArrowDownIcon, CaretSortIcon } from '@radix-ui/react-icons';
+import { FilterX, ListFilter } from 'lucide-react';
 import { Column } from '@tanstack/react-table';
-import { ListFilter, FilterX } from 'lucide-react';
-import { ArrowDownIcon, ArrowUpIcon, CaretSortIcon } from '@radix-ui/react-icons';
 import {
   DropdownMenu,
-  DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
+  DropdownMenuContent,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
 } from '~/components/ui/DropdownMenu';
 import { Button } from '~/components/ui/Button';
 import useLocalize from '~/hooks/useLocalize';

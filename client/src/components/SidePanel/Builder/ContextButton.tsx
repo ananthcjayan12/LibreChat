@@ -1,6 +1,6 @@
-import type { Assistant, AssistantCreateParams, AssistantsEndpoint } from 'librechat-data-provider';
+import type { Assistant, AssistantsEndpoint, AssistantCreateParams } from 'librechat-data-provider';
 import type { UseMutationResult } from '@tanstack/react-query';
-import { Dialog, DialogTrigger, Label } from '~/components/ui';
+import { Label, Dialog, DialogTrigger } from '~/components/ui';
 import { useChatContext, useToastContext } from '~/Providers';
 import { useDeleteAssistantMutation } from '~/data-provider';
 import DialogTemplate from '~/components/ui/DialogTemplate';

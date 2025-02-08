@@ -1,5 +1,4 @@
 const express = require('express');
-const { PermissionTypes, Permissions, SystemRoles } = require('librechat-data-provider');
 const {
   getPrompt,
   getPrompts,
@@ -14,6 +13,7 @@ const {
   // updatePromptLabels,
   makePromptProduction,
 } = require('~/models/Prompt');
+const { PermissionTypes, Permissions, SystemRoles } = require('librechat-data-provider');
 const { requireJwtAuth, generateCheckAccess } = require('~/server/middleware');
 const { logger } = require('~/config');
 

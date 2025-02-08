@@ -1,14 +1,14 @@
-import { forwardRef, ReactNode, Ref } from 'react';
+import { Ref,ReactNode, forwardRef } from 'react';
 import {
   DialogClose,
-  DialogContent,
-  DialogDescription,
+  DialogTitle,
   DialogFooter,
   DialogHeader,
-  DialogTitle,
+  DialogContent,
+  DialogDescription,
 } from './';
-import { cn } from '~/utils/';
 import { useLocalize } from '~/hooks';
+import { cn } from '~/utils/';
 
 type SelectionProps = {
   selectHandler?: () => void;

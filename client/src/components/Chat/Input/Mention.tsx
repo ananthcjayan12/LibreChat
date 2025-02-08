@@ -1,12 +1,12 @@
-import { useState, useRef, useEffect } from 'react';
-import { AutoSizer, List } from 'react-virtualized';
-import { EModelEndpoint } from 'librechat-data-provider';
+import { useRef, useState, useEffect } from 'react';
+import { List, AutoSizer } from 'react-virtualized';
 import type { SetterOrUpdater } from 'recoil';
 import type { MentionOption, ConvoGenerator } from '~/common';
 import useSelectMention from '~/hooks/Input/useSelectMention';
+import { EModelEndpoint } from 'librechat-data-provider';
 import { useAssistantsMapContext } from '~/Providers';
 import useMentions from '~/hooks/Input/useMentions';
-import { useLocalize, useCombobox } from '~/hooks';
+import { useCombobox, useLocalize } from '~/hooks';
 import { removeCharIfLast } from '~/utils';
 import MentionItem from './MentionItem';
 

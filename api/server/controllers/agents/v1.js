@@ -17,8 +17,8 @@ const {
 const { uploadImageBuffer, filterFile } = require('~/server/services/Files/process');
 const { getStrategyFunctions } = require('~/server/services/Files/strategies');
 const { updateAction, getActions } = require('~/models/Action');
-const { getProjectByName } = require('~/models/Project');
 const { updateAgentProjects } = require('~/models/Agent');
+const { getProjectByName } = require('~/models/Project');
 const { deleteFileByFilter } = require('~/models/File');
 const { logger } = require('~/config');
 

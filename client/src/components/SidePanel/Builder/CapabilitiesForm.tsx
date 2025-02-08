@@ -1,12 +1,12 @@
 import { useMemo } from 'react';
-import { Capabilities } from 'librechat-data-provider';
-import { useFormContext, useWatch } from 'react-hook-form';
+import { useWatch, useFormContext } from 'react-hook-form';
 import type { TConfig, AssistantsEndpoint } from 'librechat-data-provider';
 import type { AssistantForm } from '~/common';
+import { Capabilities } from 'librechat-data-provider';
 import ImageVision from './ImageVision';
 import { useLocalize } from '~/hooks';
-import Retrieval from './Retrieval';
 import CodeFiles from './CodeFiles';
+import Retrieval from './Retrieval';
 import Code from './Code';
 
 export default function CapabilitiesForm({

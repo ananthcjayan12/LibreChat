@@ -1,20 +1,20 @@
-import React, { useState, useRef, useCallback } from 'react';
-import { useSetRecoilState } from 'recoil';
+import React, { useRef, useState, useCallback } from 'react';
+import { Upload, RotateCw, FileImage } from 'lucide-react';
 import AvatarEditor from 'react-avatar-editor';
-import { FileImage, RotateCw, Upload } from 'lucide-react';
-import { fileConfig as defaultFileConfig, mergeFileConfig } from 'librechat-data-provider';
+import { useSetRecoilState } from 'recoil';
 import type { TUser } from 'librechat-data-provider';
 import {
-  Slider,
   Button,
+  Slider,
   Spinner,
   OGDialog,
-  OGDialogContent,
-  OGDialogHeader,
   OGDialogTitle,
+  OGDialogHeader,
+  OGDialogContent,
   OGDialogTrigger,
 } from '~/components';
-import { useUploadAvatarMutation, useGetFileConfig } from '~/data-provider';
+import { mergeFileConfig, fileConfig as defaultFileConfig } from 'librechat-data-provider';
+import { useGetFileConfig, useUploadAvatarMutation } from '~/data-provider';
 import { useToastContext } from '~/Providers';
 import { cn, formatBytes } from '~/utils';
 import { useLocalize } from '~/hooks';

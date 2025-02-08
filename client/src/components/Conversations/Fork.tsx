@@ -1,19 +1,19 @@
-import { useState, useRef } from 'react';
-import { useRecoilState } from 'recoil';
-import { GitFork, InfoIcon } from 'lucide-react';
+import { useRef, useState } from 'react';
+import { ListTree, GitCommit, GitBranchPlus } from 'lucide-react';
 import * as Popover from '@radix-ui/react-popover';
-import { ForkOptions } from 'librechat-data-provider';
-import { GitCommit, GitBranchPlus, ListTree } from 'lucide-react';
+import { GitFork, InfoIcon } from 'lucide-react';
+import { useRecoilState } from 'recoil';
 import {
   Checkbox,
   HoverCard,
-  HoverCardTrigger,
   HoverCardPortal,
   HoverCardContent,
+  HoverCardTrigger,
 } from '~/components/ui';
 import OptionHover from '~/components/SidePanel/Parameters/OptionHover';
 import { useLocalize, useNavigateToConvo } from '~/hooks';
 import { useForkConvoMutation } from '~/data-provider';
+import { ForkOptions } from 'librechat-data-provider';
 import { useToastContext } from '~/Providers';
 import { ESide } from '~/common';
 import { cn } from '~/utils';

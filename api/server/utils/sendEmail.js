@@ -1,7 +1,7 @@
-const fs = require('fs');
 const path = require('path');
-const nodemailer = require('nodemailer');
+const fs = require('fs');
 const handlebars = require('handlebars');
+const nodemailer = require('nodemailer');
 const { isEnabled } = require('~/server/utils/handleText');
 const logger = require('~/config/winston');
 

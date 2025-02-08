@@ -1,6 +1,6 @@
 import { useRef } from 'react';
-import { Save } from 'lucide-react';
 import { Portal, Content } from '@radix-ui/react-popover';
+import { Save } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { useLocalize, useOnClickOutside } from '~/hooks';
 import { cn, removeFocusOutlines } from '~/utils';

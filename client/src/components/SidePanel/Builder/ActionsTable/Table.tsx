@@ -1,4 +1,4 @@
-import { useReactTable, flexRender, getCoreRowModel } from '@tanstack/react-table';
+import { flexRender, useReactTable, getCoreRowModel } from '@tanstack/react-table';
 import type { ColumnDef } from '@tanstack/react-table';
 
 interface DataTableProps<TData, TValue> {

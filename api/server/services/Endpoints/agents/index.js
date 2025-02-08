@@ -1,5 +1,5 @@
-const build = require('./build');
 const initialize = require('./initialize');
+const build = require('./build');
 
 module.exports = {
   ...build,

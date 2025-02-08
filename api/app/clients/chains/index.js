@@ -1,5 +1,5 @@
-const runTitleChain = require('./runTitleChain');
 const predictNewSummary = require('./predictNewSummary');
+const runTitleChain = require('./runTitleChain');
 
 module.exports = {
   runTitleChain,

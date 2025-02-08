@@ -1,5 +1,5 @@
-import { useMemo, memo } from 'react';
-import { parseISO, isToday } from 'date-fns';
+import { memo, useMemo } from 'react';
+import { isToday, parseISO } from 'date-fns';
 import { TConversation } from 'librechat-data-provider';
 import { groupConversationsByDate } from '~/utils';
 import { useLocalize } from '~/hooks';
@@ -41,7 +41,7 @@ const Conversations = ({
                   paddingLeft: '10px',
                 }}
               >
-                {/* eslint-disable-next-line @typescript-eslint/strict-boolean-expressions */}
+                { }
                 {localize(groupName) || groupName}
               </div>
               {convos.map((convo, i) => (

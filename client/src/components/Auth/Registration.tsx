@@ -1,9 +1,9 @@
-import { useForm } from 'react-hook-form';
 import React, { useState } from 'react';
-import { useNavigate, useOutletContext, useLocation } from 'react-router-dom';
-import { useRegisterUserMutation } from 'librechat-data-provider/react-query';
-import type { TRegisterUser, TError } from 'librechat-data-provider';
+import { useLocation, useNavigate, useOutletContext } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import type { TError, TRegisterUser } from 'librechat-data-provider';
 import type { TLoginLayoutContext } from '~/common';
+import { useRegisterUserMutation } from 'librechat-data-provider/react-query';
 import { ErrorMessage } from './ErrorMessage';
 import { Spinner } from '~/components/svg';
 import { useLocalize } from '~/hooks';

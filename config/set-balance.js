@@ -1,10 +1,10 @@
 const path = require('path');
 require('module-alias')({ base: path.resolve(__dirname, '..', 'api') });
-const { askQuestion, silentExit } = require('./helpers');
 const { isEnabled } = require('~/server/utils/handleText');
+const { askQuestion, silentExit } = require('./helpers');
+const Balance = require('~/models/Balance');
 const User = require('~/models/User');
 const connect = require('./connect');
-const Balance = require('~/models/Balance');
 
 (async () => {
   await connect();

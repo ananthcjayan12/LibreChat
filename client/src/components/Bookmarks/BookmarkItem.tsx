@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import { BookmarkIcon, BookmarkFilledIcon } from '@radix-ui/react-icons';
 import { MenuItem } from '@headlessui/react';
-import { BookmarkFilledIcon, BookmarkIcon } from '@radix-ui/react-icons';
 import type { FC } from 'react';
 import { Spinner } from '~/components/svg';
 

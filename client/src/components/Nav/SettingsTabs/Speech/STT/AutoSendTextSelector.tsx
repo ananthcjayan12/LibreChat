@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { cn, defaultTextProps, optionText } from '~/utils/';
+import { cn, optionText, defaultTextProps } from '~/utils/';
 import { Slider, InputNumber } from '~/components/ui';
 import { useLocalize } from '~/hooks';
 import store from '~/store';

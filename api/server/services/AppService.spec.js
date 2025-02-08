@@ -7,7 +7,6 @@ const {
   deprecatedAzureVariables,
   conflictingAzureVariables,
 } = require('librechat-data-provider');
-
 const AppService = require('./AppService');
 
 jest.mock('./Config/loadCustomConfig', () => {

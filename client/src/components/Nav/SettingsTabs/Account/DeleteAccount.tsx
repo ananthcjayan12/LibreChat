@@ -1,14 +1,14 @@
-import { LockIcon, Trash } from 'lucide-react';
 import React, { useState, useCallback } from 'react';
+import { Trash, LockIcon } from 'lucide-react';
 import {
   Input,
   Button,
   Spinner,
   OGDialog,
+  OGDialogTitle,
+  OGDialogHeader,
   OGDialogContent,
   OGDialogTrigger,
-  OGDialogHeader,
-  OGDialogTitle,
 } from '~/components';
 import { useDeleteUserMutation } from '~/data-provider';
 import { useAuthContext } from '~/hooks/AuthContext';

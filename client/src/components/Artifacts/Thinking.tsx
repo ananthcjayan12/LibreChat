@@ -1,7 +1,7 @@
-import { useState, useMemo, memo, useCallback } from 'react';
-import { useRecoilValue } from 'recoil';
+import { memo, useMemo, useState, useCallback } from 'react';
 import { Atom, ChevronDown } from 'lucide-react';
-import type { MouseEvent, FC } from 'react';
+import { useRecoilValue } from 'recoil';
+import type { FC, MouseEvent } from 'react';
 import { useLocalize } from '~/hooks';
 import { cn } from '~/utils';
 import store from '~/store';

@@ -1,9 +1,9 @@
-// client/src/hooks/useDebounceCodeBlock.ts
-import { useCallback, useEffect } from 'react';
-import debounce from 'lodash/debounce';
+import { useEffect, useCallback } from 'react';
 import { useSetRecoilState } from 'recoil';
-import { codeBlocksState, codeBlockIdsState } from '~/store/artifacts';
+import debounce from 'lodash/debounce';
+// client/src/hooks/useDebounceCodeBlock.ts
 import type { CodeBlock } from '~/common';
+import { codeBlocksState, codeBlockIdsState } from '~/store/artifacts';
 
 export function useDebounceCodeBlock() {
   const setCodeBlocks = useSetRecoilState(codeBlocksState);

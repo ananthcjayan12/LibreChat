@@ -1,7 +1,8 @@
-const fs = require('fs');
 const path = require('path');
-const mime = require('mime');
+const fs = require('fs');
+const { EnvVar } = require('@librechat/agents');
 const { v4 } = require('uuid');
+const mime = require('mime');
 const {
   isUUID,
   megabyte,
@@ -18,7 +19,6 @@ const {
   hostImageNamePrefix,
   isAssistantsEndpoint,
 } = require('librechat-data-provider');
-const { EnvVar } = require('@librechat/agents');
 const {
   convertImage,
   resizeAndConvert,

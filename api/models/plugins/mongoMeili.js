@@ -1,6 +1,6 @@
-const _ = require('lodash');
-const mongoose = require('mongoose');
 const { MeiliSearch } = require('meilisearch');
+const mongoose = require('mongoose');
+const _ = require('lodash');
 const { cleanUpPrimaryKeyValue } = require('~/lib/utils/misc');
 const logger = require('~/config/meiliLogger');
 

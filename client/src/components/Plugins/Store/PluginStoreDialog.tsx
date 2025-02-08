@@ -1,16 +1,16 @@
-import { Search, X } from 'lucide-react';
-import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 import { useState, useEffect, useCallback } from 'react';
-import { useAvailablePluginsQuery } from 'librechat-data-provider/react-query';
+import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
+import { X, Search } from 'lucide-react';
 import type { TError, TPlugin, TPluginAction } from 'librechat-data-provider';
 import type { TPluginStoreDialogProps } from '~/common/types';
 import {
-  usePluginDialogHelpers,
-  useSetIndexOptions,
-  usePluginInstall,
-  useAuthContext,
   useLocalize,
+  useAuthContext,
+  usePluginInstall,
+  useSetIndexOptions,
+  usePluginDialogHelpers,
 } from '~/hooks';
+import { useAvailablePluginsQuery } from 'librechat-data-provider/react-query';
 import PluginPagination from './PluginPagination';
 import PluginStoreItem from './PluginStoreItem';
 import PluginAuthForm from './PluginAuthForm';

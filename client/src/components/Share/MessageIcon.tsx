@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import type { TMessage, TPreset, Assistant, Agent } from 'librechat-data-provider';
+import type { Agent, TMessage, Assistant } from 'librechat-data-provider';
 import type { TMessageProps } from '~/common';
 import MessageEndpointIcon from '../Endpoints/MessageEndpointIcon';
 import ConvoIconURL from '~/components/Endpoints/ConvoIconURL';

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { EToolResources } from 'librechat-data-provider';
 import type { ExtendedFile } from '~/common';
+import { EToolResources } from 'librechat-data-provider';
 import { useDeleteFilesMutation } from '~/data-provider';
 import { useFileDeletion } from '~/hooks/Files';
 import FileContainer from './FileContainer';

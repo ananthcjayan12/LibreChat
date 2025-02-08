@@ -1,6 +1,5 @@
-import { useCallback, useEffect, useState, useMemo, memo } from 'react';
+import { memo, useMemo, useState, useEffect, useCallback } from 'react';
 import { useRecoilValue } from 'recoil';
-import { PermissionTypes, Permissions } from 'librechat-data-provider';
 import type { ConversationListResponse } from 'librechat-data-provider';
 import {
   useLocalize,
@@ -10,14 +9,15 @@ import {
   useLocalStorage,
   useNavScrolling,
 } from '~/hooks';
+import { Permissions,PermissionTypes } from 'librechat-data-provider';
 import { useConversationsInfiniteQuery } from '~/data-provider';
 import { Conversations } from '~/components/Conversations';
 import BookmarkNav from './Bookmarks/BookmarkNav';
 import AccountSettings from './AccountSettings';
 import { useSearchContext } from '~/Providers';
 import { Spinner } from '~/components/svg';
-import SearchBar from './SearchBar';
 import NavToggle from './NavToggle';
+import SearchBar from './SearchBar';
 import NewChat from './NewChat';
 import { cn } from '~/utils';
 import store from '~/store';

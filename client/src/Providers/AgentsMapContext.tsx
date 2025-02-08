@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { useContext, createContext } from 'react';
 import useAgentsMap from '~/hooks/Agents/useAgentsMap';
 type AgentsMapContextType = ReturnType<typeof useAgentsMap>;
 

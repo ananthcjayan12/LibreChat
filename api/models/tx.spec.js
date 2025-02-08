@@ -1,4 +1,3 @@
-const { EModelEndpoint } = require('librechat-data-provider');
 const {
   defaultRate,
   tokenValues,
@@ -7,6 +6,7 @@ const {
   cacheTokenValues,
   getCacheMultiplier,
 } = require('./tx');
+const { EModelEndpoint } = require('librechat-data-provider');
 
 describe('getValueKey', () => {
   it('should return "16k" for model name containing "gpt-3.5-turbo-16k"', () => {

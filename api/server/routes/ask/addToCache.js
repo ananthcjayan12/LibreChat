@@ -1,5 +1,5 @@
-const Keyv = require('keyv');
 const { KeyvFile } = require('keyv-file');
+const Keyv = require('keyv');
 const { logger } = require('~/config');
 
 const addToCache = async ({ endpoint, endpointOption, userMessage, responseMessage }) => {

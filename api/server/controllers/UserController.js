@@ -8,7 +8,6 @@ const {
   deleteUserById,
   deleteAllUserSessions,
 } = require('~/models');
-const User = require('~/models/User');
 const { updateUserPluginAuth, deleteUserPluginAuth } = require('~/server/services/PluginService');
 const { updateUserPluginsService, deleteUserKey } = require('~/server/services/UserService');
 const { verifyEmail, resendVerificationEmail } = require('~/server/services/AuthService');
@@ -17,6 +16,7 @@ const { deleteAllSharedLinks } = require('~/models/Share');
 const { deleteToolCalls } = require('~/models/ToolCall');
 const { Transaction } = require('~/models/Transaction');
 const { logger } = require('~/config');
+const User = require('~/models/User');
 
 const getUserController = async (req, res) => {
   res.status(200).send(req.user);

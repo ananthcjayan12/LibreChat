@@ -1,19 +1,19 @@
 import { useMemo } from 'react';
-import { MessageSquareQuote, ArrowRightToLine, Settings2, Bookmark } from 'lucide-react';
-import {
-  isAssistantsEndpoint,
-  isAgentsEndpoint,
-  PermissionTypes,
-  isParamEndpoint,
-  EModelEndpoint,
-  Permissions,
-} from 'librechat-data-provider';
+import { Bookmark, Settings2, ArrowRightToLine, MessageSquareQuote } from 'lucide-react';
 import type { TConfig, TInterfaceConfig } from 'librechat-data-provider';
 import type { NavLink } from '~/common';
+import {
+  Permissions,
+  EModelEndpoint,
+  isParamEndpoint,
+  PermissionTypes,
+  isAgentsEndpoint,
+  isAssistantsEndpoint,
+} from 'librechat-data-provider';
 import AgentPanelSwitch from '~/components/SidePanel/Agents/AgentPanelSwitch';
 import BookmarkPanel from '~/components/SidePanel/Bookmarks/BookmarkPanel';
-import PanelSwitch from '~/components/SidePanel/Builder/PanelSwitch';
 import PromptsAccordion from '~/components/Prompts/PromptsAccordion';
+import PanelSwitch from '~/components/SidePanel/Builder/PanelSwitch';
 import Parameters from '~/components/SidePanel/Parameters/Panel';
 import FilesPanel from '~/components/SidePanel/Files/Panel';
 import { Blocks, AttachmentIcon } from '~/components/svg';

@@ -1,11 +1,11 @@
-import React, { memo, useEffect, useRef, useState } from 'react';
-import rehypeKatex from 'rehype-katex';
-import ReactMarkdown from 'react-markdown';
+import React, { memo, useRef, useState, useEffect } from 'react';
 import rehypeHighlight from 'rehype-highlight';
+import ReactMarkdown from 'react-markdown';
+import rehypeKatex from 'rehype-katex';
 import copy from 'copy-to-clipboard';
-import { handleDoubleClick, langSubset } from '~/utils';
-import Clipboard from '~/components/svg/Clipboard';
+import { langSubset, handleDoubleClick } from '~/utils';
 import CheckMark from '~/components/svg/CheckMark';
+import Clipboard from '~/components/svg/Clipboard';
 import useLocalize from '~/hooks/useLocalize';
 
 type TCodeProps = {

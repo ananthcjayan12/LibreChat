@@ -1,10 +1,10 @@
 import type { Agent, AgentCreateParams } from 'librechat-data-provider';
 import type { UseMutationResult } from '@tanstack/react-query';
-import { OGDialog, OGDialogTrigger, Label } from '~/components/ui';
-import { useChatContext, useToastContext } from '~/Providers';
+import { Label, OGDialog, OGDialogTrigger } from '~/components/ui';
 import OGDialogTemplate from '~/components/ui/OGDialogTemplate';
+import { useChatContext, useToastContext } from '~/Providers';
 import { useLocalize, useSetIndexOptions } from '~/hooks';
-import { cn, removeFocusOutlines, logger } from '~/utils';
+import { cn, logger, removeFocusOutlines } from '~/utils';
 import { useDeleteAgentMutation } from '~/data-provider';
 import { TrashIcon } from '~/components/svg';
 

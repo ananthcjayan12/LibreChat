@@ -2,12 +2,12 @@ import { memo } from 'react';
 import MaximizeChatSpace from './MaximizeChatSpace';
 import FontSizeSelector from './FontSizeSelector';
 import SendMessageKeyEnter from './EnterToSend';
-import ShowCodeSwitch from './ShowCodeSwitch';
 import { ForkSettings } from './ForkSettings';
+import ShowCodeSwitch from './ShowCodeSwitch';
 import ChatDirection from './ChatDirection';
-import ShowThinking from './ShowThinking';
 import LaTeXParsing from './LaTeXParsing';
 import ScrollButton from './ScrollButton';
+import ShowThinking from './ShowThinking';
 import ModularChat from './ModularChat';
 import SaveDraft from './SaveDraft';
 

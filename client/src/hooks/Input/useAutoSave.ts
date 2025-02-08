@@ -1,8 +1,8 @@
+import { useMemo, useState, useEffect, useCallback } from 'react';
+import { useRecoilValue, SetterOrUpdater } from 'recoil';
 import debounce from 'lodash/debounce';
-import { SetterOrUpdater, useRecoilValue } from 'recoil';
-import { useState, useEffect, useMemo, useCallback } from 'react';
-import { LocalStorageKeys, TFile } from 'librechat-data-provider';
 import type { ExtendedFile } from '~/common';
+import { TFile, LocalStorageKeys } from 'librechat-data-provider';
 import { useChatFormContext } from '~/Providers';
 import { useGetFiles } from '~/data-provider';
 import store from '~/store';
@@ -95,7 +95,7 @@ export const useAutoSave = ({
 
   const saveText = useCallback(
     (id: string) => {
-      if (!textAreaRef?.current) {
+      if (!textAreaRef.current) {
         return;
       }
       // Save the draft of the current conversation before switching

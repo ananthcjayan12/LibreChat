@@ -1,17 +1,17 @@
 import { Feather } from 'lucide-react';
-import { EModelEndpoint, alternateName } from 'librechat-data-provider';
 import {
-  AzureMinimalIcon,
-  OpenAIMinimalIcon,
+  Sparkles,
+  BedrockIcon,
+  AnthropicIcon,
   LightningIcon,
   MinimalPlugin,
-  GoogleMinimalIcon,
+  AzureMinimalIcon,
   CustomMinimalIcon,
-  AnthropicIcon,
-  BedrockIcon,
-  Sparkles,
+  GoogleMinimalIcon,
+  OpenAIMinimalIcon,
 } from '~/components/svg';
 import UnknownIcon from '~/components/Chat/Menus/Endpoints/UnknownIcon';
+import { alternateName,EModelEndpoint } from 'librechat-data-provider';
 import { IconProps } from '~/common';
 import { cn } from '~/utils';
 

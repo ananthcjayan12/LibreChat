@@ -1,18 +1,18 @@
 import { useEffect } from 'react';
-import { Search, X } from 'lucide-react';
-import { Dialog, DialogPanel, DialogTitle, Description } from '@headlessui/react';
+import { Dialog, Description, DialogPanel, DialogTitle } from '@headlessui/react';
 import { useFormContext } from 'react-hook-form';
-import { isAgentsEndpoint } from 'librechat-data-provider';
-import { useUpdateUserPluginsMutation } from 'librechat-data-provider/react-query';
+import { X, Search } from 'lucide-react';
 import type {
-  AssistantsEndpoint,
-  EModelEndpoint,
-  TPluginAction,
   TError,
+  TPluginAction,
+  EModelEndpoint,
+  AssistantsEndpoint,
 } from 'librechat-data-provider';
 import type { TPluginStoreDialogProps } from '~/common/types';
-import { PluginPagination, PluginAuthForm } from '~/components/Plugins/Store';
+import { useUpdateUserPluginsMutation } from 'librechat-data-provider/react-query';
+import { PluginAuthForm, PluginPagination } from '~/components/Plugins/Store';
 import { useLocalize, usePluginDialogHelpers } from '~/hooks';
+import { isAgentsEndpoint } from 'librechat-data-provider';
 import { useAvailableToolsQuery } from '~/data-provider';
 import ToolItem from './ToolItem';
 

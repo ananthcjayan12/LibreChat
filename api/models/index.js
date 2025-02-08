@@ -1,4 +1,13 @@
 const {
+  createSession,
+  findSession,
+  updateExpiration,
+  deleteSession,
+  deleteAllUserSessions,
+  generateRefreshToken,
+  countActiveSessions,
+} = require('./Session');
+const {
   comparePassword,
   deleteUserById,
   generateToken,
@@ -9,15 +18,6 @@ const {
   findUser,
 } = require('./userMethods');
 const {
-  findFileById,
-  createFile,
-  updateFile,
-  deleteFile,
-  deleteFiles,
-  getFiles,
-  updateFileUsage,
-} = require('./File');
-const {
   getMessage,
   getMessages,
   saveMessage,
@@ -27,14 +27,14 @@ const {
   deleteMessages,
 } = require('./Message');
 const {
-  createSession,
-  findSession,
-  updateExpiration,
-  deleteSession,
-  deleteAllUserSessions,
-  generateRefreshToken,
-  countActiveSessions,
-} = require('./Session');
+  findFileById,
+  createFile,
+  updateFile,
+  deleteFile,
+  deleteFiles,
+  getFiles,
+  updateFileUsage,
+} = require('./File');
 const { getConvoTitle, getConvo, saveConvo, deleteConvos } = require('./Conversation');
 const { getPreset, getPresets, savePreset, deletePresets } = require('./Preset');
 const { createToken, findToken, updateToken, deleteTokens } = require('./Token');

@@ -1,6 +1,6 @@
-import { AgentCapabilities } from 'librechat-data-provider';
 import type { Agent, AgentProvider, AgentModelParameters } from 'librechat-data-provider';
-import type { OptionWithIcon, ExtendedFile } from './types';
+import { AgentCapabilities } from 'librechat-data-provider';
+import type { ExtendedFile, OptionWithIcon } from './types';
 
 export type TAgentOption = OptionWithIcon &
   Agent & {

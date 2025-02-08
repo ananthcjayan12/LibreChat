@@ -1,4 +1,4 @@
-import { EModelEndpoint, FileSources } from 'librechat-data-provider';
+import { FileSources, EModelEndpoint } from 'librechat-data-provider';
 import { MinimalIcon } from '~/components/Endpoints';
 import { cn } from '~/utils';
 

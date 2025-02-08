@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useMemo, useState, useCallback } from 'react';
 import {
   Search,
   TrashIcon,
@@ -11,23 +11,23 @@ import {
 } from 'lucide-react';
 import type { TConversation } from 'librechat-data-provider';
 import {
-  Table,
   Input,
+  Table,
   Button,
-  TableRow,
-  Skeleton,
   OGDialog,
+  Skeleton,
+  TableRow,
   Separator,
-  TableCell,
   TableBody,
+  TableCell,
   TableHead,
   TableHeader,
   TooltipAnchor,
   OGDialogTrigger,
 } from '~/components';
-import { useConversationsInfiniteQuery, useArchiveConvoMutation } from '~/data-provider';
+import { useArchiveConvoMutation, useConversationsInfiniteQuery } from '~/data-provider';
 import { DeleteConversationDialog } from '~/components/Conversations/ConvoOptions';
-import { useAuthContext, useLocalize, useMediaQuery } from '~/hooks';
+import { useLocalize, useMediaQuery, useAuthContext } from '~/hooks';
 import { cn } from '~/utils';
 
 export default function ArchivedChatsTable() {

@@ -1,9 +1,4 @@
 const express = require('express');
-const { getResponseSender, Constants } = require('librechat-data-provider');
-const { initializeClient } = require('~/server/services/Endpoints/gptPlugins');
-const { sendMessage, createOnProgress } = require('~/server/utils');
-const { addTitle } = require('~/server/services/Endpoints/openAI');
-const { saveMessage, updateMessage } = require('~/models');
 const {
   handleAbort,
   createAbortController,
@@ -14,6 +9,11 @@ const {
   buildEndpointOption,
   moderateText,
 } = require('~/server/middleware');
+const { initializeClient } = require('~/server/services/Endpoints/gptPlugins');
+const { getResponseSender, Constants } = require('librechat-data-provider');
+const { sendMessage, createOnProgress } = require('~/server/utils');
+const { addTitle } = require('~/server/services/Endpoints/openAI');
+const { saveMessage, updateMessage } = require('~/models');
 const { validateTools } = require('~/app');
 const { logger } = require('~/config');
 

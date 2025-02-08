@@ -1,19 +1,19 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useMemo, useState, useCallback } from 'react';
+import { useWatch, Controller, useFormContext } from 'react-hook-form';
 import { useQueryClient } from '@tanstack/react-query';
-import { Controller, useWatch, useFormContext } from 'react-hook-form';
+import type { TPlugin } from 'librechat-data-provider';
+import type { AgentForm, AgentPanelProps } from '~/common';
 import {
   QueryKeys,
-  SystemRoles,
   Permissions,
+  SystemRoles,
   EModelEndpoint,
   PermissionTypes,
   AgentCapabilities,
 } from 'librechat-data-provider';
-import type { TPlugin } from 'librechat-data-provider';
-import type { AgentForm, AgentPanelProps } from '~/common';
-import { cn, defaultTextProps, removeFocusOutlines, getEndpointField, getIconKey } from '~/utils';
+import { cn, getIconKey, defaultTextProps, getEndpointField, removeFocusOutlines } from '~/utils';
 import { useCreateAgentMutation, useUpdateAgentMutation } from '~/data-provider';
-import { useLocalize, useAuthContext, useHasAccess } from '~/hooks';
+import { useLocalize, useHasAccess, useAuthContext } from '~/hooks';
 import { useToastContext, useFileMapContext } from '~/Providers';
 import { icons } from '~/components/Chat/Menus/Endpoints/Icons';
 import Action from '~/components/SidePanel/Builder/Action';

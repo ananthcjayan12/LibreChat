@@ -1,7 +1,6 @@
 import { useMemo } from 'react';
-import { useRecoilValue } from 'recoil';
 import TextareaAutosize from 'react-textarea-autosize';
-import { useAvailablePluginsQuery } from 'librechat-data-provider/react-query';
+import { useRecoilValue } from 'recoil';
 import type { TPlugin } from 'librechat-data-provider';
 import type { TModelSelectProps, OnInputNumberChange } from '~/common';
 import {
@@ -15,14 +14,15 @@ import {
   MultiSelectDropDown,
 } from '~/components/ui';
 import {
-  removeFocusOutlines,
+  cn,
+  optionText,
+  selectPlugins,
+  processPlugins,
   defaultTextProps,
   removeFocusRings,
-  processPlugins,
-  selectPlugins,
-  optionText,
-  cn,
+  removeFocusOutlines,
 } from '~/utils';
+import { useAvailablePluginsQuery } from 'librechat-data-provider/react-query';
 import OptionHoverAlt from '~/components/SidePanel/Parameters/OptionHover';
 import { useLocalize, useDebouncedInput } from '~/hooks';
 import OptionHover from './OptionHover';

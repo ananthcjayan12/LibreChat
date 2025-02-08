@@ -1,7 +1,7 @@
+const { getCodeBaseURL } = require('@librechat/agents');
+const FormData = require('form-data');
 // Code Files
 const axios = require('axios');
-const FormData = require('form-data');
-const { getCodeBaseURL } = require('@librechat/agents');
 
 const MAX_FILE_SIZE = 150 * 1024 * 1024;
 

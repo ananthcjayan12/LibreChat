@@ -1,13 +1,5 @@
 const express = require('express');
 const {
-  refreshController,
-  registrationController,
-  resetPasswordController,
-  resetPasswordRequestController,
-} = require('~/server/controllers/AuthController');
-const { loginController } = require('~/server/controllers/auth/LoginController');
-const { logoutController } = require('~/server/controllers/auth/LogoutController');
-const {
   checkBan,
   loginLimiter,
   requireJwtAuth,
@@ -19,6 +11,14 @@ const {
   validateRegistration,
   validatePasswordReset,
 } = require('~/server/middleware');
+const {
+  refreshController,
+  registrationController,
+  resetPasswordController,
+  resetPasswordRequestController,
+} = require('~/server/controllers/AuthController');
+const { logoutController } = require('~/server/controllers/auth/LogoutController');
+const { loginController } = require('~/server/controllers/auth/LoginController');
 
 const router = express.Router();
 

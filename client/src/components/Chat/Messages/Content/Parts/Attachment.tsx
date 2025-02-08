@@ -1,6 +1,6 @@
-import { imageExtRegex } from 'librechat-data-provider';
-import type { TAttachment, TFile, TAttachmentMetadata } from 'librechat-data-provider';
+import type { TFile, TAttachment, TAttachmentMetadata } from 'librechat-data-provider';
 import Image from '~/components/Chat/Messages/Content/Image';
+import { imageExtRegex } from 'librechat-data-provider';
 
 export default function Attachment({ attachment }: { attachment?: TAttachment }) {
   if (!attachment) {

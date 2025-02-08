@@ -1,5 +1,5 @@
-import { expect, test } from '@playwright/test';
-import type { Response, Page, BrowserContext } from '@playwright/test';
+import { test, expect } from '@playwright/test';
+import type { Page, Response, BrowserContext } from '@playwright/test';
 
 const basePath = 'http://localhost:3080/c/';
 const initialUrl = `${basePath}new`;

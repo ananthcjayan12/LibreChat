@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useMemo, useState, useEffect, useCallback } from 'react';
 
 export default function useProgress(initialProgress = 0.01, increment = 0.007, fileSize?: number) {
   const calculateIncrement = useCallback(

@@ -3,11 +3,10 @@ const { uaParser, checkBan, requireJwtAuth, createFileLimiters } = require('~/se
 const { avatar: asstAvatarRouter } = require('~/server/routes/assistants/v1');
 const { avatar: agentAvatarRouter } = require('~/server/routes/agents/v1');
 const { createMulterInstance } = require('./multer');
-
-const files = require('./files');
-const images = require('./images');
 const avatar = require('./avatar');
+const images = require('./images');
 const speech = require('./speech');
+const files = require('./files');
 
 const initialize = async () => {
   const router = express.Router();

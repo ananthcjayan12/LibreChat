@@ -1,7 +1,7 @@
-import React, { useMemo, memo } from 'react';
-import type { Assistant, Agent } from 'librechat-data-provider';
+import React, { memo, useMemo } from 'react';
+import type { Agent, Assistant } from 'librechat-data-provider';
 import type { TMessageIcon } from '~/common';
-import { getEndpointField, getIconEndpoint, logger } from '~/utils';
+import { logger, getIconEndpoint, getEndpointField } from '~/utils';
 import ConvoIconURL from '~/components/Endpoints/ConvoIconURL';
 import { useGetEndpointsQuery } from '~/data-provider';
 import Icon from '~/components/Endpoints/Icon';

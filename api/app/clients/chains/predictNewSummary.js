@@ -1,5 +1,5 @@
-const { LLMChain } = require('langchain/chains');
 const { getBufferString } = require('langchain/memory');
+const { LLMChain } = require('langchain/chains');
 
 /**
  * Predicts a new summary for the conversation given the existing messages

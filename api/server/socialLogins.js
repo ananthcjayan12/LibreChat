@@ -1,6 +1,6 @@
-const Redis = require('ioredis');
-const passport = require('passport');
 const session = require('express-session');
+const passport = require('passport');
+const Redis = require('ioredis');
 const MemoryStore = require('memorystore')(session);
 const RedisStore = require('connect-redis').default;
 const {

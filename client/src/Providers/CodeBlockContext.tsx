@@ -1,4 +1,4 @@
-import { createContext, useContext, ReactNode, useCallback, useRef } from 'react';
+import { useRef, ReactNode, useContext, useCallback, createContext } from 'react';
 
 type TCodeBlockContext = {
   getNextIndex: (skip: boolean) => number;

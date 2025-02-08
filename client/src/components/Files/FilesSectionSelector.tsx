@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Button } from '../ui';
+import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { Button } from '../ui';
 
 export default function FilesSectionSelector() {
   const navigate = useNavigate();

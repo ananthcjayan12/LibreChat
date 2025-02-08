@@ -1,8 +1,8 @@
-const fetch = require('node-fetch');
-const passport = require('passport');
-const jwtDecode = require('jsonwebtoken/decode');
-const { HttpsProxyAgent } = require('https-proxy-agent');
 const { Issuer, Strategy: OpenIDStrategy, custom } = require('openid-client');
+const { HttpsProxyAgent } = require('https-proxy-agent');
+const jwtDecode = require('jsonwebtoken/decode');
+const passport = require('passport');
+const fetch = require('node-fetch');
 const { getStrategyFunctions } = require('~/server/services/Files/strategies');
 const { findUser, createUser, updateUser } = require('~/models/userMethods');
 const { hashToken } = require('~/server/utils/crypto');

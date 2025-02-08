@@ -1,7 +1,7 @@
-import React, { useState, useCallback, useRef, useEffect } from 'react';
-import { Label, Button, OGDialog, OGDialogTrigger, Spinner } from '~/components';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
+import { Label, Button, Spinner, OGDialog, OGDialogTrigger } from '~/components';
 import OGDialogTemplate from '~/components/ui/OGDialogTemplate';
-import { useOnClickOutside, useLocalize } from '~/hooks';
+import { useLocalize, useOnClickOutside } from '~/hooks';
 
 export const DeleteCache = ({ disabled = false }: { disabled?: boolean }) => {
   const localize = useLocalize();

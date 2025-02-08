@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
 test.describe('Settings suite', () => {
   test('Last OpenAI settings', async ({ page }) => {

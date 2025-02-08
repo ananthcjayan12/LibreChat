@@ -1,9 +1,9 @@
+const AnthropicClient = require('./AnthropicClient');
 const ChatGPTClient = require('./ChatGPTClient');
-const OpenAIClient = require('./OpenAIClient');
 const PluginsClient = require('./PluginsClient');
 const GoogleClient = require('./GoogleClient');
+const OpenAIClient = require('./OpenAIClient');
 const TextStream = require('./TextStream');
-const AnthropicClient = require('./AnthropicClient');
 const toolUtils = require('./tools/util');
 
 module.exports = {

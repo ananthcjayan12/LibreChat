@@ -1,6 +1,6 @@
+const readline = require('readline');
 const path = require('path');
 const bcrypt = require('bcryptjs');
-const readline = require('readline');
 require('module-alias')({ base: path.resolve(__dirname, '..', 'api') });
 const User = require('../api/models/User');
 const connect = require('./connect');

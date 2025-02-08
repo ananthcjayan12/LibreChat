@@ -1,8 +1,8 @@
+import React, { useState, useEffect, createContext } from 'react';
+import { useSetRecoilState } from 'recoil';
+import { applyFontSize, getInitialTheme } from '~/utils';
 //ThemeContext.js
 // source: https://plainenglish.io/blog/light-and-dark-mode-in-react-web-application-with-tailwind-css-89674496b942
-import { useSetRecoilState } from 'recoil';
-import React, { createContext, useState, useEffect } from 'react';
-import { getInitialTheme, applyFontSize } from '~/utils';
 import store from '~/store';
 
 type ProviderValue = {

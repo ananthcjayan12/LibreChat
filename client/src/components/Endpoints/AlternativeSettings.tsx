@@ -1,6 +1,6 @@
 import { useRecoilValue } from 'recoil';
-import { SettingsViews } from 'librechat-data-provider';
 import type { TSettingsProps } from '~/common';
+import { SettingsViews } from 'librechat-data-provider';
 import { Advanced } from './Settings';
 import { cn } from '~/utils';
 import store from '~/store';

@@ -1,5 +1,5 @@
-const buildOptions = require('./build');
 const initializeClient = require('./initialize');
+const buildOptions = require('./build');
 
 module.exports = {
   buildOptions,

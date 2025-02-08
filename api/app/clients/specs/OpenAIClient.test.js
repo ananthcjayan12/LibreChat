@@ -1,9 +1,9 @@
 jest.mock('~/cache/getLogStores');
 require('dotenv').config();
-const OpenAI = require('openai');
-const getLogStores = require('~/cache/getLogStores');
 const { fetchEventSource } = require('@waylaidwanderer/fetch-event-source');
+const OpenAI = require('openai');
 const { genAzureChatCompletion } = require('~/utils/azureUtils');
+const getLogStores = require('~/cache/getLogStores');
 const OpenAIClient = require('../OpenAIClient');
 jest.mock('meilisearch');
 

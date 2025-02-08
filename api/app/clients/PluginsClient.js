@@ -1,4 +1,3 @@
-const OpenAIClient = require('./OpenAIClient');
 const { CallbackManager } = require('@langchain/core/callbacks/manager');
 const { BufferMemory, ChatMessageHistory } = require('langchain/memory');
 const { addImages, buildErrorInput, buildPromptPrefix } = require('./output_parsers');
@@ -8,6 +7,7 @@ const { EModelEndpoint } = require('librechat-data-provider');
 const { formatLangChainMessages } = require('./prompts');
 const checkBalance = require('~/models/checkBalance');
 const { isEnabled } = require('~/server/utils');
+const OpenAIClient = require('./OpenAIClient');
 const { extractBaseURL } = require('~/utils');
 const { loadTools } = require('./tools/util');
 const { logger } = require('~/config');

@@ -1,5 +1,5 @@
-const cookies = require('cookie');
 const jwt = require('jsonwebtoken');
+const cookies = require('cookie');
 const {
   registerUser,
   resetPassword,

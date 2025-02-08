@@ -1,7 +1,9 @@
-import { v4 } from 'uuid';
-import debounce from 'lodash/debounce';
+import { useRef, useMemo, useState, useEffect, useCallback } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
-import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
+import debounce from 'lodash/debounce';
+import { v4 } from 'uuid';
+import type { TError, TEndpointsConfig } from 'librechat-data-provider';
+import type { FileSetter, ExtendedFile } from '~/common';
 import {
   megabyte,
   QueryKeys,
@@ -13,9 +15,7 @@ import {
   defaultAssistantsVersion,
   fileConfig as defaultFileConfig,
 } from 'librechat-data-provider';
-import type { TEndpointsConfig, TError } from 'librechat-data-provider';
-import type { ExtendedFile, FileSetter } from '~/common';
-import { useUploadFileMutation, useGetFileConfig } from '~/data-provider';
+import { useGetFileConfig, useUploadFileMutation } from '~/data-provider';
 import { useDelayedUploadToast } from './useDelayedUploadToast';
 import { useToastContext } from '~/Providers/ToastContext';
 import { useChatContext } from '~/Providers/ChatContext';

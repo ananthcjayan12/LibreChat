@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Button, Label, Input, EditIcon, SaveIcon } from '~/components';
+import React, { useRef, useState, useEffect } from 'react';
+import { Input, Label, Button, EditIcon, SaveIcon } from '~/components';
 
 type Props = {
   name?: string;

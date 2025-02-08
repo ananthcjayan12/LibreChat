@@ -1,4 +1,4 @@
-import type { TPreset, TPlugin } from 'librechat-data-provider';
+import type { TPlugin, TPreset } from 'librechat-data-provider';
 import { EModelEndpoint } from 'librechat-data-provider';
 
 type TEndpoints = Array<string | EModelEndpoint>;

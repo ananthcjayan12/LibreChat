@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import {
   Listbox,
+  Transition,
   ListboxButton,
   ListboxOption,
   ListboxOptions,
-  Transition,
 } from '@headlessui/react';
 import { AnchorPropsWithSelection } from '@headlessui/react/dist/internal/floating';
 import type { Option } from '~/common';

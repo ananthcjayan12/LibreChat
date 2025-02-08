@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
-import { isAssistantsEndpoint } from 'librechat-data-provider';
-import type { AssistantsEndpoint, TConversation, TPreset } from 'librechat-data-provider';
+import type { TPreset, TConversation, AssistantsEndpoint } from 'librechat-data-provider';
 import useDefaultConvo from '~/hooks/Conversations/useDefaultConvo';
+import { isAssistantsEndpoint } from 'librechat-data-provider';
 import { useChatContext } from '~/Providers/ChatContext';
 import useAssistantListMap from './useAssistantListMap';
 import { mapAssistants } from '~/utils';
@@ -13,7 +13,7 @@ export default function useSelectAssistant(endpoint: AssistantsEndpoint) {
 
   const onSelect = useCallback(
     (value: string) => {
-      const assistant = assistantMap?.[endpoint]?.[value];
+      const assistant = assistantMap[endpoint]?.[value];
       if (!assistant) {
         return;
       }

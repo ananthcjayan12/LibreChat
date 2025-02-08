@@ -1,8 +1,8 @@
-const avatar = require('./avatar');
 const convert = require('./convert');
+const avatar = require('./avatar');
 const encode = require('./encode');
-const parse = require('./parse');
 const resize = require('./resize');
+const parse = require('./parse');
 
 module.exports = {
   ...convert,

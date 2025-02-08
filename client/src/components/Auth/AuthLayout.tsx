@@ -1,8 +1,8 @@
-import { useLocalize } from '~/hooks';
-import { BlinkAnimation } from './BlinkAnimation';
 import { TStartupConfig } from 'librechat-data-provider';
 import SocialLoginRender from './SocialLoginRender';
+import { BlinkAnimation } from './BlinkAnimation';
 import { ThemeSelector } from '~/components/ui';
+import { useLocalize } from '~/hooks';
 import { Banner } from '../Banners';
 import Footer from './Footer';
 

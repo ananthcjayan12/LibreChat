@@ -1,18 +1,18 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import {
-  Listbox,
-  ListboxButton,
   Label,
-  ListboxOptions,
-  ListboxOption,
+  Listbox,
   Transition,
+  ListboxButton,
+  ListboxOption,
+  ListboxOptions,
 } from '@headlessui/react';
 import { Wrench, ArrowRight } from 'lucide-react';
-import { CheckMark } from '~/components/svg';
+import type { TPlugin } from 'librechat-data-provider';
 import useOnClickOutside from '~/hooks/useOnClickOutside';
 import { useMultiSearch } from './MultiSearch';
+import { CheckMark } from '~/components/svg';
 import { cn } from '~/utils/';
-import type { TPlugin } from 'librechat-data-provider';
 
 export type TMultiSelectDropDownProps = {
   title?: string;

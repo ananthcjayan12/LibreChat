@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BookmarkPlusIcon } from 'lucide-react';
 import type { FC } from 'react';
-import { BookmarkEditDialog, BookmarkItems, BookmarkItem } from '~/components/Bookmarks';
+import { BookmarkItem, BookmarkItems, BookmarkEditDialog } from '~/components/Bookmarks';
 import { OGDialogTrigger } from '~/components/ui';
 import { useLocalize } from '~/hooks';
 

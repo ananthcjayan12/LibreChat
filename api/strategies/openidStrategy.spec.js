@@ -1,6 +1,6 @@
-const fetch = require('node-fetch');
-const jwtDecode = require('jsonwebtoken/decode');
 const { Issuer, Strategy: OpenIDStrategy } = require('openid-client');
+const jwtDecode = require('jsonwebtoken/decode');
+const fetch = require('node-fetch');
 const { findUser, createUser, updateUser } = require('~/models/userMethods');
 const setupOpenId = require('./openidStrategy');
 

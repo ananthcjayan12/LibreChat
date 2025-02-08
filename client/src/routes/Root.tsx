@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import type { ContextType } from '~/common';
 import {
-  AgentsMapContext,
-  AssistantsMapContext,
-  FileMapContext,
   SearchContext,
+  FileMapContext,
+  AgentsMapContext,
   SetConvoProvider,
+  AssistantsMapContext,
 } from '~/Providers';
-import { useAuthContext, useAssistantsMap, useAgentsMap, useFileMap, useSearch } from '~/hooks';
+import { useSearch, useFileMap, useAgentsMap, useAuthContext, useAssistantsMap } from '~/hooks';
 import TermsAndConditionsModal from '~/components/ui/TermsAndConditionsModal';
 import { useUserTermsQuery, useGetStartupConfig } from '~/data-provider';
 import { Nav, MobileNav } from '~/components/Nav';

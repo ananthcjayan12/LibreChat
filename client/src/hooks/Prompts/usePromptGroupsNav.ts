@@ -1,10 +1,10 @@
+import { useRef, useMemo, useEffect, useCallback } from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { useMemo, useRef, useEffect, useCallback } from 'react';
-import { usePromptGroupsInfiniteQuery } from '~/data-provider';
-import debounce from 'lodash/debounce';
-import store from '~/store';
 import { useQueryClient } from '@tanstack/react-query';
+import debounce from 'lodash/debounce';
+import { usePromptGroupsInfiniteQuery } from '~/data-provider';
 import { QueryKeys } from 'librechat-data-provider';
+import store from '~/store';
 
 export default function usePromptGroupsNav() {
   const queryClient = useQueryClient();
@@ -35,7 +35,7 @@ export default function usePromptGroupsNav() {
   }, [pageSize, name, category, setPageNumber]);
 
   const promptGroups = useMemo(() => {
-    return groupsQuery?.data?.pages?.[pageNumber - 1 + '']?.promptGroups || [];
+    return groupsQuery.data?.pages[pageNumber - 1 + '']?.promptGroups || [];
   }, [groupsQuery.data, pageNumber]);
 
   const nextPage = () => {

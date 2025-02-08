@@ -5,7 +5,7 @@
  *  - Also value will be updated everywhere, when value updated (via `storage` event)
  */
 
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function useLocalStorage<T>(key: string, defaultValue: T): [T, (value: T) => void] {
   const [value, setValue] = useState(defaultValue);

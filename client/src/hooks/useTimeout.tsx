@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef, useEffect } from 'react';
 
 type TUseTimeoutParams = {
   callback: (error: string | number | boolean | null) => void;

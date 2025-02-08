@@ -1,5 +1,5 @@
-const cookies = require('cookie');
 const { Issuer } = require('openid-client');
+const cookies = require('cookie');
 const { logoutUser } = require('~/server/services/AuthService');
 const { isEnabled } = require('~/server/utils');
 const { logger } = require('~/config');

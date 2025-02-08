@@ -1,6 +1,5 @@
 import { memo } from 'react';
 import { Feather } from 'lucide-react';
-import { EModelEndpoint, isAssistantsEndpoint, alternateName } from 'librechat-data-provider';
 import {
   Plugin,
   GPTIcon,
@@ -8,11 +7,12 @@ import {
   CodeyIcon,
   GeminiIcon,
   BedrockIcon,
-  AssistantIcon,
   AnthropicIcon,
+  AssistantIcon,
   AzureMinimalIcon,
   CustomMinimalIcon,
 } from '~/components/svg';
+import { alternateName, EModelEndpoint, isAssistantsEndpoint } from 'librechat-data-provider';
 import UnknownIcon from '~/components/Chat/Menus/Endpoints/UnknownIcon';
 import { IconProps } from '~/common';
 import { cn } from '~/utils';

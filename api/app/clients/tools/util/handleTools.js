@@ -1,8 +1,6 @@
-const { Tools, Constants } = require('librechat-data-provider');
-const { SerpAPI } = require('@langchain/community/tools/serpapi');
-const { Calculator } = require('@langchain/community/tools/calculator');
 const { createCodeExecutionTool, EnvVar } = require('@librechat/agents');
-const { getUserPluginAuthValue } = require('~/server/services/PluginService');
+const { Calculator } = require('@langchain/community/tools/calculator');
+const { SerpAPI } = require('@langchain/community/tools/serpapi');
 const {
   availableTools,
   manifestToolMap,
@@ -20,6 +18,8 @@ const {
 } = require('../');
 const { primeFiles: primeCodeFiles } = require('~/server/services/Files/Code/process');
 const { createFileSearchTool, primeFiles: primeSearchFiles } = require('./fileSearch');
+const { getUserPluginAuthValue } = require('~/server/services/PluginService');
+const { Tools, Constants } = require('librechat-data-provider');
 const { createMCPTool } = require('~/server/services/MCP');
 const { loadSpecs } = require('./loadSpecs');
 const { logger } = require('~/config');

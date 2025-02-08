@@ -8,7 +8,6 @@ const {
   // messageIpLimiter,
   // messageUserLimiter,
 } = require('~/server/middleware');
-
 const chat = require('./chat');
 
 router.use(requireJwtAuth);

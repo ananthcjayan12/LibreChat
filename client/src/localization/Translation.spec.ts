@@ -1,4 +1,4 @@
-import { getTranslations, localize } from './Translation';
+import { localize, getTranslations } from './Translation';
 import English from './languages/Eng';
 import Spanish from './languages/Es';
 import French from './languages/Fr';

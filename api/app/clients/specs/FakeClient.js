@@ -1,5 +1,5 @@
-const BaseClient = require('../BaseClient');
 const { getModelMaxTokens } = require('../../../utils');
+const BaseClient = require('../BaseClient');
 
 class FakeClient extends BaseClient {
   constructor(apiKey, options = {}) {

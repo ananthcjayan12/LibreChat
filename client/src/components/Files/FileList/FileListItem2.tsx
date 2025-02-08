@@ -1,7 +1,7 @@
-import type { TFile } from 'librechat-data-provider';
-import { FileIcon, PlusIcon } from 'lucide-react';
 import React from 'react';
+import { FileIcon, PlusIcon } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import type { TFile } from 'librechat-data-provider';
 import { DotsIcon, TrashIcon } from '~/components/svg';
 import { Button } from '~/components/ui';
 

@@ -1,6 +1,4 @@
 const express = require('express');
-const EditController = require('~/server/controllers/EditController');
-const { initializeClient } = require('~/server/services/Endpoints/google');
 const {
   setHeaders,
   handleAbort,
@@ -8,6 +6,8 @@ const {
   validateEndpoint,
   buildEndpointOption,
 } = require('~/server/middleware');
+const { initializeClient } = require('~/server/services/Endpoints/google');
+const EditController = require('~/server/controllers/EditController');
 
 const router = express.Router();
 

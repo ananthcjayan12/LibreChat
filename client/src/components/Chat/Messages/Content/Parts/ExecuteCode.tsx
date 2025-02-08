@@ -1,13 +1,13 @@
 import React, { useMemo, useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import type { TAttachment } from 'librechat-data-provider';
-import ProgressText from '~/components/Chat/Messages/Content/ProgressText';
 import FinishedIcon from '~/components/Chat/Messages/Content/FinishedIcon';
 import MarkdownLite from '~/components/Chat/Messages/Content/MarkdownLite';
+import ProgressText from '~/components/Chat/Messages/Content/ProgressText';
 import { CodeInProgress } from './CodeProgress';
+import { useProgress } from '~/hooks';
 import Attachment from './Attachment';
 import LogContent from './LogContent';
-import { useProgress } from '~/hooks';
 import store from '~/store';
 
 interface ParsedArgs {

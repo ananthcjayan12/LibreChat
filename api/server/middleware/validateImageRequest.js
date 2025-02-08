@@ -1,5 +1,5 @@
-const cookies = require('cookie');
 const jwt = require('jsonwebtoken');
+const cookies = require('cookie');
 const { logger } = require('~/config');
 
 const OBJECT_ID_LENGTH = 24;

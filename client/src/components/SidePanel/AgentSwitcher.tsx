@@ -1,8 +1,8 @@
-import { useEffect, useMemo } from 'react';
-import { EModelEndpoint, isAgentsEndpoint, LocalStorageKeys } from 'librechat-data-provider';
+import { useMemo, useEffect } from 'react';
 import type { Agent } from 'librechat-data-provider';
 import type { SwitcherProps, OptionWithIcon } from '~/common';
-import { useSetIndexOptions, useSelectAgent, useLocalize } from '~/hooks';
+import { EModelEndpoint, isAgentsEndpoint,LocalStorageKeys } from 'librechat-data-provider';
+import { useLocalize, useSelectAgent, useSetIndexOptions } from '~/hooks';
 import { useChatContext, useAgentsMapContext } from '~/Providers';
 import ControlCombobox from '~/components/ui/ControlCombobox';
 import Icon from '~/components/Endpoints/Icon';

@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { ArrowUpDown, Database } from 'lucide-react';
-import { FileSources, FileContext } from 'librechat-data-provider';
+import { Database, ArrowUpDown } from 'lucide-react';
 import type { ColumnDef } from '@tanstack/react-table';
 import type { TFile } from 'librechat-data-provider';
-import { Button, Checkbox, OpenAIMinimalIcon, AzureMinimalIcon } from '~/components';
+import { Button, Checkbox, AzureMinimalIcon, OpenAIMinimalIcon } from '~/components';
 import ImagePreview from '~/components/Chat/Input/Files/ImagePreview';
 import FilePreview from '~/components/Chat/Input/Files/FilePreview';
+import { FileContext, FileSources } from 'librechat-data-provider';
 import { SortFilterHeader } from './SortFilterHeader';
 import { useLocalize, useMediaQuery } from '~/hooks';
 import { formatDate, getFileType } from '~/utils';

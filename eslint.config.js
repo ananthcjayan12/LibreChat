@@ -1,16 +1,17 @@
-import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import typescriptEslintEslintPlugin from '@typescript-eslint/eslint-plugin';
-import importPlugin from 'eslint-plugin-import';
-import jsxA11Y from 'eslint-plugin-jsx-a11y';
-import globals from 'globals';
-import tsParser from '@typescript-eslint/parser';
-import jest from 'eslint-plugin-jest';
-import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import js from '@eslint/js';
+import path from 'node:path';
+import typescriptEslintEslintPlugin from '@typescript-eslint/eslint-plugin';
+import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
+import perfectionist from 'eslint-plugin-perfectionist';
+import reactHooks from 'eslint-plugin-react-hooks';
+import tsParser from '@typescript-eslint/parser';
+import importPlugin from 'eslint-plugin-import';
 import { FlatCompat } from '@eslint/eslintrc';
+import jsxA11Y from 'eslint-plugin-jsx-a11y';
+import react from 'eslint-plugin-react';
+import jest from 'eslint-plugin-jest';
+import globals from 'globals';
+import js from '@eslint/js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -56,6 +57,7 @@ export default [
       import: importPlugin,
       'jsx-a11y': fixupPluginRules(jsxA11Y),
       'import/parsers': tsParser,
+      perfectionist,
     },
 
     languageOptions: {
@@ -159,14 +161,52 @@ export default [
       'key-spacing': ['error', { beforeColon: false, afterColon: true }],
 
       // Added sort-imports rule:
-      'sort-imports': [
+      'perfectionist/sort-imports': [
         'error',
         {
-          ignoreCase: false,
-          ignoreDeclarationSort: false,
-          ignoreMemberSort: false,
-          memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-          allowSeparatedGroups: false,
+          type: 'line-length',
+          order: 'desc', // Global ascending order: shortest lines at the top.
+          newlinesBetween: 'never',
+          customGroups: {
+            value: {
+              // Only match the main React package.
+              react: ['^react$'],
+              // react: ['^react$', '^fs', '^zod', '^path'],
+              // Define a custom group named "local" that matches both relative paths and tilde aliases.
+              local: ['^(\\.{1,2}|~)/', '^librechat-data-provider'],
+            },
+          },
+          groups: [
+            // 0. React group: Always at the top.
+            'react',
+            // 1. NPM packages (built-in and external)
+            'builtin',
+            'external',
+            // 2. TypeScript type imports:
+            //    You can separate types coming from packages from local types if needed.
+            ['builtin-type', 'external-type'], // types from packages
+            ['internal-type'],                 // types from your workspaces (if they are defined as such)
+            // 3. Local imports
+            'local',                           // your custom group for local imports (includes tilde aliases)
+            // Optionally, if you have additional relative imports:
+            ['parent', 'sibling', 'index'],
+            'object',
+            'unknown',
+          ],
+        },
+      ],
+
+      'perfectionist/sort-named-imports': [
+        'error',
+        {
+          type: 'line-length',
+          order: 'asc',
+          ignoreAlias: false,
+          ignoreCase: true,
+          specialCharacters: 'keep',
+          groupKind: 'mixed',
+          partitionByNewLine: false,
+          partitionByComment: false,
         },
       ],
     },

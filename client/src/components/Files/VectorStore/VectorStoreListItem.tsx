@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { TVectorStore } from '~/common';
 import { DotsIcon, TrashIcon } from '~/components/svg';
 import { Button } from '~/components/ui';
+import { TVectorStore } from '~/common';
 
 type VectorStoreListItemProps = {
   vectorStore: TVectorStore;

@@ -1,5 +1,5 @@
-import { isAssistantsEndpoint, isAgentsEndpoint } from 'librechat-data-provider';
 import type { SwitcherProps } from '~/common';
+import { isAgentsEndpoint, isAssistantsEndpoint } from 'librechat-data-provider';
 import AssistantSwitcher from './AssistantSwitcher';
 import AgentSwitcher from './AgentSwitcher';
 import ModelSwitcher from './ModelSwitcher';

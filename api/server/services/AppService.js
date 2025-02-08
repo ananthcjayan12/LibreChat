@@ -1,14 +1,14 @@
-const { FileSources, EModelEndpoint, getConfigDefaults } = require('librechat-data-provider');
 const { checkVariables, checkHealth, checkConfig, checkAzureVariables } = require('./start/checks');
+const { FileSources, EModelEndpoint, getConfigDefaults } = require('librechat-data-provider');
 const { azureAssistantsDefaults, assistantsConfigSetup } = require('./start/assistants');
 const { initializeFirebase } = require('./Files/Firebase/initialize');
-const loadCustomConfig = require('./Config/loadCustomConfig');
 const handleRateLimits = require('./Config/handleRateLimits');
+const loadCustomConfig = require('./Config/loadCustomConfig');
 const { loadDefaultInterface } = require('./start/interface');
 const { azureConfigSetup } = require('./start/azureOpenAI');
 const { processModelSpecs } = require('./start/modelSpecs');
-const { loadAndFormatTools } = require('./ToolService');
 const { agentsConfigSetup } = require('./start/agents');
+const { loadAndFormatTools } = require('./ToolService');
 const { initializeRoles } = require('~/models/Role');
 const { getMCPManager } = require('~/config');
 const paths = require('~/config/paths');

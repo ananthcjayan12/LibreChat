@@ -1,4 +1,4 @@
-import type { ExtendedFile, FileSetter } from '~/common';
+import type { FileSetter, ExtendedFile } from '~/common';
 import useSetFilesToDelete from './useSetFilesToDelete';
 
 export default function useUpdateFiles(setFiles: FileSetter) {

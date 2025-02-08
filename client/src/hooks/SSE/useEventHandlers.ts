@@ -1,23 +1,15 @@
-import { v4 } from 'uuid';
-import { useCallback, useRef } from 'react';
-import { useSetRecoilState } from 'recoil';
-import { useParams } from 'react-router-dom';
+import { useRef, useCallback } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
-import {
-  QueryKeys,
-  Constants,
-  EndpointURLs,
-  tPresetSchema,
-  tMessageSchema,
-  tConvoUpdateSchema,
-} from 'librechat-data-provider';
+import { useParams } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
+import { v4 } from 'uuid';
 import type {
   TMessage,
   TConversation,
   EventSubmission,
   ConversationData,
 } from 'librechat-data-provider';
-import type { SetterOrUpdater, Resetter } from 'recoil';
+import type { Resetter, SetterOrUpdater } from 'recoil';
 import type { TResData, TFinalResData, ConvoGenerator } from '~/common';
 import type { TGenTitleMutation } from '~/data-provider';
 import {
@@ -28,6 +20,14 @@ import {
   updateConversation,
   getConversationById,
 } from '~/utils';
+import {
+  Constants,
+  QueryKeys,
+  EndpointURLs,
+  tPresetSchema,
+  tMessageSchema,
+  tConvoUpdateSchema,
+} from 'librechat-data-provider';
 import useAttachmentHandler from '~/hooks/SSE/useAttachmentHandler';
 import useContentHandler from '~/hooks/SSE/useContentHandler';
 import useStepHandler from '~/hooks/SSE/useStepHandler';
@@ -217,7 +217,7 @@ export default function useEventHandlers({
           const parentId = requestMessage.parentMessageId;
           if (
             parentId !== Constants.NO_PARENT &&
-            (title?.toLowerCase()?.includes('new chat') ?? false)
+            (title?.toLowerCase().includes('new chat') ?? false)
           ) {
             const convos = queryClient.getQueryData<ConversationData>([QueryKeys.allConversations]);
             const cachedConvo = getConversationById(convos, conversationId);
@@ -301,7 +301,7 @@ export default function useEventHandlers({
           const parentId = isRegenerate ? userMessage.overrideParentMessageId : parentMessageId;
           if (
             parentId !== Constants.NO_PARENT &&
-            (title?.toLowerCase()?.includes('new chat') ?? false)
+            (title?.toLowerCase().includes('new chat') ?? false)
           ) {
             const convos = queryClient.getQueryData<ConversationData>([QueryKeys.allConversations]);
             const cachedConvo = getConversationById(convos, conversationId);

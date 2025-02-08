@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
-import { useGetModelsQuery } from 'librechat-data-provider/react-query';
+import type { TAssistantsMap, TEndpointsConfig } from 'librechat-data-provider';
+import type { MentionOption } from '~/common';
 import {
   alternateName,
   EModelEndpoint,
@@ -7,15 +8,14 @@ import {
   getConfigDefaults,
   isAssistantsEndpoint,
 } from 'librechat-data-provider';
-import type { TAssistantsMap, TEndpointsConfig } from 'librechat-data-provider';
-import type { MentionOption } from '~/common';
 import {
   useGetPresetsQuery,
-  useGetEndpointsQuery,
   useListAgentsQuery,
   useGetStartupConfig,
+  useGetEndpointsQuery,
 } from '~/data-provider';
 import useAssistantListMap from '~/hooks/Assistants/useAssistantListMap';
+import { useGetModelsQuery } from 'librechat-data-provider/react-query';
 import { mapEndpoints, getPresetTitle } from '~/utils';
 import { EndpointIcon } from '~/components/Endpoints';
 
@@ -98,7 +98,7 @@ export default function useMentions({
             endpointsConfig,
           }),
         )
-        ?.filter(Boolean),
+        .filter(Boolean),
       [EModelEndpoint.azureAssistants]: listMap[EModelEndpoint.azureAssistants]
         ?.map(
           assistantMapFn({
@@ -107,7 +107,7 @@ export default function useMentions({
             endpointsConfig,
           }),
         )
-        ?.filter(Boolean),
+        .filter(Boolean),
     }),
     [listMap, assistantMap, endpointsConfig],
   );

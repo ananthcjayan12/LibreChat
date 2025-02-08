@@ -1,6 +1,5 @@
 import { useCallback } from 'react';
 import { useRecoilValue } from 'recoil';
-import { EModelEndpoint, isAgentsEndpoint, isAssistantsEndpoint } from 'librechat-data-provider';
 import type {
   TPreset,
   TModelSpec,
@@ -9,6 +8,7 @@ import type {
   TEndpointsConfig,
 } from 'librechat-data-provider';
 import type { MentionOption, ConvoGenerator } from '~/common';
+import { EModelEndpoint, isAgentsEndpoint, isAssistantsEndpoint } from 'librechat-data-provider';
 import { getConvoSwitchLogic, getModelSpecIconURL, removeUnavailableTools } from '~/utils';
 import { useChatContext } from '~/Providers';
 import { useDefaultConvo } from '~/hooks';

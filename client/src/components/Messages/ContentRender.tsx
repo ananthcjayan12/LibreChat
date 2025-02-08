@@ -1,7 +1,7 @@
+import { memo, useMemo, useCallback } from 'react';
 import { useRecoilValue } from 'recoil';
-import { useCallback, useMemo, memo } from 'react';
 import type { TMessage, TMessageContentParts } from 'librechat-data-provider';
-import type { TMessageProps, TMessageIcon } from '~/common';
+import type { TMessageIcon, TMessageProps } from '~/common';
 import ContentParts from '~/components/Chat/Messages/Content/ContentParts';
 import PlaceholderRow from '~/components/Chat/Messages/ui/PlaceholderRow';
 import SiblingSwitch from '~/components/Chat/Messages/SiblingSwitch';

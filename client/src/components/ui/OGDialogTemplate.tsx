@@ -1,12 +1,12 @@
-import { forwardRef, ReactNode, Ref } from 'react';
+import { Ref,ReactNode, forwardRef } from 'react';
 import {
-  OGDialogTitle,
+  OGDialog,
   OGDialogClose,
+  OGDialogTitle,
   OGDialogFooter,
   OGDialogHeader,
   OGDialogContent,
   OGDialogDescription,
-  OGDialog,
 } from './OriginalDialog';
 import { useLocalize } from '~/hooks';
 import { Spinner } from '../svg';

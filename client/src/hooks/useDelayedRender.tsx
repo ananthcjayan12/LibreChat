@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 
 const useDelayedRender = (delay: number) => {

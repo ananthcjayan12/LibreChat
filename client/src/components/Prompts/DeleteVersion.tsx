@@ -1,5 +1,5 @@
 import { Trash2 } from 'lucide-react';
-import { Button, OGDialog, OGDialogTrigger, Label } from '~/components/ui';
+import { Label, Button, OGDialog, OGDialogTrigger } from '~/components/ui';
 import OGDialogTemplate from '~/components/ui/OGDialogTemplate';
 import { useLocalize } from '~/hooks';
 

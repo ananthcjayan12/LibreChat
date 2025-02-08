@@ -1,6 +1,6 @@
 import React, { useMemo, useCallback } from 'react';
-import { useGetModelsQuery } from 'librechat-data-provider/react-query';
-import { Controller, useWatch, useForm, FormProvider } from 'react-hook-form';
+import { useForm, useWatch, Controller, FormProvider } from 'react-hook-form';
+import type { AgentForm, StringOption, AgentPanelProps } from '~/common';
 import {
   Tools,
   SystemRoles,
@@ -8,13 +8,13 @@ import {
   isAssistantsEndpoint,
   defaultAgentFormValues,
 } from 'librechat-data-provider';
-import type { AgentForm, AgentPanelProps, StringOption } from '~/common';
 import {
+  useGetAgentByIdQuery,
   useCreateAgentMutation,
   useUpdateAgentMutation,
-  useGetAgentByIdQuery,
 } from '~/data-provider';
-import { useSelectAgent, useLocalize, useAuthContext } from '~/hooks';
+import { useGetModelsQuery } from 'librechat-data-provider/react-query';
+import { useLocalize, useAuthContext, useSelectAgent } from '~/hooks';
 import AgentPanelSkeleton from './AgentPanelSkeleton';
 import { createProviderOption } from '~/utils';
 import { useToastContext } from '~/Providers';

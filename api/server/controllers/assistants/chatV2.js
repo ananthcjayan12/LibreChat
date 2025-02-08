@@ -18,8 +18,8 @@ const {
   saveAssistantMessage,
 } = require('~/server/services/Threads');
 const { runAssistant, createOnTextProgress } = require('~/server/services/AssistantService');
-const { sendMessage, sleep, isEnabled, countTokens } = require('~/server/utils');
 const { createErrorHandler } = require('~/server/controllers/assistants/errors');
+const { sendMessage, sleep, isEnabled, countTokens } = require('~/server/utils');
 const validateAuthor = require('~/server/middleware/assistants/validateAuthor');
 const { createRun, StreamRunManager } = require('~/server/services/Runs');
 const { addTitle } = require('~/server/services/Endpoints/assistants');

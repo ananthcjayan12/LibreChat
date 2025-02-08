@@ -1,8 +1,8 @@
-import * as Ariakit from '@ariakit/react';
-import React, { useRef, useState, useMemo } from 'react';
+import React, { useRef, useMemo, useState } from 'react';
 import { FileSearch, ImageUpIcon, TerminalSquareIcon } from 'lucide-react';
-import { EToolResources, EModelEndpoint } from 'librechat-data-provider';
-import { FileUpload, TooltipAnchor, DropdownPopup } from '~/components/ui';
+import * as Ariakit from '@ariakit/react';
+import { FileUpload, DropdownPopup, TooltipAnchor } from '~/components/ui';
+import { EModelEndpoint, EToolResources } from 'librechat-data-provider';
 import { useGetEndpointsQuery } from '~/data-provider';
 import { AttachmentIcon } from '~/components/svg';
 import { useLocalize } from '~/hooks';

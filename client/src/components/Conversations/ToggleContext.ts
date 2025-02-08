@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { useContext, createContext } from 'react';
 
 const defaultFunction: (value: boolean) => void = () => ({});
 export const ToggleContext = createContext({

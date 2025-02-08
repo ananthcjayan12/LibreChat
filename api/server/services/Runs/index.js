@@ -1,7 +1,7 @@
-const handle = require('./handle');
-const methods = require('./methods');
-const RunManager = require('./RunManager');
 const StreamRunManager = require('./StreamRunManager');
+const RunManager = require('./RunManager');
+const methods = require('./methods');
+const handle = require('./handle');
 
 module.exports = {
   ...handle,

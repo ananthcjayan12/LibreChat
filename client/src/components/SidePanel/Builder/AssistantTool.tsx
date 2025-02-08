@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import type { TPlugin } from 'librechat-data-provider';
 import { useUpdateUserPluginsMutation } from 'librechat-data-provider/react-query';
-import { OGDialog, OGDialogTrigger, Label } from '~/components/ui';
+import { Label, OGDialog, OGDialogTrigger } from '~/components/ui';
 import OGDialogTemplate from '~/components/ui/OGDialogTemplate';
 import { useToastContext } from '~/Providers';
 import { TrashIcon } from '~/components/svg';

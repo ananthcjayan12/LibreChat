@@ -1,6 +1,6 @@
 const express = require('express');
-const { PermissionTypes, Permissions } = require('librechat-data-provider');
 const { requireJwtAuth, generateCheckAccess } = require('~/server/middleware');
+const { PermissionTypes, Permissions } = require('librechat-data-provider');
 const v1 = require('~/server/controllers/agents/v1');
 const actions = require('./actions');
 const tools = require('./tools');

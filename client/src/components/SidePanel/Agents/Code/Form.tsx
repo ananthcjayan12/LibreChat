@@ -1,6 +1,6 @@
-import { Tools } from 'librechat-data-provider';
 import type { ExtendedFile } from '~/common';
 import { useVerifyAgentToolAuth } from '~/data-provider';
+import { Tools } from 'librechat-data-provider';
 import { useLocalize } from '~/hooks';
 import Action from './Action';
 import Files from './Files';

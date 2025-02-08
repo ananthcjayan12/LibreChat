@@ -1,8 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import ImportConversations from './ImportConversations';
 import { RevokeAllKeys } from './RevokeAllKeys';
-import { DeleteCache } from './DeleteCache';
 import { useOnClickOutside } from '~/hooks';
+import { DeleteCache } from './DeleteCache';
 import { ClearChats } from './ClearChats';
 import SharedLinks from './SharedLinks';
 

@@ -1,13 +1,13 @@
-import debounce from 'lodash/debounce';
-import React, { memo, useEffect, useMemo, useCallback } from 'react';
+import React, { memo, useMemo, useEffect, useCallback } from 'react';
 import {
   useSandpack,
   SandpackCodeEditor,
   SandpackProvider as StyledProvider,
 } from '@codesandbox/sandpack-react';
 import { SandpackProviderProps } from '@codesandbox/sandpack-react/unstyled';
+import debounce from 'lodash/debounce';
 import type { CodeEditorRef } from '@codesandbox/sandpack-react';
-import type { ArtifactFiles, Artifact } from '~/common';
+import type { Artifact, ArtifactFiles } from '~/common';
 import { sharedFiles, sharedOptions } from '~/utils/artifacts';
 import { useEditArtifact } from '~/data-provider';
 import { useEditorContext } from '~/Providers';

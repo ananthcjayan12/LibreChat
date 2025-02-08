@@ -1,7 +1,4 @@
 const axios = require('axios');
-const { EModelEndpoint, defaultModels } = require('librechat-data-provider');
-const { logger } = require('~/config');
-
 const {
   fetchModels,
   splitAndTrim,
@@ -10,6 +7,8 @@ const {
   getBedrockModels,
   getAnthropicModels,
 } = require('./ModelService');
+const { EModelEndpoint, defaultModels } = require('librechat-data-provider');
+const { logger } = require('~/config');
 
 jest.mock('~/utils', () => {
   const originalUtils = jest.requireActual('~/utils');

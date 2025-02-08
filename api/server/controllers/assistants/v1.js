@@ -1,11 +1,11 @@
 const fs = require('fs').promises;
-const { FileContext } = require('librechat-data-provider');
 const { uploadImageBuffer, filterFile } = require('~/server/services/Files/process');
 const validateAuthor = require('~/server/middleware/assistants/validateAuthor');
 const { getStrategyFunctions } = require('~/server/services/Files/strategies');
 const { deleteAssistantActions } = require('~/server/services/ActionService');
 const { updateAssistantDoc, getAssistants } = require('~/models/Assistant');
 const { getOpenAIClient, fetchAssistants } = require('./helpers');
+const { FileContext } = require('librechat-data-provider');
 const { manifestToolMap } = require('~/app/clients/tools');
 const { deleteFileByFilter } = require('~/models/File');
 const { logger } = require('~/config');

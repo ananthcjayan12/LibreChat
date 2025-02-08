@@ -1,7 +1,7 @@
-const socialLogin = require('./socialLogin');
 const { Strategy: AppleStrategy } = require('passport-apple');
-const { logger } = require('~/config');
 const jwt = require('jsonwebtoken');
+const socialLogin = require('./socialLogin');
+const { logger } = require('~/config');
 
 /**
  * Extract profile details from the decoded idToken

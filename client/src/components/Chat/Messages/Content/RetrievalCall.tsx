@@ -1,9 +1,9 @@
-import ProgressCircle from './ProgressCircle';
 import InProgressCall from './InProgressCall';
-import RetrievalIcon from './RetrievalIcon';
+import ProgressCircle from './ProgressCircle';
 import CancelledIcon from './CancelledIcon';
-import ProgressText from './ProgressText';
+import RetrievalIcon from './RetrievalIcon';
 import FinishedIcon from './FinishedIcon';
+import ProgressText from './ProgressText';
 import { useProgress } from '~/hooks';
 
 export default function RetrievalCall({

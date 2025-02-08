@@ -1,6 +1,4 @@
 const express = require('express');
-const AskController = require('~/server/controllers/AskController');
-const { addTitle, initializeClient } = require('~/server/services/Endpoints/anthropic');
 const {
   setHeaders,
   handleAbort,
@@ -8,6 +6,8 @@ const {
   validateEndpoint,
   buildEndpointOption,
 } = require('~/server/middleware');
+const { addTitle, initializeClient } = require('~/server/services/Endpoints/anthropic');
+const AskController = require('~/server/controllers/AskController');
 
 const router = express.Router();
 

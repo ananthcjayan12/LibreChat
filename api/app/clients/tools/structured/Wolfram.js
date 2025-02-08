@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-escape */
+const { Tool } = require('@langchain/core/tools');
 const axios = require('axios');
 const { z } = require('zod');
-const { Tool } = require('@langchain/core/tools');
 const { logger } = require('~/config');
 
 class WolframAlphaAPI extends Tool {

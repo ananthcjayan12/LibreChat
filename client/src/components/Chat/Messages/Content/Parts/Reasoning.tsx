@@ -1,6 +1,6 @@
 import { memo, useMemo } from 'react';
-import { ContentTypes } from 'librechat-data-provider';
 import { ThinkingContent } from '~/components/Artifacts/Thinking';
+import { ContentTypes } from 'librechat-data-provider';
 import { useMessageContext } from '~/Providers';
 import { cn } from '~/utils';
 

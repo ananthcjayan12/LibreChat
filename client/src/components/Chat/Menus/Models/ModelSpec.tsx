@@ -1,9 +1,9 @@
-import { useState, useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { Settings } from 'lucide-react';
-import type { FC } from 'react';
 import type { TModelSpec, TEndpointsConfig } from 'librechat-data-provider';
+import type { FC } from 'react';
 import { SetKeyDialog } from '~/components/Input/SetKeyDialog';
-import { useLocalize, useUserKey } from '~/hooks';
+import { useUserKey, useLocalize } from '~/hooks';
 import { cn, getEndpointField } from '~/utils';
 import SpecIcon from './SpecIcon';
 

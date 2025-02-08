@@ -1,5 +1,5 @@
-import path from 'path';
 import { pathToFileURL } from 'url';
+import path from 'path';
 // @ts-ignore
 import { resolve as resolveTs } from 'ts-node/esm';
 import * as tsConfigPaths from 'tsconfig-paths';

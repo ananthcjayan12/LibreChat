@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState, memo, useMemo } from 'react';
-import { useVirtualizer } from '@tanstack/react-virtual';
+import React, { memo, useRef, useMemo, useState, useEffect, useCallback } from 'react';
 import {
   Row,
   ColumnDef,
@@ -12,10 +11,11 @@ import {
   ColumnFiltersState,
   getFilteredRowModel,
 } from '@tanstack/react-table';
+import { useVirtualizer } from '@tanstack/react-virtual';
 import type { Table as TTable } from '@tanstack/react-table';
 import {
-  Button,
   Table,
+  Button,
   Checkbox,
   TableRow,
   TableBody,
@@ -24,7 +24,7 @@ import {
   TableHeader,
   AnimatedSearchInput,
 } from './';
-import { TrashIcon, Spinner } from '~/components/svg';
+import { Spinner, TrashIcon } from '~/components/svg';
 import { useLocalize, useMediaQuery } from '~/hooks';
 import { cn } from '~/utils';
 

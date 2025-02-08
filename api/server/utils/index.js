@@ -1,11 +1,11 @@
 const streamResponse = require('./streamResponse');
-const removePorts = require('./removePorts');
 const countTokens = require('./countTokens');
+const removePorts = require('./removePorts');
 const handleText = require('./handleText');
 const sendEmail = require('./sendEmail');
 const cryptoUtils = require('./crypto');
-const queue = require('./queue');
 const files = require('./files');
+const queue = require('./queue');
 const math = require('./math');
 
 /**

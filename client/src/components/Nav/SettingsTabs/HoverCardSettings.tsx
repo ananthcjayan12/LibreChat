@@ -1,5 +1,5 @@
 import React from 'react';
-import { HoverCard, HoverCardTrigger, HoverCardPortal, HoverCardContent } from '~/components/ui';
+import { HoverCard, HoverCardPortal, HoverCardContent, HoverCardTrigger } from '~/components/ui';
 import { CircleHelpIcon } from '~/components/svg';
 import { useLocalize } from '~/hooks';
 

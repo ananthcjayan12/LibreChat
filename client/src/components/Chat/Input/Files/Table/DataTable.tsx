@@ -1,38 +1,38 @@
 import { useState } from 'react';
-import { ListFilter } from 'lucide-react';
 import {
   flexRender,
+  useReactTable,
   getCoreRowModel,
+  getSortedRowModel,
   getFilteredRowModel,
   getPaginationRowModel,
-  getSortedRowModel,
-  useReactTable,
 } from '@tanstack/react-table';
+import { ListFilter } from 'lucide-react';
 import type {
   ColumnDef,
   SortingState,
   VisibilityState,
   ColumnFiltersState,
 } from '@tanstack/react-table';
-import { FileContext } from 'librechat-data-provider';
-import type { AugmentedColumnDef } from '~/common';
 import type { TFile } from 'librechat-data-provider';
+import type { AugmentedColumnDef } from '~/common';
 import {
-  Button,
   Input,
   Table,
+  Button,
+  TableRow,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
   DropdownMenu,
-  DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
+  DropdownMenuCheckboxItem,
 } from '~/components/ui';
 import { useDeleteFilesFromTable } from '~/hooks/Files';
-import { TrashIcon, Spinner } from '~/components/svg';
+import { FileContext } from 'librechat-data-provider';
+import { Spinner, TrashIcon } from '~/components/svg';
 import useLocalize from '~/hooks/useLocalize';
 import { useMediaQuery } from '~/hooks';
 import { cn } from '~/utils';

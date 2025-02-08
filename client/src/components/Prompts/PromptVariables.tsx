@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import { Variable } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import { Variable } from 'lucide-react';
 import { cn, extractUniqueVariables } from '~/utils';
 import { CodeVariableGfm } from './Markdown';
 import { Separator } from '~/components/ui';

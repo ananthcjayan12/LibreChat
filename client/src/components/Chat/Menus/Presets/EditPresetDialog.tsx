@@ -1,17 +1,17 @@
-import { useRecoilState } from 'recoil';
-import { useCallback, useEffect, useMemo } from 'react';
+import { useMemo, useEffect, useCallback } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
-import { QueryKeys, isAgentsEndpoint } from 'librechat-data-provider';
+import { useRecoilState } from 'recoil';
 import type { TModelsConfig, TEndpointsConfig } from 'librechat-data-provider';
 import {
   cn,
-  defaultTextProps,
-  removeFocusOutlines,
   mapEndpoints,
+  defaultTextProps,
   getConvoSwitchLogic,
+  removeFocusOutlines,
 } from '~/utils';
-import { Input, Label, SelectDropDown, Dialog, DialogClose, DialogButton } from '~/components';
-import { useSetIndexOptions, useLocalize, useDebouncedInput } from '~/hooks';
+import { Input, Label, Dialog, DialogClose, DialogButton, SelectDropDown } from '~/components';
+import { useLocalize, useDebouncedInput, useSetIndexOptions } from '~/hooks';
+import { QueryKeys,isAgentsEndpoint } from 'librechat-data-provider';
 import PopoverButtons from '~/components/Chat/Input/PopoverButtons';
 import DialogTemplate from '~/components/ui/DialogTemplate';
 import { EndpointSettings } from '~/components/Endpoints';

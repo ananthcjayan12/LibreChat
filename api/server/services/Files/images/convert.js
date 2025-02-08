@@ -1,8 +1,8 @@
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs');
 const sharp = require('sharp');
-const { resizeImageBuffer } = require('./resize');
 const { getStrategyFunctions } = require('../strategies');
+const { resizeImageBuffer } = require('./resize');
 const { logger } = require('~/config');
 
 /**

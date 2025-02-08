@@ -1,5 +1,5 @@
-import { PlusIcon } from 'lucide-react';
 import React from 'react';
+import { PlusIcon } from 'lucide-react';
 import { Button } from '~/components/ui';
 
 type VectorStoreButtonProps = {

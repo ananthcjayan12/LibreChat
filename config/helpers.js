@@ -1,11 +1,11 @@
+const { execSync } = require('child_process');
+const readline = require('readline');
+const path = require('path');
 /**
  * Helper functions
  * This allows us to give the console some colour when running in a terminal
  */
 const fs = require('fs');
-const path = require('path');
-const readline = require('readline');
-const { execSync } = require('child_process');
 
 const askQuestion = (query) => {
   const rl = readline.createInterface({

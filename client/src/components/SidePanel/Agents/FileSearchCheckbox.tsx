@@ -1,13 +1,13 @@
-import { AgentCapabilities } from 'librechat-data-provider';
-import { useFormContext, Controller } from 'react-hook-form';
+import { Controller, useFormContext } from 'react-hook-form';
 import type { AgentForm } from '~/common';
 import {
   Checkbox,
   HoverCard,
-  HoverCardContent,
   HoverCardPortal,
+  HoverCardContent,
   HoverCardTrigger,
 } from '~/components/ui';
+import { AgentCapabilities } from 'librechat-data-provider';
 import { CircleHelpIcon } from '~/components/svg';
 import { useLocalize } from '~/hooks';
 import { ESide } from '~/common';
@@ -38,7 +38,7 @@ export default function FileSearchCheckbox() {
             type="button"
             className="flex items-center space-x-2"
             onClick={() =>
-              // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+
               setValue(AgentCapabilities.file_search, !getValues(AgentCapabilities.file_search), {
                 shouldDirty: true,
               })

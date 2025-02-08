@@ -1,13 +1,6 @@
-import * as Popover from '@radix-ui/react-popover';
-import { useState, useEffect, useRef, useMemo } from 'react';
+import { useRef, useMemo, useState, useEffect } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
-import {
-  fileConfig as defaultFileConfig,
-  QueryKeys,
-  defaultOrderQuery,
-  mergeFileConfig,
-} from 'librechat-data-provider';
-import type { UseMutationResult } from '@tanstack/react-query';
+import * as Popover from '@radix-ui/react-popover';
 import type {
   Metadata,
   Assistant,
@@ -15,9 +8,16 @@ import type {
   AssistantCreateParams,
   AssistantListResponse,
 } from 'librechat-data-provider';
-import { useUploadAssistantAvatarMutation, useGetFileConfig } from '~/data-provider';
+import type { UseMutationResult } from '@tanstack/react-query';
+import {
+  QueryKeys,
+  mergeFileConfig,
+  defaultOrderQuery,
+  fileConfig as defaultFileConfig,
+} from 'librechat-data-provider';
+import { useGetFileConfig, useUploadAssistantAvatarMutation } from '~/data-provider';
 import { useToastContext, useAssistantsMapContext } from '~/Providers';
-import { AssistantAvatar, NoImage, AvatarMenu } from './Images';
+import { NoImage, AvatarMenu, AssistantAvatar } from './Images';
 // import { Spinner } from '~/components/svg';
 import { useLocalize } from '~/hooks';
 import { formatBytes } from '~/utils';

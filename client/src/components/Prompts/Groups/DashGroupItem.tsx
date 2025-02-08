@@ -1,9 +1,9 @@
-import { memo, useState, useRef, useMemo, useCallback, KeyboardEvent } from 'react';
-import { EarthIcon, Pen } from 'lucide-react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { SystemRoles, type TPromptGroup } from 'librechat-data-provider';
-import { useDeletePromptGroup, useUpdatePromptGroup } from '~/data-provider';
+import { memo, useRef, useMemo, useState, useCallback, KeyboardEvent } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { Pen, EarthIcon } from 'lucide-react';
 import { Input, Label, Button, OGDialog, OGDialogTrigger } from '~/components/ui';
+import { useDeletePromptGroup, useUpdatePromptGroup } from '~/data-provider';
+import { SystemRoles, type TPromptGroup } from 'librechat-data-provider';
 import CategoryIcon from '~/components/Prompts/Groups/CategoryIcon';
 import OGDialogTemplate from '~/components/ui/OGDialogTemplate';
 import { useLocalize, useAuthContext } from '~/hooks';

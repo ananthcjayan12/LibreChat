@@ -1,14 +1,12 @@
 import 'test/resizeObserver.mock';
 import 'test/matchMedia.mock';
 import 'test/localStorage.mock';
-
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { RecoilRoot } from 'recoil';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-
+import React from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { BrowserRouter } from 'react-router-dom';
+import { render } from '@testing-library/react';
+import { RecoilRoot } from 'recoil';
 import { AuthContextProvider } from '~/hooks/AuthContext';
 import { SearchContext } from '~/Providers';
 import Nav from './Nav';

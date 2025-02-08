@@ -1,7 +1,7 @@
-import React, { useEffect, useCallback, useRef, useState } from 'react';
-import throttle from 'lodash/throttle';
-import { visit } from 'unist-util-visit';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { useSetRecoilState } from 'recoil';
+import { visit } from 'unist-util-visit';
+import throttle from 'lodash/throttle';
 import type { Pluggable } from 'unified';
 import type { Artifact } from '~/common';
 import { useMessageContext, useArtifactContext } from '~/Providers';

@@ -1,8 +1,8 @@
-import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
+import React from 'react';
 import { render, fireEvent } from 'test/layout-test-utils';
-import SpeechToTextSwitch from '../SpeechToTextSwitch';
 import { RecoilRoot } from 'recoil';
+import SpeechToTextSwitch from '../SpeechToTextSwitch';
 
 describe('SpeechToTextSwitch', () => {
   /**

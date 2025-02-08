@@ -1,5 +1,5 @@
 // hooks/useAutoScroll.ts
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface UseAutoScrollProps {
   ref: React.RefObject<HTMLElement>;

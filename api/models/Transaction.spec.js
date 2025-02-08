@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
-const { Transaction } = require('./Transaction');
-const Balance = require('./Balance');
+const mongoose = require('mongoose');
 const { spendTokens, spendStructuredTokens } = require('./spendTokens');
 const { getMultiplier, getCacheMultiplier } = require('./tx');
+const { Transaction } = require('./Transaction');
+const Balance = require('./Balance');
 
 let mongoServer;
 

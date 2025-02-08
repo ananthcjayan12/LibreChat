@@ -1,11 +1,11 @@
 require('dotenv').config();
-const fs = require('fs');
-const { z } = require('zod');
 const path = require('path');
-const yaml = require('js-yaml');
-const { createOpenAPIChain } = require('langchain/chains');
-const { DynamicStructuredTool } = require('@langchain/core/tools');
+const fs = require('fs');
 const { ChatPromptTemplate, HumanMessagePromptTemplate } = require('@langchain/core/prompts');
+const { DynamicStructuredTool } = require('@langchain/core/tools');
+const { createOpenAPIChain } = require('langchain/chains');
+const yaml = require('js-yaml');
+const { z } = require('zod');
 const { logger } = require('~/config');
 
 function addLinePrefix(text, prefix = '// ') {

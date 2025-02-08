@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useRecoilValue } from 'recoil';
 import type { TMessageAudio } from '~/common';
-import { BrowserTTS, EdgeTTS, ExternalTTS } from '~/components/Audio/TTS';
+import { EdgeTTS, BrowserTTS, ExternalTTS } from '~/components/Audio/TTS';
 import { TTSEndpoints } from '~/common';
 import store from '~/store';
 

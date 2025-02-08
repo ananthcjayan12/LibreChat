@@ -1,14 +1,14 @@
 import React, { useMemo } from 'react';
 import { useRecoilValue } from 'recoil';
 import type { TMessageContentParts } from 'librechat-data-provider';
-import type { TMessageProps, TMessageIcon } from '~/common';
+import type { TMessageIcon, TMessageProps } from '~/common';
 import MessageIcon from '~/components/Chat/Messages/MessageIcon';
-import { useMessageHelpers, useLocalize } from '~/hooks';
+import { useLocalize, useMessageHelpers } from '~/hooks';
 import ContentParts from './Content/ContentParts';
 import SiblingSwitch from './SiblingSwitch';
+import HoverButtons from './HoverButtons';
 // eslint-disable-next-line import/no-cycle
 import MultiMessage from './MultiMessage';
-import HoverButtons from './HoverButtons';
 import SubRow from './SubRow';
 import { cn } from '~/utils';
 import store from '~/store';

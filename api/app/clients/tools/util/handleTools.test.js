@@ -18,13 +18,12 @@ jest.mock('~/models/User', () => {
 
 jest.mock('~/server/services/PluginService', () => mockPluginService);
 
-const { BaseLLM } = require('@langchain/openai');
 const { Calculator } = require('@langchain/community/tools/calculator');
-
-const User = require('~/models/User');
-const PluginService = require('~/server/services/PluginService');
+const { BaseLLM } = require('@langchain/openai');
 const { validateTools, loadTools, loadToolWithAuth } = require('./handleTools');
+const PluginService = require('~/server/services/PluginService');
 const { StructuredSD, availableTools, DALLE3 } = require('../');
+const User = require('~/models/User');
 
 describe('Tool Handlers', () => {
   let fakeUser;

@@ -1,6 +1,12 @@
 const fs = require('fs').promises;
-const express = require('express');
 const { EnvVar } = require('@librechat/agents');
+const express = require('express');
+const {
+  filterFile,
+  processFileUpload,
+  processDeleteRequest,
+  processAgentFileUpload,
+} = require('~/server/services/Files/process');
 const {
   isUUID,
   FileSources,
@@ -8,14 +14,8 @@ const {
   isAgentsEndpoint,
   checkOpenAIStorage,
 } = require('librechat-data-provider');
-const {
-  filterFile,
-  processFileUpload,
-  processDeleteRequest,
-  processAgentFileUpload,
-} = require('~/server/services/Files/process');
-const { getStrategyFunctions } = require('~/server/services/Files/strategies');
 const { getOpenAIClient } = require('~/server/controllers/assistants/helpers');
+const { getStrategyFunctions } = require('~/server/services/Files/strategies');
 const { loadAuthValues } = require('~/app/clients/tools/util');
 const { getAgent } = require('~/models/Agent');
 const { getFiles } = require('~/models/File');

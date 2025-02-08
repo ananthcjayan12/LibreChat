@@ -1,7 +1,6 @@
 import { useMemo } from 'react';
-
-import { MessageCircleDashed } from 'lucide-react';
 import { useRecoilState, useRecoilValue } from 'recoil';
+import { MessageCircleDashed } from 'lucide-react';
 import { Constants, getConfigDefaults } from 'librechat-data-provider';
 import { useGetStartupConfig } from '~/data-provider';
 import { Switch } from '~/components/ui';

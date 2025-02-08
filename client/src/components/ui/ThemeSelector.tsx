@@ -1,4 +1,4 @@
-import React, { useContext, useCallback, useEffect, useState } from 'react';
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { Sun, Moon, Monitor } from 'lucide-react';
 import { ThemeContext } from '~/hooks';
 

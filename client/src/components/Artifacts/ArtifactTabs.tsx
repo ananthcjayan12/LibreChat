@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import * as Tabs from '@radix-ui/react-tabs';
-import type { SandpackPreviewRef, CodeEditorRef } from '@codesandbox/sandpack-react';
+import type { CodeEditorRef, SandpackPreviewRef } from '@codesandbox/sandpack-react';
 import type { Artifact } from '~/common';
 import useArtifactProps from '~/hooks/Artifacts/useArtifactProps';
 import { useAutoScroll } from '~/hooks/Artifacts/useAutoScroll';

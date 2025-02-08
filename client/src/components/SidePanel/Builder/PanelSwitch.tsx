@@ -1,5 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
-import { defaultAssistantsVersion } from 'librechat-data-provider';
+import { useMemo, useState, useEffect } from 'react';
 import type { Action, TEndpointsConfig, AssistantsEndpoint } from 'librechat-data-provider';
 import type { ActionsEndpoint } from '~/common';
 import {
@@ -7,6 +6,7 @@ import {
   useGetEndpointsQuery,
   useGetAssistantDocsQuery,
 } from '~/data-provider';
+import { defaultAssistantsVersion } from 'librechat-data-provider';
 import AssistantPanel from './AssistantPanel';
 import { useChatContext } from '~/Providers';
 import ActionsPanel from './ActionsPanel';

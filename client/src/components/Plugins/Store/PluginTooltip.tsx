@@ -1,5 +1,5 @@
-import { HoverCardPortal, HoverCardContent } from '~/components/ui';
 import './styles.module.css';
+import { HoverCardPortal, HoverCardContent } from '~/components/ui';
 
 type TPluginTooltipProps = {
   content: string;

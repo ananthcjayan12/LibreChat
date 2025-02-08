@@ -1,9 +1,9 @@
 import React from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
+import { cn, optionText, defaultTextProps } from '~/utils/';
 import { Slider, InputNumber } from '~/components/ui';
 import { useLocalize } from '~/hooks';
 import store from '~/store';
-import { cn, defaultTextProps, optionText } from '~/utils/';
 
 export default function DecibelSelector() {
   const localize = useLocalize();

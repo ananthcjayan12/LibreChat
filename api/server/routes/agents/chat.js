@@ -1,5 +1,4 @@
 const express = require('express');
-const { PermissionTypes, Permissions } = require('librechat-data-provider');
 const {
   setHeaders,
   handleAbort,
@@ -8,6 +7,7 @@ const {
   validateConvoAccess,
   buildEndpointOption,
 } = require('~/server/middleware');
+const { PermissionTypes, Permissions } = require('librechat-data-provider');
 const { initializeClient } = require('~/server/services/Endpoints/agents');
 const AgentController = require('~/server/controllers/agents/request');
 const addTitle = require('~/server/services/Endpoints/agents/title');

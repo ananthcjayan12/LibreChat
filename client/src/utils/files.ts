@@ -1,10 +1,10 @@
-import { excelMimeTypes, QueryKeys } from 'librechat-data-provider';
 import type { QueryClient } from '@tanstack/react-query';
 import type { TFile } from 'librechat-data-provider';
+import { QueryKeys,excelMimeTypes } from 'librechat-data-provider';
 import SheetPaths from '~/components/svg/Files/SheetPaths';
-import TextPaths from '~/components/svg/Files/TextPaths';
-import FilePaths from '~/components/svg/Files/FilePaths';
 import CodePaths from '~/components/svg/Files/CodePaths';
+import FilePaths from '~/components/svg/Files/FilePaths';
+import TextPaths from '~/components/svg/Files/TextPaths';
 
 export const partialTypes = ['text/x-'];
 

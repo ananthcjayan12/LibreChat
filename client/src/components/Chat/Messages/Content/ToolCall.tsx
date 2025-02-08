@@ -1,17 +1,17 @@
 import { useMemo } from 'react';
 import * as Popover from '@radix-ui/react-popover';
-import { actionDelimiter, actionDomainSeparator, Constants } from 'librechat-data-provider';
 import type { TAttachment } from 'librechat-data-provider';
+import { Constants, actionDelimiter,actionDomainSeparator } from 'librechat-data-provider';
 import useLocalize from '~/hooks/useLocalize';
-import ProgressCircle from './ProgressCircle';
 import InProgressCall from './InProgressCall';
-import Attachment from './Parts/Attachment';
+import ProgressCircle from './ProgressCircle';
 import CancelledIcon from './CancelledIcon';
-import ProgressText from './ProgressText';
+import Attachment from './Parts/Attachment';
 import FinishedIcon from './FinishedIcon';
+import ProgressText from './ProgressText';
 import ToolPopover from './ToolPopover';
-import WrenchIcon from './WrenchIcon';
 import { useProgress } from '~/hooks';
+import WrenchIcon from './WrenchIcon';
 import { logger } from '~/utils';
 
 export default function ToolCall({

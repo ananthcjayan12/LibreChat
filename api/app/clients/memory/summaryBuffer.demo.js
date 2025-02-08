@@ -1,6 +1,6 @@
 require('dotenv').config();
-const { ChatOpenAI } = require('@langchain/openai');
 const { getBufferString, ConversationSummaryBufferMemory } = require('langchain/memory');
+const { ChatOpenAI } = require('@langchain/openai');
 
 const chatPromptMemory = new ConversationSummaryBufferMemory({
   llm: new ChatOpenAI({ modelName: 'gpt-4o-mini', temperature: 0 }),

@@ -1,4 +1,3 @@
-const { FileSources } = require('librechat-data-provider');
 const {
   getFirebaseURL,
   prepareImageURL,
@@ -24,6 +23,7 @@ const {
 const { uploadOpenAIFile, deleteOpenAIFile, getOpenAIFileStream } = require('./OpenAI');
 const { getCodeOutputDownloadStream, uploadCodeEnvFile } = require('./Code');
 const { uploadVectors, deleteVectors } = require('./VectorDB');
+const { FileSources } = require('librechat-data-provider');
 
 /**
  * Firebase Storage Strategy Functions

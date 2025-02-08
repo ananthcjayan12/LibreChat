@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRecoilState } from 'recoil';
-import { useLocalize } from '~/hooks';
 import { Button } from '~/components';
+import { useLocalize } from '~/hooks';
 import store from '~/store';
 
 const ChatDirection = () => {

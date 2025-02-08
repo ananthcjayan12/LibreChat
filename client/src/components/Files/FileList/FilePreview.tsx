@@ -1,12 +1,12 @@
-import { TFile } from 'librechat-data-provider/dist/types';
 import React, { useState } from 'react';
-import { TThread, TVectorStore } from '~/common';
-import { CheckMark, TrashIcon } from '~/components/svg';
-import { Button } from '~/components/ui';
-import DeleteIconButton from '../DeleteIconButton';
-import VectorStoreButton from '../VectorStore/VectorStoreButton';
-import { CircleIcon, Clock3Icon, InfoIcon } from 'lucide-react';
+import { InfoIcon, CircleIcon, Clock3Icon } from 'lucide-react';
 import { useParams } from 'react-router-dom';
+import VectorStoreButton from '../VectorStore/VectorStoreButton';
+import { TFile } from 'librechat-data-provider/dist/types';
+import { CheckMark, TrashIcon } from '~/components/svg';
+import DeleteIconButton from '../DeleteIconButton';
+import { TThread, TVectorStore } from '~/common';
+import { Button } from '~/components/ui';
 
 const tempFile: TFile = {
   filename: 'File1.jpg',

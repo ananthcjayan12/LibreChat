@@ -1,11 +1,11 @@
+import { useRef, useMemo, useCallback } from 'react';
+import { Root, Portal, Content } from '@radix-ui/react-popover';
 import { useRecoilValue } from 'recoil';
-import { useMemo, useCallback, useRef } from 'react';
-import { Content, Portal, Root } from '@radix-ui/react-popover';
-import { EModelEndpoint, isAssistantsEndpoint } from 'librechat-data-provider';
 import type { TModelSpec, TConversation, TEndpointsConfig } from 'librechat-data-provider';
 import type { KeyboardEvent } from 'react';
+import { EModelEndpoint, isAssistantsEndpoint } from 'librechat-data-provider';
 import { useChatContext, useAssistantsMapContext } from '~/Providers';
-import { useDefaultConvo, useNewConvo, useLocalize } from '~/hooks';
+import { useLocalize, useNewConvo, useDefaultConvo } from '~/hooks';
 import { getConvoSwitchLogic, getModelSpecIconURL } from '~/utils';
 import { useGetEndpointsQuery } from '~/data-provider';
 import MenuButton from './MenuButton';

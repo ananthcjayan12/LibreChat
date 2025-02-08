@@ -1,5 +1,5 @@
-const Conversation = require('./schema/convoSchema');
 const { getMessages, deleteMessages } = require('./Message');
+const Conversation = require('./schema/convoSchema');
 const logger = require('~/config/winston');
 
 /**

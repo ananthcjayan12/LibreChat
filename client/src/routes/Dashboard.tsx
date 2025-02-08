@@ -1,7 +1,7 @@
 import { Navigate } from 'react-router-dom';
 import {
-  PromptsView,
   PromptForm,
+  PromptsView,
   CreatePromptForm,
   EmptyPromptPreview,
 } from '~/components/Prompts';

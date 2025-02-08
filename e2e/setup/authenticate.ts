@@ -1,7 +1,7 @@
-import { Page, FullConfig, chromium } from '@playwright/test';
-import type { User } from '../types';
-import cleanupUser from './cleanupUser';
+import { Page,chromium, FullConfig } from '@playwright/test';
 import dotenv from 'dotenv';
+import cleanupUser from './cleanupUser';
+import type { User } from '../types';
 dotenv.config();
 
 const timeout = 6000;

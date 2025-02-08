@@ -1,4 +1,4 @@
-import { useMemo, memo } from 'react';
+import { memo, useMemo } from 'react';
 import type { TFile, TMessage } from 'librechat-data-provider';
 import FileContainer from '~/components/Chat/Input/Files/FileContainer';
 import Image from './Image';

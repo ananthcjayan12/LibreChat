@@ -1,5 +1,5 @@
-import { useSearchParams, useNavigate } from 'react-router-dom';
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useMemo, useState, useEffect, useCallback } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useVerifyEmailMutation, useResendVerificationEmail } from '~/data-provider';
 import { ThemeSelector } from '~/components/ui';
 import { Spinner } from '~/components/svg';

@@ -1,10 +1,10 @@
+import React, { useMemo, useEffect, useCallback } from 'react';
+import { Loader, TerminalSquareIcon } from 'lucide-react';
 import debounce from 'lodash/debounce';
-import { Tools, AuthType } from 'librechat-data-provider';
-import { TerminalSquareIcon, Loader } from 'lucide-react';
-import React, { useMemo, useCallback, useEffect } from 'react';
 import type { CodeBarProps } from '~/common';
-import { useVerifyAgentToolAuth, useToolCallMutation } from '~/data-provider';
+import { useToolCallMutation, useVerifyAgentToolAuth } from '~/data-provider';
 import ApiKeyDialog from '~/components/SidePanel/Agents/Code/ApiKeyDialog';
+import { Tools, AuthType } from 'librechat-data-provider';
 import { useLocalize, useCodeApiKeyForm } from '~/hooks';
 import { useMessageContext } from '~/Providers';
 import { cn, normalizeLanguage } from '~/utils';

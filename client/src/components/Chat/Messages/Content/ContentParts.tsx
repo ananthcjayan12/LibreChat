@@ -1,12 +1,12 @@
 import { memo, useMemo, useState } from 'react';
-import { useRecoilValue, useRecoilState } from 'recoil';
-import { ContentTypes } from 'librechat-data-provider';
-import type { TMessageContentParts, TAttachment, Agents } from 'librechat-data-provider';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import type { Agents, TAttachment, TMessageContentParts } from 'librechat-data-provider';
 import { ThinkingButton } from '~/components/Artifacts/Thinking';
+import { ContentTypes } from 'librechat-data-provider';
 import EditTextPart from './Parts/EditTextPart';
 import useLocalize from '~/hooks/useLocalize';
-import { mapAttachments } from '~/utils/map';
 import { MessageContext } from '~/Providers';
+import { mapAttachments } from '~/utils/map';
 import store from '~/store';
 import Part from './Part';
 

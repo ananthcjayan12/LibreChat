@@ -1,9 +1,9 @@
+import React, { useContext, useCallback } from 'react';
 import { useRecoilState } from 'recoil';
 import Cookies from 'js-cookie';
-import React, { useContext, useCallback } from 'react';
 import UserMsgMarkdownSwitch from './UserMsgMarkdownSwitch';
 import HideSidePanelSwitch from './HideSidePanelSwitch';
-import { ThemeContext, useLocalize } from '~/hooks';
+import { useLocalize, ThemeContext } from '~/hooks';
 import AutoScrollSwitch from './AutoScrollSwitch';
 import ArchivedChats from './ArchivedChats';
 import { Dropdown } from '~/components/ui';

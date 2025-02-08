@@ -1,6 +1,6 @@
-import React, { useState, useCallback, useRef, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
+import { Plus, Minus } from 'lucide-react';
 import { useLocalize } from '~/hooks';
-import { Minus, Plus } from 'lucide-react';
 
 interface ModelParametersProps {
   label?: string;

@@ -1,4 +1,4 @@
-import { memo, useRef, useMemo, useEffect, useState } from 'react';
+import { memo, useRef, useMemo, useState, useEffect } from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import {
   supportsFiles,
@@ -7,32 +7,32 @@ import {
   fileConfig as defaultFileConfig,
 } from 'librechat-data-provider';
 import {
+  useAutoSave,
+  useTextarea,
+  useHandleKeyUp,
+  useQueryParams,
+  useRequiresKey,
+  useSubmitMessage,
+} from '~/hooks';
+import {
   useChatContext,
   useChatFormContext,
   useAddedChatContext,
   useAssistantsMapContext,
 } from '~/Providers';
-import {
-  useTextarea,
-  useAutoSave,
-  useRequiresKey,
-  useHandleKeyUp,
-  useQueryParams,
-  useSubmitMessage,
-} from '~/hooks';
 import { cn, removeFocusRings, checkIfScrollable } from '~/utils';
 import FileFormWrapper from './Files/FileFormWrapper';
 import { TextareaAutosize } from '~/components/ui';
 import { useGetFileConfig } from '~/data-provider';
 import { TemporaryChat } from './TemporaryChat';
-import TextareaHeader from './TextareaHeader';
 import PromptsCommand from './PromptsCommand';
+import TextareaHeader from './TextareaHeader';
 import AudioRecorder from './AudioRecorder';
 import { mainTextareaId } from '~/common';
 import CollapseChat from './CollapseChat';
 import StreamAudio from './StreamAudio';
-import StopButton from './StopButton';
 import SendButton from './SendButton';
+import StopButton from './StopButton';
 import Mention from './Mention';
 import store from '~/store';
 

@@ -1,5 +1,5 @@
-const mergeSort = require('./mergeSort');
 const { cleanUpPrimaryKeyValue } = require('./misc');
+const mergeSort = require('./mergeSort');
 
 function reduceMessages(hits) {
   const counts = {};

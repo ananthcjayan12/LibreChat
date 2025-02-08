@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright'; // 1
 
 test('Landing page should not have any automatically detectable accessibility issues', async ({

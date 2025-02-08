@@ -1,13 +1,13 @@
-const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
-const jwt = require('jsonwebtoken');
 const { Strategy: AppleStrategy } = require('passport-apple');
-const socialLogin = require('./socialLogin');
-const User = require('~/models/User');
-const { logger } = require('~/config');
+const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 const { createSocialUser, handleExistingUser } = require('./process');
 const { isEnabled } = require('~/server/utils');
+const socialLogin = require('./socialLogin');
 const { findUser } = require('~/models');
+const { logger } = require('~/config');
+const User = require('~/models/User');
 
 // Mocking external dependencies
 jest.mock('jsonwebtoken');

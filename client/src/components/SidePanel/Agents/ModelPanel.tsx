@@ -1,12 +1,12 @@
 import React, { useMemo, useEffect } from 'react';
-import { ChevronLeft, RotateCcw } from 'lucide-react';
-import { getSettingsKeys } from 'librechat-data-provider';
-import { useFormContext, useWatch, Controller } from 'react-hook-form';
+import { useWatch, Controller, useFormContext } from 'react-hook-form';
+import { RotateCcw, ChevronLeft } from 'lucide-react';
 import type * as t from 'librechat-data-provider';
-import type { AgentForm, AgentModelPanelProps, StringOption } from '~/common';
+import type { AgentForm, StringOption, AgentModelPanelProps } from '~/common';
 import { componentMapping } from '~/components/SidePanel/Parameters/components';
 import { agentSettings } from '~/components/SidePanel/Parameters/settings';
-import { getEndpointField, cn, cardStyle } from '~/utils';
+import { getSettingsKeys } from 'librechat-data-provider';
+import { cn, cardStyle, getEndpointField } from '~/utils';
 import { useGetEndpointsQuery } from '~/data-provider';
 import { SelectDropDown } from '~/components/ui';
 import { useLocalize } from '~/hooks';

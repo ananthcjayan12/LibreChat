@@ -1,11 +1,11 @@
-const OpenAI = require('openai');
 const { HttpsProxyAgent } = require('https-proxy-agent');
-const { ErrorTypes, EModelEndpoint } = require('librechat-data-provider');
+const OpenAI = require('openai');
 const {
   getUserKeyValues,
   getUserKeyExpiry,
   checkUserKeyExpiry,
 } = require('~/server/services/UserService');
+const { ErrorTypes, EModelEndpoint } = require('librechat-data-provider');
 const OpenAIClient = require('~/app/clients/OpenAIClient');
 const { isUserProvided } = require('~/server/utils');
 

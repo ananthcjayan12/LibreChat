@@ -1,6 +1,6 @@
+const fetch = require('node-fetch');
 // __tests__/openweather.test.js
 const OpenWeather = require('../OpenWeather');
-const fetch = require('node-fetch');
 
 // Mock environment variable
 process.env.OPENWEATHER_API_KEY = 'test-api-key';

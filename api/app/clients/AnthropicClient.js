@@ -1,13 +1,5 @@
-const Anthropic = require('@anthropic-ai/sdk');
 const { HttpsProxyAgent } = require('https-proxy-agent');
-const {
-  Constants,
-  EModelEndpoint,
-  anthropicSettings,
-  getResponseSender,
-  validateVisionModel,
-} = require('librechat-data-provider');
-const { encodeAndFormat } = require('~/server/services/Files/images/encode');
+const Anthropic = require('@anthropic-ai/sdk');
 const {
   truncateText,
   formatMessage,
@@ -16,8 +8,16 @@ const {
   parseParamFromPrompt,
   createContextHandlers,
 } = require('./prompts');
+const {
+  Constants,
+  EModelEndpoint,
+  anthropicSettings,
+  getResponseSender,
+  validateVisionModel,
+} = require('librechat-data-provider');
 const { getModelMaxTokens, getModelMaxOutputTokens, matchModelName } = require('~/utils');
 const { spendTokens, spendStructuredTokens } = require('~/models/spendTokens');
+const { encodeAndFormat } = require('~/server/services/Files/images/encode');
 const Tokenizer = require('~/server/services/Tokenizer');
 const { sleep } = require('~/server/utils');
 const BaseClient = require('./BaseClient');

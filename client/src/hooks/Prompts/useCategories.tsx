@@ -1,5 +1,5 @@
-import { useGetCategories } from '~/data-provider';
 import CategoryIcon from '~/components/Prompts/Groups/CategoryIcon';
+import { useGetCategories } from '~/data-provider';
 import useLocalize from '~/hooks/useLocalize';
 
 const loadingCategories = [

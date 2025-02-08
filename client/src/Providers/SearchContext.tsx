@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { useContext, createContext } from 'react';
 import useSearch from '~/hooks/Conversations/useSearch';
 type SearchContextType = ReturnType<typeof useSearch>;
 
