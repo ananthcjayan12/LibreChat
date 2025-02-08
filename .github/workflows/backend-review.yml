@@ -22,6 +22,10 @@ jobs:
       BAN_DURATION: ${{ secrets.BAN_DURATION }}
       BAN_INTERVAL: ${{ secrets.BAN_INTERVAL }}
       NODE_ENV: CI
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js 20.x
@@ -64,4 +68,13 @@ jobs:
         run: cd packages/data-provider && npm run test:ci
 
       - name: Run linters using installed ESLint
-        run: npx eslint .
+        env:
+          SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
+        run: npx eslint -f @microsoft/eslint-formatter-sarif -o eslint-results.sarif .
+        continue-on-error: true
+
+      - name: Upload analysis results to GitHub
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: eslint-results.sarif
+          wait-for-processing: true
