@@ -66,11 +66,9 @@ export default [
         ...globals.node,
         ...globals.commonjs,
       },
-
       parser: tsParser,
       ecmaVersion: 'latest',
       sourceType: 'module',
-
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
@@ -85,16 +83,13 @@ export default [
         fragment: 'Fragment',
         version: 'detect',
       },
-
       'import/parsers': {
         '@typescript-eslint/parser': ['.ts', '.tsx'],
       },
-
       'import/resolver': {
         typescript: {
           project: ['./client/tsconfig.json'],
         },
-
         node: {
           project: ['./client/tsconfig.json'],
         },
@@ -110,9 +105,19 @@ export default [
           'ts-ignore': false,
         },
       ],
+      // Disable the following rules as requested:
+      '@typescript-eslint/no-unused-expressions': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+      'jsx-a11y/no-static-element-interactions': 'off',
+      'jsx-a11y/click-events-have-key-events': 'off',
+      'jsx-a11y/alt-text': 'off',
+      'jsx-a11y/img-redundant-alt': 'off',
+      'no-nested-ternary': 'off',
+      'no-constant-binary-expression': 'off',
+      // Also disable the core no-unused-vars rule globally.
+      'no-unused-vars': 'off',
 
       indent: ['error', 2, { SwitchCase: 1 }],
-
       'max-len': [
         'error',
         {
@@ -122,20 +127,16 @@ export default [
           ignoreComments: true,
         },
       ],
-
       'linebreak-style': 0,
       curly: ['error', 'all'],
-      // Updated semi rule:
       semi: ['error', 'always'],
       'object-curly-spacing': ['error', 'always'],
-
       'no-multiple-empty-lines': [
         'error',
         {
           max: 1,
         },
       ],
-
       'no-trailing-spaces': 'error',
       'comma-dangle': ['error', 'always-multiline'],
       'no-console': 'off',
@@ -148,47 +149,29 @@ export default [
       'no-restricted-syntax': 'off',
       'react/prop-types': 'off',
       'react/display-name': 'off',
-      'no-nested-ternary': 'error',
-
-      'no-unused-vars': [
-        'error',
-        {
-          varsIgnorePattern: '^_',
-        },
-      ],
-
       quotes: ['error', 'single'],
       'key-spacing': ['error', { beforeColon: false, afterColon: true }],
 
-      // Added sort-imports rule:
       'perfectionist/sort-imports': [
         'error',
         {
           type: 'line-length',
-          order: 'desc', // Global ascending order: shortest lines at the top.
+          order: 'desc',
           newlinesBetween: 'never',
           customGroups: {
             value: {
-              // Only match the main React package.
               react: ['^react$'],
               // react: ['^react$', '^fs', '^zod', '^path'],
-              // Define a custom group named "local" that matches both relative paths and tilde aliases.
               local: ['^(\\.{1,2}|~)/', '^librechat-data-provider'],
             },
           },
           groups: [
-            // 0. React group: Always at the top.
             'react',
-            // 1. NPM packages (built-in and external)
             'builtin',
             'external',
-            // 2. TypeScript type imports:
-            //    You can separate types coming from packages from local types if needed.
-            ['builtin-type', 'external-type'], // types from packages
-            ['internal-type'],                 // types from your workspaces (if they are defined as such)
-            // 3. Local imports
-            'local',                           // your custom group for local imports (includes tilde aliases)
-            // Optionally, if you have additional relative imports:
+            ['builtin-type', 'external-type'],
+            ['internal-type'],
+            'local',
             ['parent', 'sibling', 'index'],
             'object',
             'unknown',
@@ -216,7 +199,8 @@ export default [
     rules: {
       'no-unused-vars': 'off',
       'react/display-name': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
+      // Override for TS files: disable no-unused-vars
+      '@typescript-eslint/no-unused-vars': 'off',
     },
   },
   {
@@ -256,28 +240,24 @@ export default [
       'plugin:@typescript-eslint/eslint-recommended',
       'plugin:@typescript-eslint/recommended',
     )
-    .map(config => ({
+    .map((config) => ({
       ...config,
       files: ['**/*.ts', '**/*.tsx'],
     })),
   {
     files: ['**/*.ts', '**/*.tsx'],
-
     plugins: {
       '@typescript-eslint': typescriptEslintEslintPlugin,
       jest: fixupPluginRules(jest),
     },
-
     languageOptions: {
       parser: tsParser,
       ecmaVersion: 5,
       sourceType: 'script',
-
       parserOptions: {
         project: './client/tsconfig.json',
       },
     },
-
     rules: {
       '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/no-unnecessary-condition': 'warn',

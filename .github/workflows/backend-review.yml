@@ -67,6 +67,10 @@ jobs:
       - name: Run librechat-data-provider unit tests
         run: cd packages/data-provider && npm run test:ci
 
+      - name: Install @microsoft/eslint-formatter-sarif
+        run: |
+          npm install @microsoft/eslint-formatter-sarif@3.1.0
+
       - name: Run linters using installed ESLint
         env:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
