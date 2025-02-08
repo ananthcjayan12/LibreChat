@@ -93,8 +93,6 @@ export default {
   com_assistants_function_use: 'Assistant used {0}',
   com_assistants_domain_info: 'Assistant sent this info to {0}',
   com_assistants_needs_login: 'Sign in required',
-  com_assistants_wants_to_talk: 'wants to talk to {0}',
-  com_assistants_sign_in_with_domain: 'Sign in with {0}',
   com_assistants_allow_sites_you_trust: 'Only allow sites you trust.',
   com_assistants_error_missing_token: 'No access token found. Please sign in first.',
   com_assistants_error_expired_token: 'Access token expired. Please sign in again.',
@@ -936,4 +934,8 @@ export default {
   com_ui_no_terms_content: 'No terms and conditions content to display',
   com_ui_speech_while_submitting: 'Can\'t submit speech while a response is being generated',
   com_nav_balance: 'Balance',
+  com_ui_requires_auth: 'Requires Authentication',
+  com_ui_sign_in_to_domain: 'Sign-in to {0}',
+  com_assistants_action_attempt: 'Assistant wants to talk to {0}',
+  com_assistants_attempt_info: 'Assistant wants to send the following:',
 };
