@@ -26,6 +26,7 @@ export default [
     ignores: [
       'client/dist/**/*',
       'client/public/**/*',
+      'client/coverage/**/*',
       'e2e/playwright-report/**/*',
       'packages/mcp/types/**/*',
       'packages/mcp/dist/**/*',
@@ -105,17 +106,17 @@ export default [
           'ts-ignore': false,
         },
       ],
-      // Disable the following rules as requested:
-      '@typescript-eslint/no-unused-expressions': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
+      // Disable a11y features to be enabled later on.
       'jsx-a11y/no-static-element-interactions': 'off',
       'jsx-a11y/click-events-have-key-events': 'off',
       'jsx-a11y/alt-text': 'off',
       'jsx-a11y/img-redundant-alt': 'off',
-      'no-nested-ternary': 'off',
-      'no-constant-binary-expression': 'off',
+      'jsx-a11y/no-noninteractive-tabindex': 'off',
+      // common rules
+      'no-nested-ternary': 'warn',
+      'no-constant-binary-expression': 'warn',
       // Also disable the core no-unused-vars rule globally.
-      'no-unused-vars': 'off',
+      'no-unused-vars': 'warn',
 
       indent: ['error', 2, { SwitchCase: 1 }],
       'max-len': [
@@ -195,12 +196,14 @@ export default [
     },
   },
   {
-    files: ['**/*.ts', '**/*.tsx'],
+    files: ['client/src/**/*.tsx', 'client/src/**/*.ts', 'client/src/**/*.jsx', 'client/src/**/*.js'],
     rules: {
-      'no-unused-vars': 'off',
-      'react/display-name': 'off',
-      // Override for TS files: disable no-unused-vars
-      '@typescript-eslint/no-unused-vars': 'off',
+      // TODO: maybe later to error.
+      'jsx-a11y/no-static-element-interactions': 'warn',
+      'jsx-a11y/click-events-have-key-events': 'warn',
+      'jsx-a11y/alt-text': 'warn',
+      'jsx-a11y/img-redundant-alt': 'warn',
+      'jsx-a11y/no-noninteractive-tabindex': 'warn',
     },
   },
   {
@@ -259,9 +262,13 @@ export default [
       },
     },
     rules: {
-      '@typescript-eslint/no-explicit-any': 'error',
+      // TODO: maybe later to error.
+      '@typescript-eslint/no-unused-expressions': 'warn',
+      '@typescript-eslint/no-unused-vars': ['off'],
+      '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-unnecessary-condition': 'warn',
       '@typescript-eslint/strict-boolean-expressions': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'warn',
     },
   },
   {

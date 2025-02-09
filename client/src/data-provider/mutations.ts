@@ -2,20 +2,22 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import type { InfiniteData, UseMutationResult } from '@tanstack/react-query';
 import type * as t from 'librechat-data-provider';
 import {
+  Constants,
+  QueryKeys,
+  dataService,
+  MutationKeys,
+  defaultOrderQuery,
+  ConversationListResponse,
+  defaultAssistantsVersion,
+} from 'librechat-data-provider';
+import {
   logger,
-  /* Conversations */
   addConversation,
   updateConvoFields,
   deleteConversation,
   updateConversation,
 } from '~/utils';
-import {
-  Constants,
-  ConversationListResponse,
-  defaultAssistantsVersion,
-} from 'librechat-data-provider';
-import { QueryKeys, dataService,MutationKeys, defaultOrderQuery } from 'librechat-data-provider';
-import { useConversationTagsQuery,useConversationsInfiniteQuery } from './queries';
+import { useConversationTagsQuery, useConversationsInfiniteQuery } from './queries';
 import useUpdateTagsInConvo from '~/hooks/Conversations/useUpdateTagsInConvo';
 import { updateConversationTag } from '~/utils/conversationTags';
 import { normalizeData } from '~/utils/collection';
@@ -126,7 +128,7 @@ export const useArchiveConversationMutation = (
     (payload: t.TArchiveConversationRequest) => dataService.archiveConversation(payload),
     {
       onSuccess: (_data, vars) => {
-        const isArchived = vars.isArchived === true;
+        const isArchived = vars.isArchived;
         if (isArchived) {
           queryClient.setQueryData([QueryKeys.conversation, id], null);
         } else {
@@ -190,7 +192,7 @@ export const useArchiveConvoMutation = (options?: t.ArchiveConvoOptions) => {
     {
       onSuccess: (_data, vars) => {
         const { conversationId } = vars;
-        const isArchived = vars.isArchived === true;
+        const isArchived = vars.isArchived;
         if (isArchived) {
           queryClient.setQueryData([QueryKeys.conversation, conversationId], null);
         } else {
@@ -451,7 +453,7 @@ export const useConversationTagMutation = ({
 // When a bookmark is deleted, remove that bookmark(tag) from all conversations associated with it
 export const useDeleteTagInConversations = () => {
   const queryClient = useQueryClient();
-  const deleteTagInAllConversation = (deletedTag: string) => {
+  return (deletedTag: string) => {
     const data = queryClient.getQueryData<InfiniteData<ConversationListResponse>>([
       QueryKeys.allConversations,
     ]);
@@ -495,7 +497,6 @@ export const useDeleteTagInConversations = () => {
       }
     }
   };
-  return deleteTagInAllConversation;
 };
 // Delete a tag
 export const useDeleteConversationTagMutation = (
@@ -897,7 +898,6 @@ export const useUploadAssistantAvatarMutation = (
   unknown // context
 > => {
   return useMutation([MutationKeys.assistantAvatarUpload], {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     mutationFn: ({ postCreation, ...variables }: t.AssistantAvatarVariables) =>
       dataService.uploadAssistantAvatar(variables),
     ...(options || {}),

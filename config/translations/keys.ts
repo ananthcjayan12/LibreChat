@@ -1,15 +1,13 @@
-import fs from 'fs';
 import path from 'path';
+import fs from 'fs';
 
 async function readKeysFromFile(filePath: string): Promise<string[]> {
   const languageModule = await import(filePath);
-  const keys = Object.keys(languageModule.default);
-  return keys;
+  return Object.keys(languageModule.default);
 }
 
 async function compareKeys(baseKeys: string[], keysFromOtherFile: string[]): Promise<string[]> {
-  const missingKeys = baseKeys.filter((key) => !keysFromOtherFile.includes(key));
-  return missingKeys;
+  return baseKeys.filter((key) => !keysFromOtherFile.includes(key));
 }
 
 async function main(baseFilePath: string, languagesDir: string) {

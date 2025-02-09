@@ -26,8 +26,8 @@ export default function useChatHelpers(index = 0, paramId?: string) {
   const queryParam = paramId === 'new' ? paramId : conversationId ?? paramId ?? '';
 
   /* Messages: here simply to fetch, don't export and use `getMessages()` instead */
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { data: _messages } = useGetMessagesByConvoId(conversationId ?? '', {
+
+  const { data: messages } = useGetMessagesByConvoId(conversationId ?? '', {
     enabled: isAuthenticated,
   });
 

@@ -1,6 +1,7 @@
-import fs from 'fs';
 import path from 'path';
-import { processLanguageModule, processMissingKey } from './process';
+import fs from 'fs';
+import { processMissingKey, processLanguageModule } from './process';
+
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default async function main(baseFilePath: string, compareFilePath: string) {
@@ -25,13 +26,12 @@ export default async function main(baseFilePath: string, compareFilePath: string
       const baselineTranslation = baseModule.default[key] || 'No baseline translation available';
       const handleMissingKey = async () => {
         try {
-          const result = await processMissingKey({
+          keyTranslations[key] = await processMissingKey({
             key,
             baselineTranslation,
             translationPrompt: prompt,
             moduleName: path.basename(compareFilePath),
           });
-          keyTranslations[key] = result;
         } catch (e) {
           console.error(`Error processing key: ${key}`, e);
         }

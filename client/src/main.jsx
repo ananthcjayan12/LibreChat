@@ -1,9 +1,9 @@
 import 'regenerator-runtime/runtime';
 import { createRoot } from 'react-dom/client';
-import App from './App';
+import { ApiErrorBoundaryProvider } from './hooks/ApiErrorBoundaryContext';
 import './style.css';
 import './mobile.css';
-import { ApiErrorBoundaryProvider } from './hooks/ApiErrorBoundaryContext';
+import App from './App';
 
 const container = document.getElementById('root');
 const root = createRoot(container);

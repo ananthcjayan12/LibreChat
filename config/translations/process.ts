@@ -1,6 +1,6 @@
-import fs from 'fs';
 import path from 'path';
-import { storeEmbeddings, loadEmbeddings } from './embeddings';
+import fs from 'fs';
+import { loadEmbeddings, storeEmbeddings } from './embeddings';
 import { translateKeyPhrase } from './anthropic';
 
 const missingKeyMap = {};
