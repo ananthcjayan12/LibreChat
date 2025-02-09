@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import type { TMessageProps } from '~/common';
-// eslint-disable-next-line import/no-cycle
 import Message from './Message';
 import store from '~/store';
 

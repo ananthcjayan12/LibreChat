@@ -7,7 +7,6 @@ import { useLocalize, useMessageHelpers } from '~/hooks';
 import ContentParts from './Content/ContentParts';
 import SiblingSwitch from './SiblingSwitch';
 import HoverButtons from './HoverButtons';
-// eslint-disable-next-line import/no-cycle
 import MultiMessage from './MultiMessage';
 import SubRow from './SubRow';
 import { cn } from '~/utils';

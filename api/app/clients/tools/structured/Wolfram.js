@@ -1,4 +1,4 @@
-/* eslint-disable no-useless-escape */
+
 const { Tool } = require('@langchain/core/tools');
 const axios = require('axios');
 const { z } = require('zod');
@@ -23,7 +23,7 @@ class WolframAlphaAPI extends Tool {
     // - Display image URLs with Image Markdown syntax: ![caption](https://imageURL/.../MSPStoreType=image/png&s=18). You must prefix the caption brackets with "!".
     // - ALWAYS use this exponent notation: \`6*10^14\`, NEVER \`6e14\`.
     // - ALWAYS use {{"input": query}} structure for queries to Wolfram endpoints; \`query\` must ONLY be a single-line string.
-    // - ALWAYS use proper Markdown formatting for all math, scientific, and chemical formulas, symbols, etc.:  '$$\n[expression]\n$$' for standalone cases and '\( [expression] \)' when inline.
+    // - ALWAYS use proper Markdown formatting for all math, scientific, and chemical formulas, symbols, etc.:  '$$\n[expression]\n$$' for standalone cases and '( [expression] )' when inline.
     // - Format inline Wolfram Language code with Markdown code formatting.
     // - Never mention your knowledge cutoff date; Wolfram may return more recent data. getWolframAlphaResults guidelines:
     // - Understands natural language queries about entities in chemistry, physics, geography, history, art, astronomy, and more.

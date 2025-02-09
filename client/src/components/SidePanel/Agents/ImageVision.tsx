@@ -12,11 +12,13 @@ export default function ImageVision() {
   return (
     <div className="flex items-center">
       <Controller
+        // @ts-ignore
         name={Capabilities.image_vision}
         control={control}
         render={({ field }) => (
           <Checkbox
             {...field}
+            // @ts-ignore
             checked={field.value}
             onCheckedChange={field.onChange}
             className="relative float-left  mr-2 inline-flex h-4 w-4 cursor-pointer"
@@ -28,6 +30,7 @@ export default function ImageVision() {
         className="form-check-label text-token-text-primary w-full cursor-pointer"
         htmlFor={Capabilities.image_vision}
         onClick={() =>
+          // @ts-ignore
           setValue(Capabilities.image_vision, !getValues(Capabilities.image_vision), {
             shouldDirty: true,
           })

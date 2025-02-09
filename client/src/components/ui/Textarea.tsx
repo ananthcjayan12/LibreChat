@@ -1,9 +1,8 @@
-/* eslint-disable */
 import * as React from 'react';
 // import TextareaAutosize from 'react-textarea-autosize';
 import { cn } from '../../utils';
 
-export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+export type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className = '', ...props }, ref) => {

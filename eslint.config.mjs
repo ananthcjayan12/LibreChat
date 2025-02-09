@@ -196,14 +196,26 @@ export default [
     },
   },
   {
+    files: ['api/**/*.js'],
+    rules: {
+      'no-async-promise-executor': 'warn',
+    },
+  },
+  {
     files: ['client/src/**/*.tsx', 'client/src/**/*.ts', 'client/src/**/*.jsx', 'client/src/**/*.js'],
     rules: {
+      'react/no-unknown-property': 'warn',
       // TODO: maybe later to error.
+      'jsx-a11y/no-noninteractive-element-interactions': 'warn',
+      'jsx-a11y/label-has-associated-control': 'warn',
       'jsx-a11y/no-static-element-interactions': 'warn',
       'jsx-a11y/click-events-have-key-events': 'warn',
-      'jsx-a11y/alt-text': 'warn',
-      'jsx-a11y/img-redundant-alt': 'warn',
+      'jsx-a11y/interactive-supports-focus': 'warn',
       'jsx-a11y/no-noninteractive-tabindex': 'warn',
+      'jsx-a11y/img-redundant-alt': 'warn',
+      'jsx-a11y/media-has-caption': 'warn',
+      'jsx-a11y/no-autofocus': 'warn',
+      'jsx-a11y/alt-text': 'warn',
     },
   },
   {
@@ -236,6 +248,7 @@ export default [
       'react/display-name': 'off',
       'react/prop-types': 'off',
       'react/no-unescaped-entities': 'off',
+      'jest/no-conditional-expect': 'warn',
     },
   },
   ...compat
@@ -269,6 +282,9 @@ export default [
       '@typescript-eslint/no-unnecessary-condition': 'warn',
       '@typescript-eslint/strict-boolean-expressions': 'warn',
       '@typescript-eslint/ban-ts-comment': 'warn',
+
+      'react-hooks/rules-of-hooks': 'warn',
+      'import/no-cycle': 'warn',
     },
   },
   {

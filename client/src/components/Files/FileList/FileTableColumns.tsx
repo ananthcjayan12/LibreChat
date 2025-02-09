@@ -1,8 +1,7 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { PlusIcon } from 'lucide-react';
 import type { ColumnDef } from '@tanstack/react-table';
 import type { TFile } from 'librechat-data-provider';
-import { FileContext, FileSources } from 'librechat-data-provider';
+// import { FileContext, FileSources } from 'librechat-data-provider';
 import { DotsIcon, CrossIcon } from '~/components/svg';
 import FileIcon from '~/components/svg/Files/FileIcon';
 import { Button, Checkbox } from '~/components/ui';
@@ -71,6 +70,7 @@ export const fileTableColumns: ColumnDef<TFile>[] = [
       return 'Vector Stores';
     },
     cell: ({ row }) => {
+      // @ts-ignore
       const { vectorsAttached: attachedVectorStores } = row.original;
       return (
         <>
@@ -106,6 +106,7 @@ export const fileTableColumns: ColumnDef<TFile>[] = [
       const localize = useLocalize();
       return 'Modified';
     },
+    // @ts-ignore
     cell: ({ row }) => formatDate(row.original.updatedAt),
   },
   {

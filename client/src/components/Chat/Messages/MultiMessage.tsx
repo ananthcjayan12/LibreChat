@@ -2,12 +2,9 @@ import { useEffect, useCallback } from 'react';
 import { useRecoilState } from 'recoil';
 import type { TMessage } from 'librechat-data-provider';
 import type { TMessageProps } from '~/common';
-// eslint-disable-next-line import/no-cycle
 import MessageContent from '~/components/Messages/MessageContent';
 import { isAssistantsEndpoint } from 'librechat-data-provider';
-// eslint-disable-next-line import/no-cycle
 import MessageParts from './MessageParts';
-// eslint-disable-next-line import/no-cycle
 import Message from './Message';
 import store from '~/store';
 

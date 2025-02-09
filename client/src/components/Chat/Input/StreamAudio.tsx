@@ -213,7 +213,6 @@ export default function StreamAudio({ index = 0 }) {
 
   logger.log('StreamAudio.tsx - globalAudioURL:', globalAudioURL);
   return (
-    // eslint-disable-next-line jsx-a11y/media-has-caption
     <audio
       ref={audioRef}
       controls

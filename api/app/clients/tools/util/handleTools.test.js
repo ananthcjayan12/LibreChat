@@ -217,7 +217,6 @@ describe('Tool Handlers', () => {
       try {
         await loadTool2();
       } catch (error) {
-        // eslint-disable-next-line jest/no-conditional-expect
         expect(error).toBeDefined();
       }
     });

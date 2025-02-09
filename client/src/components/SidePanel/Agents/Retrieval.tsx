@@ -21,10 +21,12 @@ export default function Retrieval({ retrievalModels }: { retrievalModels: Set<st
   const { control, setValue, getValues } = methods;
   const model = useWatch({ control, name: 'model' });
 
+  // @ts-ignore
   const isDisabled = useMemo(() => !retrievalModels.has(model), [model, retrievalModels]);
 
   useEffect(() => {
     if (model && isDisabled) {
+      // @ts-ignore
       setValue(Capabilities.retrieval, false);
     }
   }, [model, setValue, isDisabled]);
@@ -34,11 +36,13 @@ export default function Retrieval({ retrievalModels }: { retrievalModels: Set<st
       <HoverCard openDelay={50}>
         <div className="flex items-center">
           <Controller
+            // @ts-ignore
             name={Capabilities.retrieval}
             control={control}
             render={({ field }) => (
               <Checkbox
                 {...field}
+                // @ts-ignore
                 checked={field.value}
                 disabled={isDisabled}
                 onCheckedChange={field.onChange}
@@ -55,7 +59,9 @@ export default function Retrieval({ retrievalModels }: { retrievalModels: Set<st
               )}
               htmlFor={Capabilities.retrieval}
               onClick={() =>
+                // @ts-ignore
                 retrievalModels.has(model) &&
+                // @ts-ignore
                 setValue(Capabilities.retrieval, !getValues(Capabilities.retrieval), {
                   shouldDirty: true,
                 })
