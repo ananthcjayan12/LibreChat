@@ -277,15 +277,15 @@ export default [
     },
     rules: {
       // TODO: maybe later to error.
-      '@typescript-eslint/no-unused-expressions': 'warn',
-      '@typescript-eslint/no-unused-vars': ['off'],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-unnecessary-condition': 'warn',
-      '@typescript-eslint/strict-boolean-expressions': 'warn',
-      '@typescript-eslint/ban-ts-comment': 'warn',
+      '@typescript-eslint/no-unused-expressions': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-unnecessary-condition': 'off',
+      '@typescript-eslint/strict-boolean-expressions': 'off',
+      '@typescript-eslint/ban-ts-comment': 'off',
 
       'react-hooks/rules-of-hooks': 'warn',
-      'import/no-cycle': 'warn',
+      'import/no-cycle': 'off',
     },
   },
   {

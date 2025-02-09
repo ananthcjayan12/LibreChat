@@ -1,12 +1,11 @@
 import { PlusIcon } from 'lucide-react';
 import type { ColumnDef } from '@tanstack/react-table';
 import type { TFile } from 'librechat-data-provider';
-// import { FileContext, FileSources } from 'librechat-data-provider';
-import { DotsIcon, CrossIcon } from '~/components/svg';
 import FileIcon from '~/components/svg/Files/FileIcon';
 import { Button, Checkbox } from '~/components/ui';
 import { formatDate, getFileType } from '~/utils';
 import useLocalize from '~/hooks/useLocalize';
+import { DotsIcon } from '~/components/svg';
 
 export const fileTableColumns: ColumnDef<TFile>[] = [
   {
