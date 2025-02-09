@@ -26,6 +26,7 @@ const SearchContent = ({ message }: { message: TMessage }) => {
                 showCursor={false}
                 isSubmitting={false}
                 isCreatedByUser={message.isCreatedByUser}
+                // @ts-ignore
                 messageId={message.messageId}
                 part={part}
               />

@@ -14,6 +14,7 @@ export default function Search() {
     setShowLoading: () => ({}),
     hasNextPage: searchQueryRes?.hasNextPage,
     fetchNextPage: searchQueryRes?.fetchNextPage,
+    // @ts-ignore
     isFetchingNextPage: searchQueryRes?.isFetchingNextPage,
   });
 

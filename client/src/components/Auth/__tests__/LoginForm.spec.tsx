@@ -11,6 +11,7 @@ jest.mock('librechat-data-provider/react-query');
 
 const mockLogin = jest.fn();
 
+// @ts-ignore
 const mockStartupConfig: TStartupConfig = {
   socialLogins: ['google', 'facebook', 'openid', 'github', 'discord'],
   discordLoginEnabled: true,
@@ -103,6 +104,7 @@ beforeEach(() => {
 
 test('renders login form', () => {
   const { getByLabelText } = render(
+    // @ts-ignore
     <Login onSubmit={mockLogin} startupConfig={mockStartupConfig} />,
   );
   expect(getByLabelText(/email/i)).toBeInTheDocument();
@@ -111,6 +113,7 @@ test('renders login form', () => {
 
 test('submits login form', async () => {
   const { getByLabelText, getByRole } = render(
+    // @ts-ignore
     <Login onSubmit={mockLogin} startupConfig={mockStartupConfig} />,
   );
   const emailInput = getByLabelText(/email/i);
@@ -126,6 +129,7 @@ test('submits login form', async () => {
 
 test('displays validation error messages', async () => {
   const { getByLabelText, getByRole, getByText } = render(
+    // @ts-ignore
     <Login onSubmit={mockLogin} startupConfig={mockStartupConfig} />,
   );
   const emailInput = getByLabelText(/email/i);

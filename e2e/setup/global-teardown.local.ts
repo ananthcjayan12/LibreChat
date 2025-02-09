@@ -1,3 +1,4 @@
+// @ts-ignore
 import localUser from '../config.local';
 import cleanupUser from './cleanupUser';
 

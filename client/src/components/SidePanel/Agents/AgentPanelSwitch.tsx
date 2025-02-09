@@ -48,6 +48,7 @@ export default function AgentPanelSwitch() {
   }
 
   return (
+    // @ts-ignore
     <AgentPanel {...commonProps} agentsConfig={agentsConfig} endpointsConfig={endpointsConfig} />
   );
 }

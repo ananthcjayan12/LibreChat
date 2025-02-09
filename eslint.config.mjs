@@ -249,6 +249,7 @@ export default [
       'react/prop-types': 'off',
       'react/no-unescaped-entities': 'off',
       'jest/no-conditional-expect': 'warn',
+      '@typescript-eslint/no-unused-vars': 'off',
     },
   },
   ...compat

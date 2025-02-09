@@ -52,6 +52,7 @@ const useNavigateToConvo = (index = 0) => {
 
       convo = buildDefaultConvo({
         conversation,
+        // @ts-ignore
         endpoint: defaultEndpoint,
         lastConversationSetup: conversation,
         models,

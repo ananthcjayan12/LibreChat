@@ -122,8 +122,8 @@ const PromptEditor: React.FC<Props> = ({ name, isEditing, setIsEditing }) => {
                 style={{ minHeight: '4.5em', maxHeight: '21em', overflow: 'auto' }}
               >
                 <ReactMarkdown
-                  /** @ts-ignore */
                   remarkPlugins={[
+                    // @ts-ignore
                     supersub,
                     remarkGfm,
                     [remarkMath, { singleDollarTextMath: true }],

@@ -16,7 +16,7 @@ import {
 } from '~/components/ui';
 import { useLocalize, useCustomLink, useAuthContext } from '~/hooks';
 import AdvancedSwitch from '~/components/Prompts/AdvancedSwitch';
-import { RightPanel } from '../../components/Prompts/RightPanel';
+// import { RightPanel } from '../../components/Prompts/RightPanel';
 import AdminSettings from '~/components/Prompts/AdminSettings';
 import { SystemRoles } from 'librechat-data-provider';
 import { useDashboardContext } from '~/Providers';

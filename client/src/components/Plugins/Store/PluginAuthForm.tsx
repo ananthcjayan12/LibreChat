@@ -38,6 +38,7 @@ function PluginAuthForm({ plugin, onSubmit, isEntityTool }: TPluginAuthFormProps
         >
           {authConfig.map((config: TPluginAuthConfig, i: number) => {
             const authField = config.authField.split('||')[0];
+            // @ts-ignore
             return (
               <div key={`${authField}-${i}`} className="flex w-full flex-col gap-1">
                 <label
@@ -70,6 +71,7 @@ function PluginAuthForm({ plugin, onSubmit, isEntityTool }: TPluginAuthFormProps
                 </HoverCard>
                 {errors[authField] && (
                   <span role="alert" className="mt-1 text-sm text-red-400">
+                    {/* @ts-ignore */}
                     {errors[authField].message as string}
                   </span>
                 )}

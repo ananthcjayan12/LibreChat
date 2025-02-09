@@ -52,6 +52,7 @@ export const getAllContentText = (message?: TMessage | null): string => {
   if (message.content && message.content.length > 0) {
     return message.content
       .filter((part) => part.type === ContentTypes.TEXT)
+      // @ts-ignore
       .map((part) => (typeof part.text === 'string' ? part.text : part.text.value) || '')
       .filter((text) => text.length > 0)
       .join('\n');

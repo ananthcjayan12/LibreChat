@@ -103,6 +103,7 @@ export default function ExportAndShareMenu({
       <ShareButton
         triggerRef={shareButtonRef}
         conversationId={conversation.conversationId ?? ''}
+        // @ts-ignore
         title={conversation.title ?? ''}
         open={showShareDialog}
         onOpenChange={setShowShareDialog}

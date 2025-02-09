@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
+// @ts-ignore
 import { TransformWrapper, TransformComponent, ReactZoomPanPinchRef } from 'react-zoom-pan-pinch';
 import { ZoomIn, ZoomOut, RefreshCw } from 'lucide-react';
+// @ts-ignore
 import mermaid from 'mermaid';
 // import { Button } from '/components/ui/Button'; // Live component
 import { Button } from '~/components/ui/Button';

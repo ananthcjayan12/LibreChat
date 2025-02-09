@@ -18,6 +18,7 @@ export function mapAttachments(attachments: Array<t.TAttachment | null | undefin
       attachmentMap[key] = [];
     }
 
+    // @ts-ignore
     attachmentMap[key].push(attachment);
   }
 

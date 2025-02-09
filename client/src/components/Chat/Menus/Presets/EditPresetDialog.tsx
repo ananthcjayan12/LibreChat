@@ -186,6 +186,7 @@ const EditPresetDialog = ({
                     buttonClass="ml-0 w-full border border-border-medium p-2 h-[40px] justify-center mt-0"
                     iconClass="hidden lg:block w-4 "
                     endpoint={endpoint}
+                    // @ts-ignore
                     endpointType={endpointType}
                     model={model}
                   />

@@ -52,6 +52,7 @@ const PromptVariables = ({
           </div>
         ) : (
           <div className="text-sm text-text-secondary">
+            {/* @ts-ignore */}
             <ReactMarkdown components={{ code: CodeVariableGfm }}>
               {localize('com_ui_variables_info')}
             </ReactMarkdown>
@@ -65,6 +66,7 @@ const PromptVariables = ({
                 {localize('com_ui_special_variables')}
               </span>
               <span className="text-sm text-text-secondary">
+                {/*  @ts-ignore */}
                 <ReactMarkdown components={{ code: CodeVariableGfm }}>
                   {localize('com_ui_special_variables_info')}
                 </ReactMarkdown>
@@ -75,6 +77,7 @@ const PromptVariables = ({
                 {localize('com_ui_dropdown_variables')}
               </span>
               <span className="text-sm text-text-secondary">
+                {/*  @ts-ignore */}
                 <ReactMarkdown components={{ code: CodeVariableGfm }}>
                   {localize('com_ui_dropdown_variables_info')}
                 </ReactMarkdown>

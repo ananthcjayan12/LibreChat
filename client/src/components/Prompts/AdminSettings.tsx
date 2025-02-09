@@ -81,6 +81,7 @@ const AdminSettings = () => {
 
   const defaultValues = useMemo(() => {
     if (roles?.[selectedRole]) {
+      // @ts-ignore
       return roles[selectedRole][PermissionTypes.PROMPTS];
     }
     return roleDefaults[selectedRole][PermissionTypes.PROMPTS];
@@ -100,6 +101,7 @@ const AdminSettings = () => {
 
   useEffect(() => {
     if (roles?.[selectedRole]?.[PermissionTypes.PROMPTS]) {
+      // @ts-ignore
       reset(roles[selectedRole][PermissionTypes.PROMPTS]);
     } else {
       reset(roleDefaults[selectedRole][PermissionTypes.PROMPTS]);

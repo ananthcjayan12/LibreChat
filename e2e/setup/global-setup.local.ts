@@ -1,5 +1,6 @@
 import { FullConfig } from '@playwright/test';
 import authenticate from './authenticate';
+// @ts-ignore
 import localUser from '../config.local';
 
 async function globalSetup(config: FullConfig) {

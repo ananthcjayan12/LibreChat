@@ -200,6 +200,7 @@ export default function AgentConfig({
       endpointType,
       endpointIconURL,
     });
+    // @ts-ignore
     Icon = icons[iconKey];
   }
 

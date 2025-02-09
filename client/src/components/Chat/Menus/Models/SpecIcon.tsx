@@ -18,10 +18,12 @@ const SpecIcon: React.FC<SpecIconProps> = ({ currentSpec, endpointsConfig }) => 
   let Icon: (props: IconMapProps) => React.JSX.Element;
 
   if (!iconURL.includes('http')) {
+    // @ts-ignore
     Icon = icons[iconKey] ?? icons.unknown;
   } else if (iconURL) {
     return <URLIcon iconURL={iconURL} altName={currentSpec.name} />;
   } else {
+    // @ts-ignore
     Icon = icons[endpoint ?? ''] ?? icons.unknown;
   }
 

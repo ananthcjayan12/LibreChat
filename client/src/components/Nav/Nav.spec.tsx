@@ -41,6 +41,7 @@ const mockMatchMedia = (mediaQueryList?: string[]) => {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
     value: jest.fn().mockImplementation((query) => ({
+      // @ts-ignore
       matches: mediaQueryList.includes(query),
       media: query,
       onchange: null,

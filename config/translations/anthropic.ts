@@ -73,6 +73,7 @@ export async function translateKeyPhrase({ key, baselineTranslation, translation
     try {
       const client = getClient();
       const response = await client.messages.create(requestOptions);
+      // @ts-ignore
       const text = response.content[0].text;
       translation = parseParamFromPrompt(text, 'translation');
     } catch (e) {

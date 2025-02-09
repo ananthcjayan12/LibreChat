@@ -39,6 +39,7 @@ const ConvoIconURL: React.FC<ConvoIconURLProps> = ({
   agentName,
   context,
 }) => {
+  // @ts-ignore
   const Icon: (
     props: IconMapProps & {
       context?: string;

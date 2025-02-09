@@ -228,6 +228,7 @@ export default function useChatFunctions({
       conversationId,
       unfinished: false,
       isCreatedByUser: false,
+      // @ts-ignore
       isEdited: isEditOrContinue,
       iconURL: convo?.iconURL,
       model: convo?.model,

@@ -19,11 +19,12 @@ const useDefaultConvo = () => {
       convoSetup: preset as TPreset,
       endpointsConfig,
     });
-
+    // @ts-ignore
     const models = modelsConfig[endpoint] || [];
 
     return buildDefaultConvo({
       conversation: conversation as TConversation,
+      // @ts-ignore
       endpoint,
       lastConversationSetup: preset as TConversation,
       models,

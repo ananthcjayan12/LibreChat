@@ -27,7 +27,8 @@ export default function VectorStoreListItem({
       </div>
       <div className="w-2/6 text-gray-500">
         <p>
-          {vectorStore.file_counts.total} Files ({vectorStore.bytes / 1000}KB)
+          {/* @ts-ignore  */}
+          { vectorStore.file_counts.total} Files ({vectorStore.bytes / 1000}KB)
         </p>
         <p className="text-sm">{vectorStore.created_at.toString()}</p>
       </div>

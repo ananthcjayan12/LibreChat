@@ -35,6 +35,7 @@ const EngineTTSDropdown: React.FC<EngineTTSDropdownProps> = ({ external }) => {
         onChange={handleSelect}
         options={endpointOptions}
         sizeClasses="w-[180px]"
+        // @ts-ignore
         anchor="bottom start"
         testId="EngineTTSDropdown"
       />

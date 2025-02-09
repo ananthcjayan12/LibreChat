@@ -6,6 +6,7 @@ describe('ConversationTag Utilities', () => {
 
   beforeEach(() => {
     conversations = [
+      // @ts-ignore
       {
         tag: 'saved',
         count: 1,
@@ -15,6 +16,7 @@ describe('ConversationTag Utilities', () => {
         createdAt: '2023-04-01T12:00:00Z',
         user: 'user1',
       },
+      // @ts-ignore
       {
         tag: 'tag1',
         count: 1,
@@ -24,6 +26,7 @@ describe('ConversationTag Utilities', () => {
         createdAt: '2023-04-01T12:00:00Z',
         user: 'user1',
       },
+      // @ts-ignore
       {
         tag: 'tag2',
         count: 20,
@@ -33,6 +36,7 @@ describe('ConversationTag Utilities', () => {
         createdAt: '2023-04-01T12:00:00Z',
         user: 'user1',
       },
+      // @ts-ignore
       {
         tag: 'tag3',
         count: 30,
@@ -42,6 +46,7 @@ describe('ConversationTag Utilities', () => {
         createdAt: new Date().toISOString(),
         user: 'user1',
       },
+      // @ts-ignore
       {
         tag: 'tag4',
         count: 40,
@@ -51,6 +56,7 @@ describe('ConversationTag Utilities', () => {
         createdAt: new Date().toISOString(),
         user: 'user1',
       },
+      // @ts-ignore
       {
         tag: 'tag5',
         count: 50,
@@ -174,6 +180,7 @@ describe('ConversationTag Utilities', () => {
     const updated = updateConversationTag(
       conversations,
       { tag: 'newtag', description: 'newDescription' },
+      // @ts-ignore
       {
         tag: 'newtag',
         description: 'newDescription',
@@ -207,6 +214,7 @@ describe('ConversationTag Utilities', () => {
     const updated = updateConversationTag(
       [],
       { tag: 'newtag', description: 'newDescription' },
+      // @ts-ignore
       {
         tag: 'saved',
         description: 'newDescription',

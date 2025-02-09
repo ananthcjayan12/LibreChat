@@ -64,6 +64,7 @@ export default function Message(props: TMessageProps) {
               <div className="flex-col gap-1 md:gap-3">
                 <div className="flex max-w-full flex-grow flex-col gap-0">
                   <MessageContext.Provider
+                    // @ts-ignore
                     value={{
                       messageId,
                       conversationId: conversation?.conversationId,

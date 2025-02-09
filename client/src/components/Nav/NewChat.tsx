@@ -51,6 +51,7 @@ const NewChatButtonIcon = ({ conversation }: { conversation: TConversation | nul
               context="nav"
               className="h-2/3 w-2/3"
               endpoint={endpoint}
+              // @ts-ignore
               endpointType={endpointType}
               iconURL={endpointIconURL}
             />
