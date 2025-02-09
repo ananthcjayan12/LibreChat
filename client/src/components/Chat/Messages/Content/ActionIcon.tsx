@@ -41,6 +41,7 @@ export default function ActionIcon() {
         <clipPath id="__lottie_element_256">
           <path d="M0,0 L20000,0 L20000,20000 L0,20000z"></path>
         </clipPath>
+        {/* eslint-disable-next-line react/no-unknown-property */}
         <mask id="__lottie_element_245_1" mask-type="alpha">
           <use xlinkHref="#__lottie_element_245"></use>
         </mask>

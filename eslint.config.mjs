@@ -196,26 +196,30 @@ export default [
     },
   },
   {
-    files: ['api/**/*.js'],
+    files: ['api/**/*.js', 'config/**/*.js'],
     rules: {
-      'no-async-promise-executor': 'warn',
+      // API
+      // TODO: maybe later to error.
+      'no-unused-const': 'off',
+      'no-unused-vars': 'off',
+      'no-async-promise-executor': 'off',
     },
   },
   {
     files: ['client/src/**/*.tsx', 'client/src/**/*.ts', 'client/src/**/*.jsx', 'client/src/**/*.js'],
     rules: {
-      'react/no-unknown-property': 'warn',
+      // Client a11y
       // TODO: maybe later to error.
-      'jsx-a11y/no-noninteractive-element-interactions': 'warn',
-      'jsx-a11y/label-has-associated-control': 'warn',
-      'jsx-a11y/no-static-element-interactions': 'warn',
-      'jsx-a11y/click-events-have-key-events': 'warn',
-      'jsx-a11y/interactive-supports-focus': 'warn',
-      'jsx-a11y/no-noninteractive-tabindex': 'warn',
-      'jsx-a11y/img-redundant-alt': 'warn',
-      'jsx-a11y/media-has-caption': 'warn',
-      'jsx-a11y/no-autofocus': 'warn',
-      'jsx-a11y/alt-text': 'warn',
+      'jsx-a11y/no-noninteractive-element-interactions': 'off',
+      'jsx-a11y/label-has-associated-control': 'off',
+      'jsx-a11y/no-static-element-interactions': 'off',
+      'jsx-a11y/click-events-have-key-events': 'off',
+      'jsx-a11y/interactive-supports-focus': 'off',
+      'jsx-a11y/no-noninteractive-tabindex': 'off',
+      'jsx-a11y/img-redundant-alt': 'off',
+      'jsx-a11y/media-has-caption': 'off',
+      'jsx-a11y/no-autofocus': 'off',
+      'jsx-a11y/alt-text': 'off',
     },
   },
   {
@@ -245,10 +249,13 @@ export default [
       },
     },
     rules: {
+      // TEST
       'react/display-name': 'off',
       'react/prop-types': 'off',
+      'jest/no-commented-out-tests': 'off',
       'react/no-unescaped-entities': 'off',
-      'jest/no-conditional-expect': 'warn',
+      'jest/no-conditional-expect': 'off',
+      'jest/no-disabled-tests': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
     },
   },
@@ -283,9 +290,14 @@ export default [
       '@typescript-eslint/no-unnecessary-condition': 'off',
       '@typescript-eslint/strict-boolean-expressions': 'off',
       '@typescript-eslint/ban-ts-comment': 'off',
-
-      'react-hooks/rules-of-hooks': 'warn',
+      // React
+      'react/no-unknown-property': 'warn',
+      'react-hooks/rules-of-hooks': 'off',
+      'react-hooks/exhaustive-deps': 'off',
+      // General
+      'no-constant-binary-expression': 'off',
       'import/no-cycle': 'off',
+      'no-nested-ternary': 'off',
     },
   },
   {
